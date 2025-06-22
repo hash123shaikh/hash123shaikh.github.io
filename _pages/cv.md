@@ -9,56 +9,62 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+# Education
+- **Master of Technology in Computer Engineering**, Aligarh Muslim University, Aligarh, India (Nov 2021 – Nov 2023), CGPA: 8.80/10.00
+- **Bachelor of Technology in Computer Science and Engineering**, Dr. A.P.J. Abdul Kalam Technical University, Lucknow, India (Aug 2017 – Jul 2021), CGPA: 8.04/10.00
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+# Work Experience
+- **Data Scientist**, Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL), Dept. of Radiation Oncology, Christian Medical College, Vellore (Aug 2024 – Present)
+  - Developed ML models for recurrence prediction in Head and Neck Cancer using radiomics and clinical data.
+  - Implemented feature selection methods (LASSO, SelectKBest, PSO, GWO, etc.).
+  - Contributed to the CHAVI imaging biobank by uploading anonymized DICOM data.
+  - Worked on nnU-Net for automatic tumor segmentation (avg. DSC: 0.72).
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+- **Research Analyst**, STARlab Capital, Lucknow (Dec 2023 – Jun 2024)
+  - Evaluated trading strategies using OptionNet Explorer, Mesosim, OptiTrade.
+  - Suggested UI and backend improvements for internal tools.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+# Projects
+- **Multimodal Survival Prediction in Cancer**, AMU (2022–2023)
+  - Developed a deep learning model (MGAttCNNMD) using METABRICS dataset.
+  - Combined clinical, gene expression, and CNA data (Accuracy: 91.2%).
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- **AI for Legal Text Processing**, AMU (2022)
+  - Topic modeling (LDA) and abstractive summarization of legal texts.
+
+# Technical Skills
+- **Languages**: Python, Java, SQL, HTML, CSS
+- **Frameworks**: PyTorch, TensorFlow, Keras, Flask
+- **Tools**: Docker, GitHub Actions, Orthanc PACS, XNAT, CTP, 3D Slicer
+- **ML/DS**: Radiomics, Deep Learning, Feature Selection, Model Optimization
+- **Others**: Bash, YAML, JSON, XML, PostgreSQL
+
+# Publications
+- Hasan Shaikh & Rashid Ali, "Cancer Survival Prediction Using AI," *Data Science in Medical Field*, Elsevier, 2023.
+- Hasan Shaikh et al., "CT Radiomics for Recurrence Prediction," Poster at 14th Research Day, CMC Vellore, 2024.
+- Piyus Prabhanjans et al., "Automated Segmentation Using 3D CNN," Poster at Winter Symposium, CMC Vellore, 2025.
+- Manuscript in prep: "Breast Cancer Prognosis using MGAttCNNMD" (with Prof. Rashid Ali).
+
+# Conferences / Workshops
+- 2nd Winter Symposium on Health Data and AI, CMC Vellore, 2025 *(Organizing team)*
+- Revolution and Precision in Radiation Oncology CME, CMC, 2025
+- 14th Annual Research Day, CMC Vellore, 2024
+- IEEE CIS Summer School on AI in CV & ML, IIIT Hyderabad, 2023
+- AI for Biomedical Imaging, NIT Arunachal, 2022
+
+# Awards & Achievements
+- 3rd Prize – Oral Presentation, Winter Symposium, CMC, 2025
+- Research Abstract Acceptance – 14th Research Day, CMC, 2024
+- Honors Degree – Top 1% of graduating UG class, AKTU
+- NPTEL Certifications – Data Analytics, Deep Learning, ML (Elite+Silver)
+
+# Teaching
+*No formal teaching experience yet, but actively mentoring juniors and contributing to documentation in collaborative research projects.*
+
+# Leadership & Service
+- Volunteered in multiple research conferences (incl. logistics, registrations, and scheduling)
+- Maintainer of CHAVI data pipelines at CMC Vellore
+- Active contributor to open-source projects and issue documentation
+
+# Referees
+*Available on request.*
