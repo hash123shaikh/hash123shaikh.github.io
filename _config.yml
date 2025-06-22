@@ -1,264 +1,145 @@
-# Jekyll Configuration for Hasan Shaikh's Academic Portfolio
+# ----------------------------------------
+# ✅ Hasan Shaikh - Academic Portfolio Site
+# Based on academicpages.github.io
+# ----------------------------------------
 
-# Basic Site Settings
-locale                   : "en-US"
-title                    : "Hasan Shaikh"
-title_separator          : "-"
-name                     : &name "Hasan Shaikh"
-description              : &description "Clinical Data Scientist | AI in Oncology Imaging | Radiomics & Machine Learning Enthusiast"
-url                      : "https://academicpages.github.io" # Update this if hosted elsewhere
-baseurl                  : "" 
-repository               : "academicpages/academicpages.github.io"
+# Basic Site Info
+locale          : "en-US"
+title           : "Hasan Shaikh"
+title_separator : "-"
+name            : "Hasan Shaikh"
+description     : "Clinical Data Scientist | AI in Oncology Imaging | Radiomics & ML"
+url             : "https://hash123shaikh.github.io"
+baseurl         : ""
+repository      : "hash123shaikh/Hasan_Portfolio"
 
-# Author Information
+
+# Author Details
 author:
-  avatar           : "profile.png"  # Profile picture
-  name             : "Hasan Shaikh"
-  pronouns         : "he/him"  
-  bio              : "Clinical Data Scientist at Christian Medical College (CMC) | Radiomics, AI & Machine Learning in Oncology | Passionate about Cancer Research"
-  location         : "Tamil Nadu, India"
-  employer         : "Christian Medical College, Vellore"
-  uri              : "https://www.cmcvellore.ac.in"
-  email            : "hasanshaikh3198@gmail.com"
+  avatar   : "profile.png"
+  name     : "Hasan Shaikh"
+  pronouns : "he/him"
+  bio      : "Clinical Data Scientist @ CMC Vellore | Radiomics & AI in Oncology Imaging"
+  location : "Tamil Nadu, India"
+  employer : "Christian Medical College, Vellore"
+  uri      : "https://www.cmcvellore.ac.in"
+  email    : "hasanshaikh3198@gmail.com"
 
-# Academic Profiles
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid            : "http://orcid.org/yourorcidurl"
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Hasan+Shaikh"
-  researchgate     : "https://www.researchgate.net/profile/Hasan-Shaikh"
 
-  # Code & Data Science Platforms
-  github           : "hash123shaikh"
-  kaggle           : "hasanshaikh"
-  stackoverflow    : "1/hasan-shaikh"
+  # Academic & Research IDs
+  googlescholar : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  orcid         : "https://orcid.org/0000-0000-0000-0000"  # replace with actual
+  pubmed        : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Hasan+Shaikh"
+  researchgate  : "https://www.researchgate.net/profile/Hasan-Shaikh"
 
-  # Social Media Links
-  linkedin         : "hasann-shaikh"
-  twitter          : "hasan_ai"
-  medium          : "https://medium.com/@hasanshaikh"
-  youtube          : "HasanShaikhAI"
 
-# Publication Category - The following is the list of publication categories and their headings
+# Code & Professional Networks
+  github        : "hash123shaikh"
+  kaggle        : "hasanshaikh"
+  linkedin      : "hasann-shaikh"
+  twitter       : "hasan_ai"
+  medium        : "https://medium.com/@hasanshaikh"
+
+
+# Publication Types
 publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
 
+
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+teaser            : 
+breadcrumbs       : false
+future            : true
+words_per_minute  : 160
+read_more         : "disabled"
+talkmap_link      : false
+
+
+# RSS Feed
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+  hide: false
 
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-
-# Analytics
-analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
+# Markdown & Syntax Highlighting
+markdown         : kramdown
+highlighter      : rouge
 excerpt_separator: "\n\n"
-incremental: false
 
 
-# Markdown Processing
 kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  input         : GFM
+  hard_wrap     : false
+  auto_ids      : true
+  toc_levels    : 1..6
+  entity_output : as_char
 
-
-# These settings control the types of collections used by the template
+# Collections
 collections:
   teaching:
-    output: true
+    output   : true
     permalink: /:collection/:path/
   publications:
-    output: true
+    output   : true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output   : true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output   : true
     permalink: /:collection/:path/
 
-
-# These settings control how pages and collections are included in the site
+# Default Layouts
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
+      layout        : single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+      read_time     : true
+      share         : true
+      comments      : false
+      related       : true
+
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
+      layout        : single
       author_profile: true
-  # _teaching
+
   - scope:
       path: ""
       type: teaching
     values:
-      layout: single
+      layout        : single
       author_profile: true
-      share: true
-      comments: true
-  # _publications
+
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
+      layout        : single
       author_profile: true
-      share: true
-      comments: true
-  # _portfolio
+
   - scope:
       path: ""
       type: portfolio
     values:
-      layout: single
+      layout        : single
       author_profile: true
-      share: true
-      comment: true
-  # _talks
+
   - scope:
       path: ""
       type: talks
     values:
-      layout: talk
+      layout        : talk
       author_profile: true
-      share: true
-
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
 
 # Plugins
 plugins:
@@ -269,48 +150,40 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+# Permalinks
+permalink: /:categories/:title/
+timezone : Asia/Kolkata
 
+# Folders to Include/Exclude
+include:
+  - _pages
+  - files
+
+exclude:
+  - .github
+  - node_modules
+  - vendor
+  - tmp
+  - README
+  - Gemfile
+  - Rakefile
+  - Dockerfile
+  - package.json*
+  - config
+  - LICENSE
+  - CHANGELOG
+
+keep_files:
+  - .git
+
+encoding     : "utf-8"
+markdown_ext : "markdown,mkdown,mkdn,mkd,md"
 
 # Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
