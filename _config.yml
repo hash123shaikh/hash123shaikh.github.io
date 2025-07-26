@@ -16,7 +16,7 @@ repository      : "hash123shaikh/Hasan_Portfolio"
 
 # Author Details
 author:
-  avatar   : "profile.png"
+  avatar   : "hasan_profile.jpg"
   name     : "Hasan Shaikh"
   pronouns : "he/him"
   bio      : "Clinical Data Scientist @ CMC Vellore | Radiomics & AI in Oncology Imaging"
@@ -27,18 +27,12 @@ author:
 
 
   # Academic & Research IDs
-  googlescholar : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid         : "https://orcid.org/0000-0000-0000-0000"  # replace with actual
-  pubmed        : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Hasan+Shaikh"
-  researchgate  : "https://www.researchgate.net/profile/Hasan-Shaikh"
+  googlescholar : "https://scholar.google.com/citations?user=9jjwZ8cAAAAJ"
 
 
 # Code & Professional Networks
   github        : "hash123shaikh"
-  kaggle        : "hasanshaikh"
   linkedin      : "hasann-shaikh"
-  twitter       : "hasan_ai"
-  medium        : "https://medium.com/@hasanshaikh"
 
 
 # Publication Types
