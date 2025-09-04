@@ -9,9 +9,9 @@ title           : "Hasan Shaikh"
 title_separator : "-"
 name            : "Hasan Shaikh"
 description     : "Clinical Data Scientist | AI in Oncology Imaging | Radiomics & ML"
-url             : "https://hash123shaikh.github.io"
-baseurl         : ""
-repository      : "hash123shaikh/Hasan_Portfolio"
+url             : "https://hash123shaikh.github.io"   # For user site (hash123shaikh.github.io)
+baseurl         : ""                                   # Keep empty for user site
+repository      : "hash123shaikh/Hasan_Portfolio"      # Update if your repo name changes
 
 
 # Author Details
@@ -26,11 +26,8 @@ author:
   email    : "hasanshaikh3198@gmail.com"
 
 
-  # Academic & Research IDs
+  # Profiles
   googlescholar : "https://scholar.google.com/citations?user=9jjwZ8cAAAAJ"
-
-
-# Code & Professional Networks
   github        : "hash123shaikh"
   linkedin      : "hasann-shaikh"
 
@@ -46,31 +43,28 @@ publication_category:
 
 
 # Site Settings
-teaser            : 
 breadcrumbs       : false
 future            : true
-words_per_minute  : 160
-read_more         : "disabled"
-talkmap_link      : false
+timezone          : "Asia/Kolkata"
+permalink         : "/:categories/:title/"
+
+
+# Markdown & Syntax Highlighting
+markdown          : kramdown
+highlighter       : rouge
+excerpt_separator : "\n\n"
+kramdown:
+  input           : GFM
+  hard_wrap       : false
+  auto_ids        : true
+  toc_levels      : 1..6
+  entity_output   : as_char
 
 
 # RSS Feed
 atom_feed:
   hide: false
 
-
-# Markdown & Syntax Highlighting
-markdown         : kramdown
-highlighter      : rouge
-excerpt_separator: "\n\n"
-
-
-kramdown:
-  input         : GFM
-  hard_wrap     : false
-  auto_ids      : true
-  toc_levels    : 1..6
-  entity_output : as_char
 
 # Collections
 collections:
@@ -86,6 +80,7 @@ collections:
   talks:
     output   : true
     permalink: /:collection/:path/
+
 
 # Default Layouts
 defaults:
