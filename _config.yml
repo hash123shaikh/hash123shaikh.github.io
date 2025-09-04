@@ -176,3 +176,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Set a skin
+minimal_mistakes_skin: "default"   # or "air", "mint", "contrast", etc.
+
+
