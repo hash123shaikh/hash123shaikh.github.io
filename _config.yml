@@ -132,12 +132,14 @@ defaults:
 
 # Plugins
 plugins:
+  - jekyll-include-cache     # ← the cache plugin
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+
 
 # Permalinks
 permalink: /:categories/:title/
