@@ -178,6 +178,8 @@ tag_archive:
   path: /tags/
 
 # Set a skin
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"   # or "air", "mint", "contrast", etc.
+
 
 
