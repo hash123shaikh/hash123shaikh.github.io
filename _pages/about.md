@@ -1,59 +1,68 @@
----
-permalink: /
-title: "Hasan Shaikh — Researcher in AI for Cancer Imaging"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
-
 > *“The real purpose of research is not just discovery — but translation. That’s where science becomes service.”*
 
-Welcome! I’m **Hasan Shaikh**, a passionate AI researcher working at the **Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)**, Christian Medical College (CMC) Vellore, India. My work lies at the intersection of **cancer imaging**, **radiomics**, and **deep learning**, with a vision to bring **real-world clinical impact** through data-driven solutions.
+I’m **Hasan Shaikh**, a Clinical Data Scientist at the **Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)**, **Christian Medical College (CMC) Vellore**, India. I work at the intersection of **cancer imaging**, **radiomics**, and **machine learning**, with a focus on **head & neck cancer**. I build end-to-end pipelines—from **DICOM data curation** and **segmentation** to **risk modeling** and **clinician-facing dashboards**—aimed at delivering trustworthy, explainable tools for patient care.
 
----
+See also: **[Projects](/portfolio/)** · **[Publications](/publications/)** · **[CV](/cv/)**
 
-## 👨‍💻 About Me
 
-- 🔬 Currently involved in **prospective clinical studies** to predict **locoregional recurrence** in **head and neck cancer** using CT imaging and radiomics.
-- 🧠 Special focus on **explainable machine learning**, **automated segmentation**, and integrating **AI into clinical workflows**.
-- 🛠️ Skilled in Python, PyRadiomics, scikit-learn, nnUNet, MedSAM, and full-stack development tools like React and FastAPI.
-- 🤝 Collaborating across departments, including Radiation Oncology, Computer Science, and AI research labs.
-- 🧪 Past projects include **multimodal survival prediction**, deep learning pipelines, and feature optimization using **metaheuristic algorithms** (PSO, WOA, GWO).
+### Research (brief)
+- **Radiomics-based recurrence prediction** in HNC using robust ML pipelines (feature stability, calibration, uncertainty).
+- **Automated tumor/structure segmentation** with **3D nnU-Net** and **MedSAM**, emphasizing QA and reproducibility.
+- **Clinical integration**: lightweight dashboards (FastAPI + React) to surface predictions and explanations at point-of-care.
+- **Data governance & curation**: Orthanc/XNAT workflows, RSNA CTP, HIPAA/GDPR-aware anonymization for multi-institutional research.
 
-I’m committed to combining **domain knowledge**, **technical skill**, and **clinical understanding** to develop systems that can genuinely assist doctors and improve patient care.
 
----
+<style>
+.about-two-col{display:grid;grid-template-columns:minmax(260px,1fr) minmax(320px,1fr);gap:2.5rem 3rem;align-items:start;margin-top:.5rem}
+@media (max-width:860px){.about-two-col{grid-template-columns:1fr}}
+.section-title{font-weight:800;font-size:1.9rem;margin:0 0 .75rem}
+.bullet-xl li{margin:.4rem 0;font-size:1.06rem;line-height:1.6}
+.edu-item{margin:0 0 1.25rem}
+.edu-degree{font-weight:700;font-size:1.25rem;display:flex;gap:.55rem;align-items:baseline}
+.edu-degree i{opacity:.9}
+.edu-meta{color:#6b7280;margin:.1rem 0}
+.edu-dates{color:#374151}
+</style>
 
-## 🔍 Current Research Focus
 
-- **Radiomics-Based Recurrence Prediction**  
-  Developing robust ML pipelines for analyzing texture, shape, and intensity features from CT images to stratify recurrence risk.
 
-- **AI-Driven Tumor Segmentation**  
-  Applying state-of-the-art models like **nnUNet** and **MedSAM** for accurate and reproducible tumor volume segmentation in clinical datasets.
+<!-- Two-column: Research Interests (left) • Education (right) -->
+<div class="about-two-col">
 
-- **Clinical Dashboard Integration**  
-  Building end-to-end dashboards with backend (FastAPI) + frontend (React) to bring predictions and risk assessments into the hands of clinicians.
+  <section class="col">
+    <h2 class="section-title">Research Interests</h2>
+    <ul class="bullet-xl">
+      <li>Radiomics (CT feature engineering)</li>
+      <li>Auto-segmentation (3D nnU-Net, MedSAM)</li>
+      <li>Risk prediction & survival modeling</li>
+      <li>Adaptive radiotherapy & decision support</li>
+      <li>Explainable ML (attribution, calibration, uncertainty)</li>
+      <li>Deep learning for medical imaging</li>
+      <li>LLMs for clinical text/report alignment</li>
+      <li>Radiation oncology data curation (DICOM, Orthanc/XNAT)</li>
+    </ul>
+  </section>
 
-- **Model Explainability & Generalization**  
-  Exploring feature attribution, cohort variation, and domain shifts across datasets to ensure models remain reliable and understandable.
+  <section class="col">
+    <h2 class="section-title">Education</h2>
 
----
+    <div class="edu-item">
+      <div class="edu-degree">
+        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+        M.Tech., Computer Engineering
+      </div>
+      <div class="edu-meta">Aligarh Muslim University (AMU) · Aligarh, India</div>
+      <div class="edu-dates"><em>Nov 2021 – Nov 2023 · CGPA 8.80 / 10</em></div>
+    </div>
 
-## 💡 Why This Website?
-This portfolio exists not only to archive my work but to share ideas, progress, and collaborations. It reflects my journey from solving small classification tasks to designing clinically relevant AI pipelines. Here, you’ll find:
+    <div class="edu-item">
+      <div class="edu-degree">
+        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+        B.Tech., Computer Science & Engineering
+      </div>
+      <div class="edu-meta">Dr. A.P.J. Abdul Kalam Technical University (AKTU) · Lucknow, India</div>
+      <div class="edu-dates"><em>Aug 2017 – Jul 2021 · CGPA 8.04 / 10</em></div>
+    </div>
+  </section>
 
-- A showcase of ongoing and past **projects**
-- A list of **talks, posters, and presentations**
-- Published **abstracts and book chapters**
-- My **academic CV** and roadmap for future exploration
-
-If you're a fellow researcher, professor, or prospective collaborator interested in cancer imaging, medical AI, or clinical implementation — I’d love to connect.
-
----
-
-## 📬 Let’s Connect
-Feel free to reach out through [LinkedIn](https://www.linkedin.com/in/hasann-shaikh), [GitHub](https://github.com/hash123shaikh), or email me.
-
-Let’s use AI not just to interpret medical images — but to **empower clinical decisions**, one model at a time.
+</div>
