@@ -1,17 +1,17 @@
 # Navigation Links for Header (Edit order or remove/add as needed)
 
 main:
+  - title: "About"
+    url: /
+  
+  - title: "Projects"
+    url: /projects/
+  
   - title: "Publications"
     url: /publications/
-
-  - title: "Portfolio"
-    url: /portfolio/
-
-  - title: "Blog"
-    url: /year-archive/
-
+  
   - title: "CV"
     url: /cv/
-
-  - title: "Markdown Guide"
-    url: /markdown/
+  
+  - title: "Contact"
+    url: /contact/
