@@ -6,7 +6,7 @@ permalink: /publication/cmc-research-day-2024-hnc-radiomics
 date: 2024-03-15
 venue: "14th Research Day, Christian Medical College, Vellore — Poster"
 excerpt: "Prospective CT radiomics study for one-year LRR prediction in HNC; Naive Bayes showed the best train–test balance in early results."
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
+paperurl: 'http://academicpages.github.io/files/Hasan_Poster - CMC Vellore.pdf'
 citation: "Shaikh H., Varghese A.J., Thomas H.M.T., et al. (2024). 14th Research Day, CMC Vellore. Poster."
 ---
 
