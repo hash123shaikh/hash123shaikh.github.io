@@ -7,6 +7,7 @@ date: 2024-01-01
 venue: "Book Chapter — Data Science in the Medical Field, Academic Press (Elsevier), 2024. ISBN-13: 978-0-443-24029-4"
 paperurl: "https://doi.org/10.1016/B978-0-443-24028-7.00016-7"
 excerpt: "Overview of AI/ML for cancer survival prediction, spanning imaging and clinical data, with emphasis on explainability and clinical integration."
+paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 citation: "Shaikh H., Ali R. (2024). Cancer Survival Prediction Using Artificial Intelligence: Current Status and Future Prospects. In: Data Science in the Medical Field. Academic Press (Elsevier). https://doi.org/10.1016/B978-0-443-24028-7.00016-7"
 ---
 
