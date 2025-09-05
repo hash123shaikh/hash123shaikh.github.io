@@ -2,5 +2,8 @@
 # Only the main Sass file needs front matter
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // pick skin
-@import "minimal-mistakes";                                                              // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes/initialize";
+
+/* Explicitly pull in your custom partial. */
+@import "minimal-mistakes/custom";
