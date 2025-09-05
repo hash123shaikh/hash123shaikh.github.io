@@ -1,0 +1,47 @@
+---
+layout: single
+title: "Hasan Shaikh — Researcher in AI for Cancer Imaging"
+permalink: /
+author_profile: true
+---
+
+> *“The real purpose of research is not just discovery — but translation. That’s where science becomes service.”*
+
+I’m **Hasan Shaikh**, a Clinical Data Scientist at the **Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)**, **Christian Medical College (CMC) Vellore**, India. I work at the intersection of **cancer imaging**, **radiomics**, and **machine learning**, with a focus on **head & neck cancer**. I build end-to-end pipelines—from **DICOM data curation** and **segmentation** to **risk modeling** and **clinician-facing dashboards**—aimed at delivering trustworthy, explainable tools for patient care.
+
+See also: **[Projects](/portfolio/)** · **[Publications](/publications/)** · **[CV](/cv/)**
+
+<!-- Two-column: Research Interests (left) • Education (right) -->
+<div class="about-two-col">
+
+  <section class="col">
+    <h2 class="section-title">Research Interests</h2>
+    <ul class="bullet-xl">
+      <li>Radiomics (CT feature engineering)</li>
+      <li>Auto-segmentation (3D nnU-Net, MedSAM)</li>
+      <li>Risk prediction & survival modeling</li>
+      <li>Adaptive radiotherapy & decision support</li>
+      <li>Explainable ML (attribution, calibration, uncertainty)</li>
+      <li>Deep learning for medical imaging</li>
+      <li>LLMs for clinical text/report alignment</li>
+      <li>Radiation oncology data curation (DICOM, Orthanc/XNAT)</li>
+    </ul>
+  </section>
+
+  <section class="col">
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-item">
+      <div class="edu-degree"><i class="fas fa-graduation-cap" aria-hidden="true"></i> M.Tech., Computer Engineering</div>
+      <div class="edu-meta">Aligarh Muslim University (AMU) · Aligarh, India</div>
+      <div class="edu-dates"><em>Nov 2021 – Nov 2023 · CGPA 8.80 / 10</em></div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-degree"><i class="fas fa-graduation-cap" aria-hidden="true"></i> B.Tech., Computer Science & Engineering</div>
+      <div class="edu-meta">Dr. A.P.J. Abdul Kalam Technical University (AKTU) · Lucknow, India</div>
+      <div class="edu-dates"><em>Aug 2017 – Jul 2021 · CGPA 8.04 / 10</em></div>
+    </div>
+  </section>
+
+</div>
