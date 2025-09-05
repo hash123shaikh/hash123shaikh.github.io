@@ -9,3 +9,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
