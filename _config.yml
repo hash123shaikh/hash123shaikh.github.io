@@ -20,3 +20,16 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+
+exclude:
+  - _pages/page-archive.html
+  - _pages/archive-layout-with-content.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/talkmap.html
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/year-archive.html
+
