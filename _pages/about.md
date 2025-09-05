@@ -1,7 +1,9 @@
 ---
 permalink: /about/
-title: "About"          # (you can keep "about" if you prefer)
+title: "About"
+layout: single
 author_profile: true
+classes: wide
 ---
 
 > *“The real purpose of research is not just discovery — but translation. That’s where science becomes service.”*
