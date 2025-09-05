@@ -9,6 +9,7 @@ redirect_from:
   - /about.html
 ---
 
+
 <style>
 /* About page: two-column layout + typographic tweaks */
 .about-two-col {
