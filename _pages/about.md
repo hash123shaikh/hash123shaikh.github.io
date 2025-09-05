@@ -1,6 +1,6 @@
 ---
-permalink: /
-title: "Hasan Shaikh — Researcher in AI for Cancer Imaging"
+permalink: /about/
+title: "About"          # (you can keep "about" if you prefer)
 author_profile: true
 ---
 
@@ -10,13 +10,11 @@ I’m **Hasan Shaikh**, a Clinical Data Scientist at the **Quantitative Imaging 
 
 See also: **[Projects](/portfolio/)** · **[Publications](/publications/)** · **[CV](/cv/)**
 
-
 ### Research (brief)
 - **Radiomics-based recurrence prediction** in HNC using robust ML pipelines (feature stability, calibration, uncertainty).
 - **Automated tumor/structure segmentation** with **3D nnU-Net** and **MedSAM**, emphasizing QA and reproducibility.
 - **Clinical integration**: lightweight dashboards (FastAPI + React) to surface predictions and explanations at point-of-care.
 - **Data governance & curation**: Orthanc/XNAT workflows, RSNA CTP, HIPAA/GDPR-aware anonymization for multi-institutional research.
-
 
 <!-- Two-column: Research Interests (left) • Education (right) -->
 <div class="about-two-col">
@@ -56,8 +54,5 @@ See also: **[Projects](/portfolio/)** · **[Publications](/publications/)** · *
       <div class="edu-dates"><em>Aug 2017 – Jul 2021 · CGPA 8.04 / 10</em></div>
     </div>
   </section>
-
-</div>
-
 
 </div>
