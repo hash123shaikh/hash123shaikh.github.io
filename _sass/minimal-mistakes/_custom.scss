@@ -1,4 +1,4 @@
-/* About page: two-column layout + typographic tweaks */
+/* About page — two-column layout */
 .about-two-col {
   display: grid;
   grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
@@ -8,11 +8,36 @@
 }
 @media (max-width: 860px) { .about-two-col { grid-template-columns: 1fr; } }
 
-.section-title { font-weight: 800; font-size: 1.9rem; margin: 0 0 .75rem; }
-.bullet-xl li { margin: .4rem 0; font-size: 1.06rem; line-height: 1.6; }
+/* Titles scoped to About */
+.about-two-col .section-title {
+  font-weight: 800;
+  font-size: 1.85rem;
+  margin: 0 0 .75rem;
+}
 
-.edu-item { margin: 0 0 1.25rem; }
-.edu-degree { font-weight: 700; font-size: 1.25rem; display: flex; gap: .55rem; align-items: baseline; }
-.edu-degree i { opacity: .9; }
-.edu-meta { color: #6b7280; margin: .1rem 0; }    /* subtle grey label */
-.edu-dates { color: #374151; }                    /* darker for dates */
+/* Research interests list */
+.bullet-xl { padding-left: 1.2rem; }
+.bullet-xl li { margin: .35rem 0; font-size: 1.05rem; line-height: 1.6; }
+
+/* Education cards */
+.edu-item {
+  padding: .6rem .9rem;
+  border-left: 3px solid var(--mm-accent, #2f7d95); /* uses theme accent when available */
+  background: #f9fafb;
+  border-radius: 6px;
+  margin: 0 0 1rem;
+}
+.edu-degree {
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  gap: .55rem;
+  align-items: baseline;
+}
+.edu-degree i { opacity: .85; font-size: 1.05rem; }
+.edu-meta   { color: #6b7280; margin: .15rem 0 .1rem; }  /* subtle label */
+.edu-dates  { color: #374151; font-style: italic; }      /* dates */
+
+ /* Optional page-width & teaser tidy-ups */
+@media (min-width: 64em) { .page__content { max-width: 980px; } }
+.archive__item-teaser img { object-fit: cover; height: 180px; width: 100%; }
