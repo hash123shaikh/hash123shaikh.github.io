@@ -2,9 +2,6 @@
 permalink: /
 title: "Hasan Shaikh — Researcher in AI for Cancer Imaging"
 author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
 ---
 
 > *“The real purpose of research is not just discovery — but translation. That’s where science becomes service.”*
