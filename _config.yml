@@ -1,6 +1,7 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
+
 plugins:
   - jekyll-include-cache
   - jekyll-feed
@@ -9,6 +10,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+
 
 collections:
   pages:
@@ -20,6 +22,11 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+
+
+include:
+  - files
+
 
 exclude:
   - _pages/page-archive.html
