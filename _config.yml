@@ -130,6 +130,7 @@ defaults:
       layout        : talk
       author_profile: true
 
+
 # Plugins
 plugins:
   - jekyll-include-cache
@@ -145,10 +146,12 @@ plugins:
 permalink: /:categories/:title/
 timezone : Asia/Kolkata
 
+
 # Folders to Include/Exclude
 include:
   - _pages
   - files
+
 
 exclude:
   - .github
@@ -164,11 +167,14 @@ exclude:
   - LICENSE
   - CHANGELOG
 
+
 keep_files:
   - .git
 
+
 encoding     : "utf-8"
 markdown_ext : "markdown,mkdown,mkdn,mkd,md"
+
 
 # Archives
 category_archive:
