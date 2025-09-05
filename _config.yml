@@ -2,16 +2,6 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
 
-plugins:
-  - jekyll-include-cache
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-
-
 collections:
   pages:
     output: true
@@ -24,19 +14,7 @@ collections:
     permalink: /:collection/:path/
 
 
+# publish only what we need
 include:
   - files
-
-
-exclude:
-  - _pages/page-archive.html
-  - _pages/archive-layout-with-content.md
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/talks.html
-  - _pages/teaching.html
-  - _pages/talkmap.html
-  - _pages/category-archive.html
-  - _pages/collection-archive.html
-  - _pages/year-archive.html
 
