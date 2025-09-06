@@ -164,7 +164,7 @@ classes: wide
       <i class="fas fa-phone icon-phone"></i>
       <div class="contact-item-content">
         <h4>Phone</h4>
-        <p><a href="tel:+919968982501">+91 99689 82501</a></p>
+        <p><a href="tel:+91-7906049358">+91-7906049358</a></p>
       </div>
     </div>
     
