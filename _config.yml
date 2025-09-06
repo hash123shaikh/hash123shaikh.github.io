@@ -30,16 +30,6 @@ permalink: /:categories/:title/
 timezone: Asia/Kolkata # Your timezone
 
 # Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-remote-theme
-  - jekyll-redirect-from
-  - jemoji
-
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-sitemap
@@ -109,9 +99,9 @@ collections:
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
   - files
+
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -120,32 +110,14 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
   - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-keep_files:
-  - .git
-  - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Defaults
+# Defaults (only for content you actually have)
 defaults:
   # _pages
   - scope:
@@ -154,6 +126,4 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-
   
