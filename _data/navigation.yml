@@ -1,20 +1,14 @@
 # Navigation Links for Header (Edit order or remove/add as needed)
-
 main:
   - title: "Home"
     url: /
-  
-  - title: "About"
+  - title: "About" 
     url: /about/
-  
   - title: "Projects"
     url: /portfolio/
-  
   - title: "Publications"
     url: /publications/
-  
   - title: "CV"
-    url: /cv/
-    
+    url: /files/CV_Hasan_Shaikh.pdf  # Direct PDF link
   - title: "Contact"
     url: /contact/
