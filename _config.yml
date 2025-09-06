@@ -67,7 +67,7 @@ compress_html:
 # Site Author
 author:
   name: "Hasan Shaikh"
-  avatar: "/assets/images/hasan_profile.jpg" # Add your photo here if you have one
+  avatar: "/assets/images/bio_photo.jpg" # Add your photo here if you have one
   bio: "Clinical Data Scientist at QIRAIL, CMC Vellore. AI researcher in cancer imaging."
   location: "Vellore, Tamil Nadu, India"
   email: "hasanshaikh3198@gmail.com"
