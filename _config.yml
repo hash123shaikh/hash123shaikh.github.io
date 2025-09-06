@@ -1,18 +1,111 @@
+# Site Settings
+locale: "en-US"
+title: "Hasan Shaikh"
+title_separator: "—"
+subtitle: "Researcher in AI for Cancer Imaging"
+name: "Hasan Shaikh"
+description: "Clinical Data Scientist at QIRAIL, CMC Vellore. Working on AI for cancer imaging, radiomics, and machine learning for head & neck cancer."
+url: "https://hash123shaikh.github.io" # Replace with your actual URL
+baseurl: "" # Leave empty for user GitHub Pages sites
+repository: "hash123shaikh/hash123shaikh.github.io" # Replace with your actual repo
+
+# Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: Asia/Kolkata # Your timezone
+
+# Plugins (previously gems:)
 plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
-  - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
   - jekyll-redirect-from
   - jemoji
 
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-redirect-from
+  - jemoji
 
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Site Author
+author:
+  name: "Hasan Shaikh"
+  avatar: "/assets/images/hasan_profile.jpg" # Add your photo here if you have one
+  bio: "Clinical Data Scientist at QIRAIL, CMC Vellore. AI researcher in cancer imaging."
+  location: "Vellore, Tamil Nadu, India"
+  email: "hasanshaikh3198@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:hasanshaikh3198@gmail.com"
+    - label: "Work Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:hasan.shaikh.inst@cmcvellore.ac.in"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hasann-shaikh/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hash123shaikh"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=9jjwZ8cAAAAJ"
+
+# Site Footer
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hasann-shaikh/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hash123shaikh"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=9jjwZ8cAAAAJ"
+
+# Collections
 collections:
   pages:
     output: true
@@ -24,12 +117,78 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-
-paginate: 5
-paginate_path: "/page:num/"
-
-
-# publish only what we need
+# Reading Files
 include:
+  - .htaccess
+  - _pages
   - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
