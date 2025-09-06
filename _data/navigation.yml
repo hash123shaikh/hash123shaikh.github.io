@@ -9,6 +9,6 @@ main:
   - title: "Publications"
     url: /publications/
   - title: "CV"
-    url: /files/CV_Hasan_Shaikh.pdf  # Direct PDF link
+    url: /cv/  # Direct PDF link
   - title: "Contact"
     url: /contact/
