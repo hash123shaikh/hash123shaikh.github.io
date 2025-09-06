@@ -2,20 +2,22 @@
 layout: single
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
-classes: wide
+author_profile: false
 ---
 
-**Last Updated:** September 2025
+<script>
+// Automatically open PDF in new tab when page loads
+window.onload = function() {
+  window.open('/files/CV_Hasan_Shaikh.pdf', '_blank');
+  // Optional: redirect current tab back to home or close it
+  // window.location.href = '/';
+};
+</script>
 
-[View CV (Full Screen)](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--primary .btn--large target="_blank"}
-[Download CV (PDF)](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--success .btn--large download}
-
----
-
-<iframe src="/files/CV_Hasan_Shaikh.pdf" width="100%" height="800px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
-
-<div style="text-align: center; margin-top: 1rem;">
-  <a href="/files/CV_Hasan_Shaikh.pdf" target="_blank" class="btn btn--primary">Open in New Tab</a>
-  <a href="/files/CV_Hasan_Shaikh.pdf" download class="btn btn--success">Download PDF</a>
+<div style="text-align: center; padding: 2rem;">
+  <h2>Opening CV in new tab...</h2>
+  <p>Your CV is opening in a new tab. If it doesn't open automatically:</p>
+  <a href="/files/CV_Hasan_Shaikh.pdf" target="_blank" class="btn btn--primary btn--large">Click here to open CV</a>
+  <br><br>
+  <a href="/" class="btn btn--secondary">Return to Home</a>
 </div>
