@@ -241,12 +241,3 @@ var circle = L.circle([12.9249, 79.1382], {
 }).addTo(map);
 </script>
 
----
-
-**For collaboration/mentoring requests, please include a 1-2 paragraph summary and any deadlines.**
-
-**Email:** [hasanshaikh3198@gmail.com](mailto:hasanshaikh3198@gmail.com)  
-**Work Email:** [hasan.shaikh.inst@cmcvellore.ac.in](mailto:hasan.shaikh.inst@cmcvellore.ac.in)  
-**LinkedIn:** [https://www.linkedin.com/in/hasann-shaikh/](https://www.linkedin.com/in/hasann-shaikh/)  
-**GitHub:** [https://github.com/hash123shaikh](https://github.com/hash123shaikh)  
-**Google Scholar:** [https://scholar.google.com/citations?user=9jjwZ8cAAAAJ](https://scholar.google.com/citations?user=9jjwZ8cAAAAJ)
