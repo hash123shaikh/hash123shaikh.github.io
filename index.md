@@ -10,7 +10,6 @@ classes: wide
 
 I'm **Hasan Shaikh**, a Clinical Data Scientist at the **Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)**, **Christian Medical College (CMC) Vellore**, India. I work at the intersection of **cancer imaging**, **radiomics**, and **machine learning**, with a focus on **head & neck cancer**. I build end-to-end pipelines—from **DICOM data curation** and **segmentation** to **risk modeling** and **clinician-facing dashboards**—aimed at delivering trustworthy, explainable tools for patient care.
 
-See also: [Projects](/portfolio/){: .btn .btn--primary} [Publications](/publications/){: .btn .btn--info} [CV](/cv/){: .btn .btn--success}
 
 ## Research Interests
 
@@ -32,8 +31,3 @@ See also: [Projects](/portfolio/){: .btn .btn--primary} [Publications](/publicat
 **B.Tech., Computer Science & Engineering**  
 *Dr. A.P.J. Abdul Kalam Technical University (AKTU) · Lucknow, India*  
 *Aug 2017 – Jul 2021 · CGPA 8.04 / 10*
-
-
-
-
-</div>
