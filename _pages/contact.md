@@ -12,15 +12,13 @@ share: false
 ---
 
 <style>
-/* Hide any blog-style bits if the theme injects them */
+/* Hide blog-like inserts if any */
 .page__related, .post-navigation, .page-navigation, .pagination, .page__meta { display:none !important; }
 
-/* Trim bottom white space that Minimal Mistakes adds */
-.page__content { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-.page { padding-bottom: 0 !important; }
-.page__footer { margin-top: 0 !important; }
+/* Remove that FOLLOW footer row on this page */
+.site-footer, .page__footer, .page__footer-follow { display:none !important; }
 
-/* Background (subtle, professional) */
+/* Background — subtle, professional */
 body{
   background:
     radial-gradient(1200px 600px at -10% -10%, rgba(220,53,69,.06), transparent 60%),
@@ -28,39 +26,33 @@ body{
     linear-gradient(180deg, #fcf7f8 0%, #f8f9fb 100%);
 }
 
-/* --- Centered single-column layout --- */
+/* Centered single-column layout */
 .contact-shell{
-  min-height: 80svh;                     /* centers nicely on laptops */
-  display: grid;
-  place-items: start center;
-  padding: 2rem 1rem 1.5rem;
+  display:grid; place-items:start center;
+  padding: 1.5rem 1rem 1rem;          /* tighter bottom padding */
 }
 .contact-wrap{
-  width: 100%;
-  max-width: 720px;                      /* clean laptop width */
-  margin: 0 auto;
+  width:100%; max-width:720px; margin:0 auto;
 }
+h1{ text-align:center; margin:.25rem 0 1rem; }
 
-/* Cards (glass-lite) */
+/* Cards */
 .contact-card{
-  background: rgba(255,255,255,.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.05);
-  padding: 1.25rem 1.25rem;
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.05);
+  padding:1.25rem 1.25rem;
 }
-.contact-card + .contact-card{ margin-top: 1rem; }
-h1{ text-align:center; margin: .25rem 0 1rem; }
+.contact-card + .contact-card{ margin-top:1rem; }
 
 /* Form */
-.form-group{ margin-bottom: 1rem; }
+.form-group{ margin-bottom:1rem; }
 .form-group label{ display:block; margin:0 0 .4rem; font-weight:600; color:#333; }
 .form-group input, .form-group textarea{
-  width:100%; padding:12px 14px; font-size:15px;
-  border:1px solid #e1e5e9; border-radius:10px; background:#fff;
-  transition: border-color .2s, box-shadow .2s; box-sizing:border-box;
+  width:100%; padding:12px 14px; font-size:15px; background:#fff;
+  border:1px solid #e1e5e9; border-radius:10px; transition:border-color .2s, box-shadow .2s;
+  box-sizing:border-box;
 }
 .form-group textarea{ min-height:150px; resize:vertical; }
 .form-group input:focus, .form-group textarea:focus{
@@ -72,20 +64,30 @@ h1{ text-align:center; margin: .25rem 0 1rem; }
 }
 .btn-send:hover{ filter:brightness(.95); }
 
-/* Map card */
-#map{
-  height: 320px;
-  width: 100%;
-  border-radius: 14px;
-  border:1px solid rgba(0,0,0,.08);
+/* Info list */
+.contact-item{
+  display:flex; align-items:flex-start; gap:.9rem;
+  padding:.9rem 1rem; border-radius:12px; background:#fff;
+  border:1px solid rgba(0,0,0,.06); box-shadow:0 2px 8px rgba(0,0,0,.04);
 }
+.contact-item + .contact-item{ margin-top:.75rem; }
+.contact-item i{ width:26px; text-align:center; font-size:1.15rem; margin-top:.2rem; }
+.contact-item .icon-phone{ color:#28a745; }
+.contact-item .icon-location{ color:#6f42c1; }
+.contact-item .icon-directions{ color:#fd7e14; }
+.contact-item .icon-time{ color:#17a2b8; }
+.contact-item-content h4{ margin:0 0 .2rem; font-size:1rem; }
+.contact-item-content p{ margin:0; color:#5f6b76; }
+
+/* Map */
+#map{ height:320px; width:100%; border-radius:14px; border:1px solid rgba(0,0,0,.08); }
 </style>
 
 <div class="contact-shell">
   <div class="contact-wrap">
     <h1>Contact</h1>
 
-    <!-- Form only (no duplicate emails/links here) -->
+    <!-- Form -->
     <div class="contact-card" data-blobity-hoverable data-blobity-radius="24">
       <h2>Get in Touch</h2>
       <form action="https://formspree.io/f/mdklyaqp" method="POST">
@@ -105,33 +107,83 @@ h1{ text-align:center; margin: .25rem 0 1rem; }
       </form>
     </div>
 
-    <!-- Optional: compact map only (kept for directions) -->
-    <div class="contact-card">
-      <div id="map"></div>
+    <!-- Contact info (no duplicate emails here) -->
+    <div class="contact-card" data-blobity-hoverable>
+      <h2>Contact Information</h2>
+
+      <div class="contact-item">
+        <i class="fas fa-phone icon-phone"></i>
+        <div class="contact-item-content">
+          <h4>Phone</h4>
+          <p><a href="tel:+917906049358">+91 79060 49358</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt icon-location"></i>
+        <div class="contact-item-content">
+          <h4>Address</h4>
+          <p>
+            Quantitative Imaging Research & Artificial Intelligence Lab (QIRAIL)<br>
+            Christian Medical College, Vellore 632004, Tamil Nadu, India
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-route icon-directions"></i>
+        <div class="contact-item-content">
+          <h4>Directions</h4>
+          <p>Main Gate → follow signs for QIRAIL Lab</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-clock icon-time"></i>
+        <div class="contact-item-content">
+          <h4>Office Hours</h4>
+          <p>Weekdays: 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+
+      <div id="map" style="margin-top:.5rem;"></div>
     </div>
   </div>
 </div>
 
-<!-- Leaflet CSS/JS (for the map) -->
+<!-- Leaflet CSS/JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Blobity (cursor blob) -->
-<script src="https://unpkg.com/blobity@1.0.4/dist/blobity.min.js"></script>
+<!-- Blobity (CDN + fallback) -->
+<script src="https://cdn.jsdelivr.net/npm/blobity@1.0.4/lib/blobity.min.js"></script>
 <script>
-/* Init Blobity — subtle professional cursor blob */
 (function(){
-  if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
-  new Blobity({
-    color: '#dc3545',
-    dotColor: 'rgba(0,0,0,0.35)',
-    focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
-    radius: 18,
-    magnetic: true,
-    opacity: 0.18,
-    zIndex: 1000,
-    invert: false,
-  });
+  // Fallback if jsDelivr fails
+  if (!window.Blobity) {
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/blobity@1.0.4/lib/blobity.min.js';
+    document.head.appendChild(s);
+    s.onload = initBlobity;
+  } else {
+    initBlobity();
+  }
+
+  function initBlobity(){
+    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
+    if (!window.Blobity) return;
+
+    new Blobity({
+      color: '#dc3545',
+      dotColor: 'rgba(0,0,0,0.35)',
+      focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
+      radius: 18,
+      magnetic: true,
+      opacity: 0.18,
+      zIndex: 9999,   // ensure above all
+      invert: false,
+    });
+  }
 })();
 </script>
 
