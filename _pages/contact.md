@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Contact"
+title: ""
 permalink: /contact/
 author_profile: false
 classes: wide
@@ -12,106 +12,180 @@ share: false
 ---
 
 <style>
-:root {
-  --card-bg: #fff;
-  --card-border: rgba(0,0,0,.08);
+/* Hide page navigation and unwanted elements */
+.page__related, .post-navigation, .page-navigation, 
+.pagination, .page__meta, .page__footer-follow { 
+  display: none !important; 
 }
 
-/* Page container so the section always fits neatly */
+/* Container adjustments for better fit */
 .contact-wrap {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: .5rem 0 2rem;
+  padding: 0.5rem 1rem;
 }
 
-/* Your original grid, but with overflow-safe tracks */
+/* Responsive grid that fits better */
 .contact-container {
   display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  grid-template-columns: 1.2fr 1fr;
   gap: 2rem;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
 }
-@media (max-width: 980px) { .contact-container { grid-template-columns: 1fr; } }
 
-/* Cards */
+@media (max-width: 1024px) { 
+  .contact-container { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  } 
+}
+
+/* Compact form styling */
 .contact-form {
   background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 2px 10px rgba(0,0,0,.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
-.contact-info { padding: 0; }
 
-/* Inputs */
-.form-group { margin-bottom: 1rem; }
-.form-group label {
-  display:block; margin-bottom:.45rem; font-weight:600; color:#333;
+.contact-form h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
 }
+
+/* More compact form elements */
+.form-group { 
+  margin-bottom: 1rem; 
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 0.4rem; 
+  font-weight: 600; 
+  color: #333;
+  font-size: 0.95rem;
+}
+
 .form-group input, .form-group textarea {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border: 1px solid #e1e5e9;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 15px;
   transition: border-color .2s ease;
   box-sizing: border-box;
   background: #fff;
 }
-.form-group textarea { min-height: 160px; resize: vertical; }
+
+.form-group textarea { 
+  min-height: 100px; 
+  resize: vertical; 
+}
+
 .form-group input:focus, .form-group textarea:focus {
   outline: none;
   border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0,123,255,.12);
+  box-shadow: 0 0 0 2px rgba(0,123,255,.1);
 }
 
-/* Button */
 .btn-send {
-  background: #dc3545; color: white;
-  padding: 12px 24px; border: none; border-radius: 999px;
-  font-size: 16px; font-weight: 700; cursor: pointer;
+  background: #dc3545; 
+  color: white;
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 6px;
+  font-size: 15px; 
+  font-weight: 600; 
+  cursor: pointer;
+  transition: background-color .2s ease;
 }
-.btn-send:hover { background: #c82333; }
 
-/* Info cards */
-.contact-item {
-  display: flex; align-items: flex-start; gap: 1rem;
-  margin: 0; padding: 1rem;
-  background: var(--card-bg);
-  border-radius: 14px;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+.btn-send:hover { 
+  background: #c82333; 
 }
-.contact-item + .contact-item { margin-top: 1rem; }
-.contact-item i { font-size: 1.25rem; width: 28px; text-align: center; margin-top:.2rem; }
+
+/* Compact contact info */
+.contact-info h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact-item {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 0.8rem;
+  margin-bottom: 0.8rem; 
+  padding: 0.8rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+}
+
+.contact-item i { 
+  font-size: 1.1rem; 
+  width: 24px; 
+  text-align: center; 
+  margin-top: 0.1rem; 
+}
+
 .contact-item .icon-phone { color: #28a745; }
 .contact-item .icon-location { color: #6f42c1; }
 .contact-item .icon-directions { color: #fd7e14; }
 .contact-item .icon-time { color: #17a2b8; }
 .contact-item .icon-calendar { color: #dc3545; }
 .contact-item .icon-twitter { color: #1da1f2; }
-.contact-item-content h4 { margin: 0 0 .25rem; font-size: 1.05rem; }
-.contact-item-content p { margin: 0; color: #6c757d; font-size: .97rem; }
-.contact-item a { color: #dc3545; font-weight: 500; text-decoration: none;
-  overflow-wrap:anywhere; word-break: break-word; }
-.contact-item a:hover { text-decoration: underline; }
 
-/* Leaflet map (fixed height works best for Leaflet) */
-#map {
-  height: 360px;
-  width: 100%;
-  border-radius: 14px;
-  margin-top: 1.5rem;
-  border: 1px solid var(--card-border);
+.contact-item-content h4 { 
+  margin: 0 0 0.2rem; 
+  font-size: 1rem; 
+  font-weight: 600;
 }
 
-/* Safety: hide blog-like bits if theme still injects them */
-.page__meta, .page__related, .post-navigation { display:none !important; }
+.contact-item-content p { 
+  margin: 0; 
+  color: #6c757d; 
+  font-size: 0.9rem; 
+  line-height: 1.4;
+}
+
+.contact-item a { 
+  color: #dc3545; 
+  font-weight: 500; 
+  text-decoration: none;
+}
+
+.contact-item a:hover { 
+  text-decoration: underline; 
+}
+
+/* Responsive map */
+#map {
+  height: 280px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+@media (max-width: 768px) {
+  .contact-wrap { padding: 0.5rem; }
+  .contact-form, .contact-info { padding: 1rem; }
+  #map { height: 250px; margin-top: 1rem; }
+  .contact-container { gap: 1rem; }
+}
+
+/* Ensure full width usage */
+.page__content {
+  max-width: none !important;
+}
 </style>
 
 <div class="contact-wrap">
-
-  <h1>Contact</h1>
+  <h1 style="text-align: center; margin-bottom: 1.5rem; color: #333;">Contact</h1>
 
   <div class="contact-container">
     <div class="contact-form">
@@ -132,7 +206,7 @@ share: false
           <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
         </div>
 
-        <button type="submit" class="btn-send">Send</button>
+        <button type="submit" class="btn-send">Send Message</button>
       </form>
     </div>
 
@@ -151,9 +225,7 @@ share: false
         <i class="fas fa-map-marker-alt icon-location"></i>
         <div class="contact-item-content">
           <h4>Address</h4>
-          <p>Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)<br>
-          Christian Medical College, Vellore 632004<br>
-          Tamil Nadu, India</p>
+          <p>QIRAIL Lab, Christian Medical College<br>Vellore 632004, Tamil Nadu, India</p>
         </div>
       </div>
 
@@ -161,7 +233,7 @@ share: false
         <i class="fas fa-route icon-directions"></i>
         <div class="contact-item-content">
           <h4>Directions</h4>
-          <p>Enter through Main Gate and follow signs to QIRAIL Lab</p>
+          <p>Main Gate → Follow QIRAIL Lab signs</p>
         </div>
       </div>
 
@@ -169,29 +241,21 @@ share: false
         <i class="fas fa-clock icon-time"></i>
         <div class="contact-item-content">
           <h4>Office Hours</h4>
-          <p>Weekdays from 9:00 am to 5:00 pm</p>
+          <p>Weekdays: 9:00 AM - 5:00 PM</p>
         </div>
       </div>
 
       <div class="contact-item">
         <i class="fas fa-calendar icon-calendar"></i>
         <div class="contact-item-content">
-          <h4>Meetings</h4>
-          <p><a href="mailto:hasanshaikh3198@gmail.com?subject=Meeting Request">Book an appointment</a></p>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-twitter icon-twitter"></i>
-        <div class="contact-item-content">
-          <h4>Social Media</h4>
-          <p><a href="https://www.linkedin.com/in/hasann-shaikh/" target="_blank">Connect on LinkedIn</a></p>
+          <h4>Appointments</h4>
+          <p><a href="mailto:hasanshaikh3198@gmail.com?subject=Meeting Request">Schedule Meeting</a></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Map -->
+  <!-- Compact Map -->
   <div id="map"></div>
 </div>
 
@@ -200,24 +264,23 @@ share: false
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-// Initialize the map
-var map = L.map('map').setView([12.9249, 79.1382], 15); // CMC Vellore
+// Initialize map
+var map = L.map('map').setView([12.9249, 79.1382], 15);
 
-// Tiles
+// Add tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// Marker + popup
+// Add marker
 var marker = L.marker([12.9249, 79.1382]).addTo(map);
-marker.bindPopup('<b>Christian Medical College, Vellore</b><br>QIRAIL Lab<br>Vellore, Tamil Nadu 632004').openPopup();
+marker.bindPopup('<b>Christian Medical College</b><br>QIRAIL Lab<br>Vellore, Tamil Nadu').openPopup();
 
-// Area circle
+// Add area circle
 L.circle([12.9249, 79.1382], {
-  color: 'red',
-  fillColor: '#f03',
+  color: '#dc3545',
+  fillColor: '#dc3545',
   fillOpacity: 0.1,
-  radius: 500
+  radius: 300
 }).addTo(map);
 </script>
-
