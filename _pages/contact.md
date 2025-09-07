@@ -137,6 +137,19 @@ h1 {
 }
 #map:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
 
+/* Visitor Map sizing & styling */
+.clustrmaps-embed { position: relative; width: 100%; }
+.clustrmaps-embed::before { content: ""; display: block; padding-top: 56.25%; } /* 16:9 */
+.clustrmaps-container iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
 /* Motion accessibility */
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
@@ -220,7 +233,9 @@ h1 {
       <!-- Full-row: Visitor Map -->
       <div class="contact-card clustrmaps-container">
         <h2>Visitor Map</h2>
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AmqL4hhrl_2HnAUjIPqeXXIoXhOre-e2zwJSQYLuIW0&cl=ffffff&w=a"></script>
+        <div class="clustrmaps-embed">
+          <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AmqL4hhrl_2HnAUjIPqeXXIoXhOre-e2zwJSQYLuIW0&cl=ffffff&w=a"></script>
+        </div>
       </div>
     </div>
   </div>
