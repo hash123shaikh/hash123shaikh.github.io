@@ -15,6 +15,15 @@ share: false
 <div id="vanta-bg" aria-hidden="true"></div>
 
 <style>
+/* ========= Quick knobs (edit these values) ========= */
+:root{
+  --container-max: 1100px;   /* page content max width */
+  --grid-gap: 1.75rem;       /* space between cards */
+  --body-size: 16px;         /* base text size */
+  --h1-size: 2.6rem;         /* page title size */
+  --h2-size: 1.35rem;        /* card section titles */
+}
+
 /* Hide unwanted Minimal Mistakes bits on this page */
 .page__related, .post-navigation, .page-navigation, .pagination, .page__meta,
 footer.site-footer, .page__footer, .page__footer-follow { display: none !important; }
@@ -29,14 +38,34 @@ body.vanta-fallback {
               #240101;
 }
 
+/* Base text scale */
+html { font-size: var(--body-size); }
+
 /* Page layout */
-.contact-shell { padding: 2rem 1rem 1.5rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-.contact-wrap { width: 100%; max-width: 1100px; margin: 0 auto; }
-h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; color: #f8f9fa; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
+.contact-shell {
+  padding: 2rem 1rem 1.5rem;
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.contact-wrap { width: 100%; max-width: var(--container-max); margin: 0 auto; }
+h1 {
+  text-align: center; margin: 0 0 2rem;
+  font-size: var(--h1-size); font-weight: 800; color: #f8f9fa;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
 
 /* Grid */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-@media (max-width: 900px){ .contact-grid { grid-template-columns: 1fr; } }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+}
+@media (max-width: 900px){
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Make these cards span a full row each */
+.map-container, .clustrmaps-container { grid-column: 1 / -1; }
 
 /* Cards */
 .contact-card {
@@ -56,13 +85,17 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 }
 .contact-card:hover { transform: translateY(-4px); box-shadow: 0 18px 56px rgba(0,0,0,0.22); }
 .contact-card:hover::before { left: 100%; }
-.contact-card h2 { margin: 0 0 1.1rem; font-size: 1.0rem; color: #222; font-weight: 800; }
+.contact-card h2 {
+  margin: 0 0 1.1rem;
+  font-size: var(--h2-size);
+  color: #222; font-weight: 800;
+}
 
 /* Form */
 .form-group { margin-bottom: 1.1rem; }
 .form-group label { display:block; margin:0 0 .45rem; font-weight:700; color:#222; }
 .form-group input, .form-group textarea {
-  width:100%; padding:12px 16px; font-size:18px; background: rgba(255,255,255,0.96);
+  width:100%; padding:12px 16px; font-size:15px; background: rgba(255,255,255,0.96);
   border:2px solid rgba(63,166,255,0.25); border-radius:12px; transition: all .25s ease; box-sizing: border-box;
 }
 .form-group textarea { min-height: 120px; resize: vertical; }
@@ -89,14 +122,19 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 .contact-item .icon-location { color:#6f42c1; }
 .contact-item .icon-directions { color:#fd7e14; }
 .contact-item .icon-time { color:#17a2b8; }
-.contact-item-content h4 { margin:0 0 .25rem; font-size:1.15rem; font-weight:800; }
+.contact-item-content h4 { margin:0 0 .25rem; font-size:1.05rem; font-weight:800; }
 .contact-item-content p { margin:0; color:#5f6770; line-height:1.55; }
 .contact-item a { color:#1e73c9; text-decoration:none; font-weight:700; }
 .contact-item a:hover { text-decoration: underline; }
 
 /* Map block */
 .map-container .map-title { margin: 0 0 .5rem; font-weight: 900; }
-#map { height:300px; width:100%; border-radius:16px; border:1px solid rgba(63,166,255,0.2); transition: box-shadow .25s ease; }
+#map {
+  height: 340px;           /* slightly taller for prominence */
+  width: 100%;
+  border-radius:16px; border:1px solid rgba(63,166,255,0.2);
+  transition: box-shadow .25s ease;
+}
 #map:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
 
 /* Motion accessibility */
@@ -141,7 +179,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
           <i class="fas fa-phone icon-phone"></i>
           <div class="contact-item-content">
             <h4>Phone</h4>
-            <p><a href="tel:+91-7906049358">+91-79060 49358</a></p>
+            <p><a href="tel:+917906049358">+91 79060 49358</a></p>
           </div>
         </div>
 
@@ -173,13 +211,13 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
         </div>
       </div>
 
-      <!-- Bottom Left: Map -->
+      <!-- Full-row: Map -->
       <div class="contact-card map-container">
         <h2 class="map-title">Location</h2>
         <div id="map"></div>
       </div>
 
-      <!-- Bottom Right: Visitor Map -->
+      <!-- Full-row: Visitor Map -->
       <div class="contact-card clustrmaps-container">
         <h2>Visitor Map</h2>
         <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AmqL4hhrl_2HnAUjIPqeXXIoXhOre-e2zwJSQYLuIW0&cl=ffffff&w=a"></script>
