@@ -31,7 +31,7 @@ body.vanta-fallback {
 
 /* Page layout */
 .contact-shell { padding: 2rem 1rem 1.5rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-.contact-wrap { width: 100%; max-width: 980px; margin: 0 auto; }
+.contact-wrap { width: 100%; max-width: 1100px; margin: 0 auto; }
 h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; color: #f8f9fa; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
 
 /* Grid */
@@ -45,7 +45,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-  padding: 2rem;
+  padding: 2.25rem;
   transition: transform .35s ease, box-shadow .35s ease;
   position: relative; overflow: hidden;
 }
@@ -56,7 +56,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 }
 .contact-card:hover { transform: translateY(-4px); box-shadow: 0 18px 56px rgba(0,0,0,0.22); }
 .contact-card:hover::before { left: 100%; }
-.contact-card h2 { margin: 0 0 1.1rem; font-size: 1.5rem; color: #222; font-weight: 800; }
+.contact-card h2 { margin: 0 0 1.1rem; font-size: 1.0rem; color: #222; font-weight: 800; }
 
 /* Form */
 .form-group { margin-bottom: 1.1rem; }
@@ -84,7 +84,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
   box-shadow: 0 6px 22px rgba(0,0,0,0.08); margin-bottom:1rem; transition: transform .25s ease, background .25s ease;
 }
 .contact-item:hover { transform: translateX(8px); background: rgba(255,255,255,0.97); }
-.contact-item i { width:28px; text-align:center; font-size:1.2rem; margin-top:.2rem; }
+.contact-item i { width:28px; text-align:center; font-size:1.5rem; margin-top:.2rem; }
 .contact-item .icon-phone { color:#28a745; }
 .contact-item .icon-location { color:#6f42c1; }
 .contact-item .icon-directions { color:#fd7e14; }
