@@ -152,7 +152,7 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
   if (!window.Blobity) return;
 
   new Blobity({
-    licenseKey: 'opensource',            // or your GitHub username to silence warnings
+    licenseKey: 'hash123shaikh',            // or your GitHub username to silence warnings
     color: '#dc3545',
     dotColor: 'rgba(0,0,0,0.35)',
     focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
