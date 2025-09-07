@@ -62,7 +62,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 .form-group { margin-bottom: 1.1rem; }
 .form-group label { display:block; margin:0 0 .45rem; font-weight:700; color:#222; }
 .form-group input, .form-group textarea {
-  width:100%; padding:12px 16px; font-size:15px; background: rgba(255,255,255,0.96);
+  width:100%; padding:12px 16px; font-size:12px; background: rgba(255,255,255,0.96);
   border:2px solid rgba(63,166,255,0.25); border-radius:12px; transition: all .25s ease; box-sizing: border-box;
 }
 .form-group textarea { min-height: 120px; resize: vertical; }
