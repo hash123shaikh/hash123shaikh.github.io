@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Contact"
+title: ""
 permalink: /contact/
 author_profile: false
 classes: wide
@@ -12,13 +12,12 @@ share: false
 ---
 
 <style>
-/* Hide blog-like inserts if any */
+/* Hide blog-like inserts */
 .page__related, .post-navigation, .page-navigation, .pagination, .page__meta { display:none !important; }
+/* Remove the FOLLOW footer just on this page */
+footer.site-footer, .page__footer, .page__footer-follow { display:none !important; height:0 !important; overflow:hidden !important; }
 
-/* Remove that FOLLOW footer row on this page */
-.site-footer, .page__footer, .page__footer-follow { display:none !important; }
-
-/* Background — subtle, professional */
+/* Background */
 body{
   background:
     radial-gradient(1200px 600px at -10% -10%, rgba(220,53,69,.06), transparent 60%),
@@ -26,14 +25,9 @@ body{
     linear-gradient(180deg, #fcf7f8 0%, #f8f9fb 100%);
 }
 
-/* Centered single-column layout */
-.contact-shell{
-  display:grid; place-items:start center;
-  padding: 1.5rem 1rem 1rem;          /* tighter bottom padding */
-}
-.contact-wrap{
-  width:100%; max-width:720px; margin:0 auto;
-}
+/* Centered single column */
+.contact-shell{ display:grid; place-items:start center; padding:1.5rem 1rem 1rem; }
+.contact-wrap{ width:100%; max-width:720px; margin:0 auto; }
 h1{ text-align:center; margin:.25rem 0 1rem; }
 
 /* Cards */
@@ -51,17 +45,11 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
 .form-group label{ display:block; margin:0 0 .4rem; font-weight:600; color:#333; }
 .form-group input, .form-group textarea{
   width:100%; padding:12px 14px; font-size:15px; background:#fff;
-  border:1px solid #e1e5e9; border-radius:10px; transition:border-color .2s, box-shadow .2s;
-  box-sizing:border-box;
+  border:1px solid #e1e5e9; border-radius:10px; transition:border-color .2s, box-shadow .2s; box-sizing:border-box;
 }
 .form-group textarea{ min-height:150px; resize:vertical; }
-.form-group input:focus, .form-group textarea:focus{
-  outline:0; border-color:#0d6efd; box-shadow:0 0 0 3px rgba(13,110,253,.12);
-}
-.btn-send{
-  background:#dc3545; color:#fff; border:0; cursor:pointer;
-  padding:12px 22px; border-radius:999px; font-weight:700;
-}
+.form-group input:focus, .form-group textarea:focus{ outline:0; border-color:#0d6efd; box-shadow:0 0 0 3px rgba(13,110,253,.12); }
+.btn-send{ background:#dc3545; color:#fff; border:0; cursor:pointer; padding:12px 22px; border-radius:999px; font-weight:700; }
 .btn-send:hover{ filter:brightness(.95); }
 
 /* Info list */
@@ -107,7 +95,7 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
       </form>
     </div>
 
-    <!-- Contact info (no duplicate emails here) -->
+    <!-- Contact info (no duplicate emails) -->
     <div class="contact-card" data-blobity-hoverable>
       <h2>Contact Information</h2>
 
@@ -155,35 +143,24 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Blobity (CDN + fallback) -->
-<script src="https://cdn.jsdelivr.net/npm/blobity@1.0.4/lib/blobity.min.js"></script>
+<!-- Blobity: official CDN with open-source key -->
+<script src="https://cdn.blobity.dev/by.js"></script>
 <script>
 (function(){
-  // Fallback if jsDelivr fails
-  if (!window.Blobity) {
-    var s = document.createElement('script');
-    s.src = 'https://unpkg.com/blobity@1.0.4/lib/blobity.min.js';
-    document.head.appendChild(s);
-    s.onload = initBlobity;
-  } else {
-    initBlobity();
-  }
+  // skip on touch devices
+  if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+  if (!window.Blobity) return;
 
-  function initBlobity(){
-    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
-    if (!window.Blobity) return;
-
-    new Blobity({
-      color: '#dc3545',
-      dotColor: 'rgba(0,0,0,0.35)',
-      focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
-      radius: 18,
-      magnetic: true,
-      opacity: 0.18,
-      zIndex: 9999,   // ensure above all
-      invert: false,
-    });
-  }
+  new Blobity({
+    licenseKey: 'opensource',            // or your GitHub username to silence warnings
+    color: '#dc3545',
+    dotColor: 'rgba(0,0,0,0.35)',
+    focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
+    radius: 18,
+    magnetic: true,
+    opacity: 0.18,
+    zIndex: 9999
+  });
 })();
 </script>
 
