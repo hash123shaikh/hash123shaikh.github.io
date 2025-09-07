@@ -27,8 +27,6 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: Asia/Kolkata # Your timezone
 
 # Plugins (previously gems:)
@@ -72,7 +70,7 @@ compress_html:
 author:
   name: "Hasan Shaikh"
   avatar: "/assets/images/bio_photo.jpg" # Add your photo here if you have one
-  bio: "Clinical Data Scientist at QIRAIL, CMC Vellore. AI researcher in cancer imaging."
+  bio: "Clinical Data Scientist at QIRAIL, CMC Vellore. Researcher in AI for cancer imaging, radiomics, and machine learning."
   location: "Vellore, Tamil Nadu, India"
   email: "hasanshaikh3198@gmail.com"
   links:
