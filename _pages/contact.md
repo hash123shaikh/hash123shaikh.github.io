@@ -11,6 +11,9 @@ related: false
 share: false
 ---
 
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-1P8eJcT1rGvJ8oRrO5o4w7y5f8nWm7hHqA0H2q4xw8+8C5nXx8s7nKQ7q8xNvB4J4Ew0m3C1kYwOq9qYb3w6AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
 /* Hide blog-like inserts */
 .page__related, .post-navigation, .page-navigation, .pagination, .page__meta { display:none !important; }
@@ -95,7 +98,7 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
       </form>
     </div>
 
-    <!-- Contact info (no duplicate emails) -->
+    <!-- Contact info -->
     <div class="contact-card" data-blobity-hoverable>
       <h2>Contact Information</h2>
 
@@ -140,19 +143,30 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
 </div>
 
 <!-- Leaflet CSS/JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Blobity: official CDN with open-source key -->
+<!-- Blobity CDN -->
 <script src="https://cdn.blobity.dev/by.js"></script>
+
 <script>
-(function(){
-  // skip on touch devices
+/* Initialize everything after the page fully loads (avoids timing issues on GH Pages) */
+window.addEventListener('load', function () {
+  // Leaflet map
+  var map = L.map('map').setView([12.9249, 79.1382], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([12.9249, 79.1382]).addTo(map);
+  marker.bindPopup('<b>Christian Medical College</b><br>QIRAIL Lab<br>Vellore, Tamil Nadu').openPopup();
+  L.circle([12.9249, 79.1382], { color:'#dc3545', fillColor:'#dc3545', fillOpacity:0.10, radius:300 }).addTo(map);
+
+  // Blobity (skip on touch devices)
   if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
-  if (!window.Blobity) return;
+  if (!window.Blobity) return; // CDN failed
 
   new Blobity({
-    licenseKey: 'hash123shaikh',            // or your GitHub username to silence warnings
+    licenseKey: 'opensource', // OSS usage
     color: '#dc3545',
     dotColor: 'rgba(0,0,0,0.35)',
     focusableElements: '[data-blobity],[data-blobity-hoverable],[data-blobity-input],a,button',
@@ -161,16 +175,5 @@ h1{ text-align:center; margin:.25rem 0 1rem; }
     opacity: 0.18,
     zIndex: 9999
   });
-})();
-</script>
-
-<script>
-/* Leaflet map */
-var map = L.map('map').setView([12.9249, 79.1382], 15);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-var marker = L.marker([12.9249, 79.1382]).addTo(map);
-marker.bindPopup('<b>Christian Medical College</b><br>QIRAIL Lab<br>Vellore, Tamil Nadu').openPopup();
-L.circle([12.9249, 79.1382], { color:'#dc3545', fillColor:'#dc3545', fillOpacity:0.10, radius:300 }).addTo(map);
+});
 </script>
