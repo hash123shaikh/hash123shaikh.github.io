@@ -11,47 +11,51 @@ related: false
 share: false
 ---
 
-<!-- Background canvas (required for the animation) -->
-<canvas id="network-canvas" aria-hidden="true"></canvas>
+<!-- Liquid / Metaball Background -->
+<canvas id="liquid-canvas" aria-hidden="true"></canvas>
 
 <style>
-/* remove blog-style bits if theme injects them */
+/* Hide any blog-style bits if the theme injects them */
 .page__related, .post-navigation, .page-navigation, .pagination, .page__meta { display:none !important; }
 
-/* -------------- Background + stacking -------------- */
+/* --------- Background + stacking --------- */
 :root{
-  --accent:#dc3545;              /* “medical red” */
+  --accent:#dc3545;                 /* medical red */
+  --accent2:#6f42c1;                /* violet */
   --glass-bg: rgba(255,255,255,.68);
   --glass-brd: rgba(255,255,255,.35);
 }
 body{
-  /* subtle gradient so it’s not plain */
+  /* soft gradient so the page isn't plain */
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(220,53,69,.10), transparent 60%),
-    radial-gradient(1000px 600px at 120% 10%, rgba(13,110,253,.10), transparent 60%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(220,53,69,.08), transparent 60%),
+    radial-gradient(1000px 600px at 120% 10%, rgba(111,66,193,.08), transparent 60%),
     linear-gradient(180deg, #fcf5f6 0%, #f9f7fb 100%);
 }
-#network-canvas{
+#liquid-canvas{
   position: fixed; inset: 0;
   width: 100vw; height: 100vh;
-  z-index: 0; display:block;
-  pointer-events:none;           /* don’t block clicks */
+  z-index: 0;
+  display:block;
+  pointer-events:none;
+  /* gooey look */
+  filter: blur(16px) contrast(1.25) saturate(1.15) brightness(1.03);
 }
-.contact-layer{ position: relative; z-index: 1; } /* content sits above canvas */
+.contact-layer{ position: relative; z-index: 1; } /* content above canvas */
 
-/* -------------- Page layout (single column) -------------- */
+/* --------- Single-column layout --------- */
 .contact-wrap{
-  max-width: 720px;              /* good laptop width */
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0.75rem 1rem 2rem;
+  padding: .75rem 1rem 2rem;
 }
 .contact-container{
   display: grid;
-  grid-template-columns: 1fr;    /* ALWAYS 1 column (desktop + mobile) */
+  grid-template-columns: 1fr;   /* always one column on laptop/desktop */
   gap: 1rem;
 }
 
-/* -------------- Cards -------------- */
+/* --------- Cards --------- */
 .contact-card{
   background: var(--glass-bg);
   backdrop-filter: blur(8px);
@@ -61,18 +65,17 @@ body{
   box-shadow: 0 6px 18px rgba(0,0,0,.05);
   padding: 1.25rem 1.25rem;
 }
-.contact-card h2{ margin: 0 0 0.75rem; }
+.contact-card h2{ margin: 0 0 .75rem; }
 
-/* -------------- Form -------------- */
+/* --------- Form --------- */
 .form-group{ margin-bottom: 1rem; }
 .form-group label{ display:block; margin:0 0 .4rem; font-weight:600; color:#333; }
 .form-group input, .form-group textarea{
   width:100%; padding:12px 14px; font-size:15px;
   border:1px solid #e1e5e9; border-radius:10px; background:#fff;
-  transition: border-color .2s, box-shadow .2s;
-  box-sizing:border-box;
+  transition:border-color .2s, box-shadow .2s; box-sizing:border-box;
 }
-.form-group textarea{ min-height: 150px; resize: vertical; }
+.form-group textarea{ min-height:150px; resize:vertical; }
 .form-group input:focus, .form-group textarea:focus{
   outline:0; border-color:#0d6efd; box-shadow:0 0 0 3px rgba(13,110,253,.12);
 }
@@ -80,14 +83,14 @@ body{
   background: var(--accent); color:#fff; border:0; cursor:pointer;
   padding:12px 22px; border-radius:999px; font-weight:700;
 }
-.btn-send:hover{ filter: brightness(.95); }
+.btn-send:hover{ filter:brightness(.95); }
 
-/* -------------- Info list -------------- */
+/* --------- Info list --------- */
 .contact-item{
   display:flex; align-items:flex-start; gap:.9rem;
-  padding: .9rem 1rem; border-radius:12px;
+  padding:.9rem 1rem; border-radius:12px;
   background:#fff; border:1px solid rgba(0,0,0,.06);
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
 }
 .contact-item + .contact-item{ margin-top:.75rem; }
 .contact-item i{ width:26px; text-align:center; font-size:1.15rem; margin-top:.2rem; }
@@ -99,7 +102,7 @@ body{
 .contact-item-content h4{ margin:0 0 .2rem; font-size:1rem; }
 .contact-item-content p{ margin:0; color:#5f6b76; }
 
-/* -------------- Map -------------- */
+/* --------- Map --------- */
 #map{
   height: 350px;
   width: 100%;
@@ -108,8 +111,8 @@ body{
   border:1px solid rgba(0,0,0,.08);
 }
 
-/* spacing tweaks */
-.masthead { margin-bottom: .5rem; }
+/* small spacing tweak */
+.masthead{ margin-bottom:.5rem; }
 </style>
 
 <div class="contact-layer">
@@ -193,71 +196,75 @@ body{
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-/* ---------- Animated network background ---------- */
+/* ========== Liquid / Metaball animation (Canvas 2D) ========== */
 (function(){
   const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const canvas = document.getElementById('network-canvas');
+  const canvas = document.getElementById('liquid-canvas');
   if (!canvas || reduce) return;
 
   const ctx = canvas.getContext('2d');
-  const DPR = Math.min(window.devicePixelRatio || 1, 2);
-  let W, H, particles;
+  let W, H, DPR;
+  let blobs = [];
 
   function resize(){
-    W = canvas.width = Math.floor(window.innerWidth * DPR);
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = canvas.width  = Math.floor(window.innerWidth  * DPR);
     H = canvas.height = Math.floor(window.innerHeight * DPR);
     canvas.style.width = '100vw';
     canvas.style.height = '100vh';
-    particles = particles || [];
-    if (particles.length === 0) init();
+
+    // Rebuild blob set based on area (keeps perf reasonable)
+    const target = Math.max(10, Math.min(18, Math.round((W*H)/(110000*DPR))));
+    blobs = Array.from({length: target}, () => makeBlob());
   }
 
-  function init(){
-    const count = Math.round((W*H) / (14000 * DPR)); // density scales with screen
-    particles = Array.from({length: count}, () => ({
-      x: Math.random() * W,
-      y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.35 * DPR,
-      vy: (Math.random() - 0.5) * 0.35 * DPR,
-      r: 1 + Math.random() * 2 * DPR
-    }));
+  function makeBlob(){
+    // radius scales with viewport; velocity gentle for calm motion
+    const r = (Math.random()*60 + 60) * DPR;
+    const speed = (Math.random()*0.25 + 0.08) * DPR;
+    const angle = Math.random()*Math.PI*2;
+    // alternate colors for depth
+    const hue = Math.random() < 0.5 ? 'rgba(220,53,69,' : 'rgba(111,66,193,';
+    return {
+      x: Math.random()*W, y: Math.random()*H,
+      vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed,
+      r, hue
+    };
   }
 
-  function step(){
+  function draw(){
     ctx.clearRect(0,0,W,H);
 
-    // lines
-    for (let i=0;i<particles.length;i++){
-      for (let j=i+1;j<particles.length;j++){
-        const a = particles[i], b = particles[j];
-        const dx = a.x - b.x, dy = a.y - b.y;
-        const d2 = dx*dx + dy*dy;
-        const max = 120 * DPR, max2 = max*max;
-        if (d2 < max2){
-          ctx.strokeStyle = `rgba(220,53,69,${0.22*(1 - d2/max2)})`;
-          ctx.lineWidth = 0.6 * DPR;
-          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-        }
-      }
+    // Additive blending gives the gooey merge
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (const b of blobs){
+      // radial falloff for soft edges
+      const g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+      g.addColorStop(0.0, `${b.hue}0.85)`);
+      g.addColorStop(0.5, `${b.hue}0.35)`);
+      g.addColorStop(1.0, `${b.hue}0.00)`);
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+      ctx.fill();
+
+      // movement + bounce
+      b.x += b.vx; b.y += b.vy;
+      if (b.x < -b.r) { b.x = -b.r; b.vx *= -1; }
+      if (b.x > W+b.r){ b.x = W+b.r; b.vx *= -1; }
+      if (b.y < -b.r) { b.y = -b.r; b.vy *= -1; }
+      if (b.y > H+b.r){ b.y = H+b.r; b.vy *= -1; }
     }
 
-    // particles
-    ctx.fillStyle = 'rgba(220,53,69,0.7)';
-    for (const p of particles){
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
-    }
-
-    requestAnimationFrame(step);
+    requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', resize);
-  resize(); step();
+  resize(); draw();
 })();
 
-/* ---------- Leaflet map ---------- */
+/* ========== Leaflet map ========== */
 var map = L.map('map').setView([12.9249, 79.1382], 15);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
