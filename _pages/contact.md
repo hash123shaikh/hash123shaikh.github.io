@@ -137,17 +137,23 @@ h1 {
 }
 #map:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
 
-/* Visitor Map sizing & styling */
-.clustrmaps-embed { position: relative; width: 100%; }
-.clustrmaps-embed::before { content: ""; display: block; padding-top: 56.25%; } /* 16:9 */
-.clustrmaps-container iframe {
+/* Visitor Map sizing & styling — FIX */
+.clustrmaps-embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;     /* responsive height */
+  min-height: 260px;        /* graceful minimum */
+  border-radius: 12px;
+  overflow: hidden;         /* round corners apply to content */
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+/* Whatever ClustrMaps injects (iframe/div/img), make it fill the wrapper */
+.clustrmaps-embed > :not(script){
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   border: 0 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,.06);
 }
 
 /* Motion accessibility */
