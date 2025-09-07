@@ -278,66 +278,75 @@ h1 {
   <div class="contact-wrap">
     <h1>Contact</h1>
 
-    <!-- Contact Form -->
-    <div class="contact-card">
-      <h2>Get in Touch</h2>
-      <form action="https://formspree.io/f/mdklyaqp" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@institution.edu" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
-        </div>
-        <button class="btn-send" type="submit">Send Message</button>
-      </form>
-    </div>
+    <div class="contact-grid">
+      <!-- Top Left: Contact Form -->
+      <div class="contact-card contact-form">
+        <h2>Get in Touch</h2>
+        <form action="https://formspree.io/f/mdklyaqp" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@institution.edu" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
+          </div>
+          <button class="btn-send" type="submit">Send Message</button>
+        </form>
+      </div>
 
-    <!-- Contact Information -->
-    <div class="contact-card">
-      <h2>Contact Information</h2>
+      <!-- Top Right: Contact Information -->
+      <div class="contact-card contact-info">
+        <h2>Contact Information</h2>
 
-      <div class="contact-item">
-        <i class="fas fa-phone icon-phone"></i>
-        <div class="contact-item-content">
-          <h4>Phone</h4>
-          <p><a href="tel:+917906049358">+91 79060 49358</a></p>
+        <div class="contact-item">
+          <i class="fas fa-phone icon-phone"></i>
+          <div class="contact-item-content">
+            <h4>Phone</h4>
+            <p><a href="tel:+917906049358">+91 79060 49358</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt icon-location"></i>
+          <div class="contact-item-content">
+            <h4>Address</h4>
+            <p>QIRAIL Lab, Christian Medical College<br>Vellore 632004, Tamil Nadu, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-route icon-directions"></i>
+          <div class="contact-item-content">
+            <h4>Directions</h4>
+            <p>Main Gate → follow signs for QIRAIL Lab</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-clock icon-time"></i>
+          <div class="contact-item-content">
+            <h4>Office Hours</h4>
+            <p>Weekdays: 9:00 AM – 5:00 PM</p>
+          </div>
         </div>
       </div>
 
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt icon-location"></i>
-        <div class="contact-item-content">
-          <h4>Address</h4>
-          <p>
-            Quantitative Imaging Research & Artificial Intelligence Lab (QIRAIL)<br>
-            Christian Medical College, Vellore 632004, Tamil Nadu, India
-          </p>
-        </div>
+      <!-- Bottom Left: Location Map -->
+      <div class="map-container">
+        <h3>Location</h3>
+        <div id="map"></div>
       </div>
 
-      <div class="contact-item">
-        <i class="fas fa-route icon-directions"></i>
-        <div class="contact-item-content">
-          <h4>Directions</h4>
-          <p>Main Gate → follow signs for QIRAIL Lab</p>
-        </div>
+      <!-- Bottom Right: ClustrMaps -->
+      <div class="clustrmaps-container">
+        <h3>Visitor Map</h3>
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AmqL4hhrl_2HnAUjIPqeXXIoXhOre-e2zwJSQYLuIW0&cl=ffffff&w=a"></script>
       </div>
-
-      <div class="contact-item">
-        <i class="fas fa-clock icon-time"></i>
-        <div class="contact-item-content">
-          <h4>Office Hours</h4>
-          <p>Weekdays: 9:00 AM – 5:00 PM</p>
-        </div>
-      </div>
-
-      <div id="map"></div>
     </div>
   </div>
 </div>
