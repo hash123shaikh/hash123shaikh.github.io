@@ -162,25 +162,47 @@ share: false
   text-decoration: underline; 
 }
 
-/* Responsive map */
+/* Responsive map - smaller on mobile, larger on desktop */
 #map {
-  height: 280px;
+  height: 250px;
   width: 100%;
   border-radius: 10px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border: 1px solid rgba(0,0,0,.08);
 }
 
-@media (max-width: 768px) {
-  .contact-wrap { padding: 0.5rem; }
-  .contact-form, .contact-info { padding: 1rem; }
-  #map { height: 250px; margin-top: 1rem; }
-  .contact-container { gap: 1rem; }
+@media (min-width: 768px) {
+  #map { 
+    height: 300px; 
+    margin-top: 1.5rem; 
+  }
 }
 
-/* Ensure full width usage */
+@media (max-width: 767px) {
+  .contact-wrap { 
+    padding: 0.5rem; 
+  }
+  .contact-form, .contact-info { 
+    padding: 1rem; 
+  }
+  .contact-container { 
+    gap: 1rem; 
+    margin: 0.5rem 0;
+  }
+}
+
+/* Ensure full width usage and remove excess spacing */
 .page__content {
   max-width: none !important;
+}
+
+/* Fix any remaining spacing issues */
+.page {
+  min-height: auto !important;
+}
+
+.masthead {
+  margin-bottom: 1rem;
 }
 </style>
 
