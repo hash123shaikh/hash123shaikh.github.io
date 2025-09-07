@@ -1,243 +1,155 @@
 ---
-layout: single
 title: "Contact"
 permalink: /contact/
+layout: single
+classes: wide        # keeps it within site width but wider than default
+toc: false
 author_profile: false
-classes: wide
+share: false
+comments: false
+related: false
+# IMPORTANT: ensure this file lives in _pages/, not _posts/, and do NOT set a date
 ---
 
 <style>
-.contact-container {
+/* --- Contact page layout --- */
+.contact-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5rem 0 2.5rem;
+}
+.contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin: 2rem 0;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 980px) {
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+/* Cards */
+.contact-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,.03);
 }
 
-.contact-form {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.contact-info {
-  padding: 2rem;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.form-group input,
-.form-group textarea {
+/* Form */
+.contact-form h3 { margin: 0 0 .75rem; }
+.form-row { margin-bottom: 1rem; }
+.form-row label { display:block; font-weight:600; margin-bottom:.35rem; }
+.form-row input, .form-row textarea {
   width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #e1e5e9;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: .75rem .9rem;
+  font: inherit;
+  background: #fafafa;
 }
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.form-group textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.btn-send {
-  background: #dc3545;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
+.form-row textarea { min-height: 160px; resize: vertical; }
+.contact-submit {
+  display:inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: .7rem 1.25rem;
+  font-weight:700;
+  background: #e63946; /* theme accent */
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.btn-send:hover {
-  background: #c82333;
-}
+/* Right column list */
+.info-stack .contact-card + .contact-card { margin-top: 1rem; }
+.info-title { font-size: 1.05rem; font-weight: 800; margin: 0 0 .35rem; }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.contact-item i {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  width: 40px;
-  text-align: center;
-}
-
-.contact-item .icon-phone { color: #28a745; }
-.contact-item .icon-location { color: #6f42c1; }
-.contact-item .icon-directions { color: #fd7e14; }
-.contact-item .icon-time { color: #17a2b8; }
-.contact-item .icon-calendar { color: #dc3545; }
-.contact-item .icon-twitter { color: #1da1f2; }
-
-.contact-item-content h4 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.1rem;
-}
-
-.contact-item-content p {
-  margin: 0;
-  color: #6c757d;
-  font-size: 0.95rem;
-}
-
-.contact-item a {
-  color: #dc3545;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
-}
-
-#map {
-  height: 300px;
+/* Map */
+.map-wrap {
   width: 100%;
-  border-radius: 8px;
-  margin-top: 2rem;
-  border: 2px solid #e1e5e9;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.06);
 }
+.map-wrap iframe { width:100%; height:100%; border:0; }
+
+/* Link list at bottom */
+.contact-links { margin-top: 1.25rem; }
+.contact-links a { word-break: break-word; }
 </style>
 
-<div class="contact-container">
-  <div class="contact-form">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/mdklyaqp" method="POST">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-      </div>
-      
-      <button type="submit" class="btn-send">Send</button>
-    </form>
-  </div>
-  
-  <div class="contact-info">
-    <h2>Contact Information</h2>
-    
-    <div class="contact-item">
-      <i class="fas fa-phone icon-phone"></i>
-      <div class="contact-item-content">
-        <h4>Phone</h4>
-        <p><a href="tel:+91-7906049358">+91-7906049358</a></p>
-      </div>
+<div class="contact-wrap">
+
+  <h1>Contact</h1>
+
+  <div class="contact-grid">
+
+    <!-- Left: form -->
+    <div class="contact-card contact-form">
+      <h3>Get in Touch</h3>
+      <!-- If you use Formspree or similar, replace the action URL -->
+      <form action="https://formspree.io/f/mdklyaqp" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" placeholder="you@institution.edu" required>
+        </div>
+        <div class="form-row">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" placeholder="How can I help? Please include context and deadlines." required></textarea>
+        </div>
+        <button class="contact-submit" type="submit">Send</button>
+      </form>
     </div>
-    
-    <div class="contact-item">
-      <i class="fas fa-map-marker-alt icon-location"></i>
-      <div class="contact-item-content">
-        <h4>Address</h4>
-        <p>Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)<br>
-        Christian Medical College, Vellore 632004<br>
-        Tamil Nadu, India</p>
+
+    <!-- Right: info stack -->
+    <div class="info-stack">
+
+      <div class="contact-card">
+        <div class="info-title">Phone</div>
+        <p>+91 79060 49358</p>
       </div>
-    </div>
-    
-    <div class="contact-item">
-      <i class="fas fa-route icon-directions"></i>
-      <div class="contact-item-content">
-        <h4>Directions</h4>
-        <p>Enter through Main Gate and follow signs to QIRAIL Lab</p>
+
+      <div class="contact-card">
+        <div class="info-title">Address</div>
+        <p>
+          Quantitative Imaging Research & Artificial Intelligence Lab (QIRAIL)<br>
+          Dept. of Radiation Oncology – Unit 2<br>
+          Christian Medical College, Vellore 632004<br>
+          Tamil Nadu, India
+        </p>
       </div>
-    </div>
-    
-    <div class="contact-item">
-      <i class="fas fa-clock icon-time"></i>
-      <div class="contact-item-content">
-        <h4>Office Hours</h4>
-        <p>Weekdays from 9:00 am to 5:00 pm</p>
+
+      <div class="contact-card">
+        <div class="info-title">Office Hours</div>
+        <p>Weekdays: 9:00 am – 5:00 pm IST</p>
       </div>
-    </div>
-    
-    <div class="contact-item">
-      <i class="fas fa-calendar icon-calendar"></i>
-      <div class="contact-item-content">
-        <h4>Meetings</h4>
-        <p><a href="mailto:hasanshaikh3198@gmail.com?subject=Meeting Request">Book an appointment</a></p>
-      </div>
-    </div>
-    
-    <div class="contact-item">
-      <i class="fab fa-twitter icon-twitter"></i>
-      <div class="contact-item-content">
-        <h4>Social Media</h4>
-        <p><a href="https://www.linkedin.com/in/hasann-shaikh/" target="_blank">Connect on LinkedIn</a></p>
-      </div>
+
     </div>
   </div>
+
+  <!-- Map -->
+  <div class="map-wrap" style="margin-top:1.5rem;">
+    <!-- swap with your preferred embed; this one is responsive -->
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=79.118%2C12.904%2C79.166%2C12.969&layer=mapnik&marker=12.920%2C79.135"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Direct links -->
+  <div class="contact-card contact-links">
+    <div class="info-title">Direct Contacts</div>
+    <p><strong>Email:</strong> <a href="mailto:hasanshaikh3198@gmail.com">hasanshaikh3198@gmail.com</a></p>
+    <p><strong>Work:</strong> <a href="mailto:hasan.shaikh.inst@cmcvellore.ac.in">hasan.shaikh.inst@cmcvellore.ac.in</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hasann-shaikh/">linkedin.com/in/hasann-shaikh/</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/hash123shaikh">github.com/hash123shaikh</a></p>
+    <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ">scholar.google.com/citations?user=9jjwZ8cAAAAJ</a></p>
+  </div>
+
 </div>
-
-<!-- Map Container -->
-<div id="map"></div>
-
-<!-- Leaflet CSS and JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-// Initialize the map
-var map = L.map('map').setView([12.9249, 79.1382], 15); // CMC Vellore coordinates
-
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-// Add a marker for CMC Vellore
-var marker = L.marker([12.9249, 79.1382]).addTo(map);
-marker.bindPopup('<b>Christian Medical College, Vellore</b><br>QIRAIL Lab<br>Vellore, Tamil Nadu 632004').openPopup();
-
-// Add a circle to show the general area
-var circle = L.circle([12.9249, 79.1382], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.1,
-    radius: 500
-}).addTo(map);
-</script>
-
