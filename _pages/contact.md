@@ -141,7 +141,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
           <i class="fas fa-phone icon-phone"></i>
           <div class="contact-item-content">
             <h4>Phone</h4>
-            <p><a href="tel:+917906049358">+91 79060 49358</a></p>
+            <p><a href="tel:+91-7906049358">+91-79060 49358</a></p>
           </div>
         </div>
 
