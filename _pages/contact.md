@@ -62,7 +62,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 .form-group { margin-bottom: 1.1rem; }
 .form-group label { display:block; margin:0 0 .45rem; font-weight:700; color:#222; }
 .form-group input, .form-group textarea {
-  width:100%; padding:12px 16px; font-size:12px; background: rgba(255,255,255,0.96);
+  width:100%; padding:12px 16px; font-size:18px; background: rgba(255,255,255,0.96);
   border:2px solid rgba(63,166,255,0.25); border-radius:12px; transition: all .25s ease; box-sizing: border-box;
 }
 .form-group textarea { min-height: 120px; resize: vertical; }
@@ -89,7 +89,7 @@ h1 { text-align: center; margin: 0 0 2rem; font-size: 2.4rem; font-weight: 800; 
 .contact-item .icon-location { color:#6f42c1; }
 .contact-item .icon-directions { color:#fd7e14; }
 .contact-item .icon-time { color:#17a2b8; }
-.contact-item-content h4 { margin:0 0 .25rem; font-size:1.05rem; font-weight:800; }
+.contact-item-content h4 { margin:0 0 .25rem; font-size:1.15rem; font-weight:800; }
 .contact-item-content p { margin:0; color:#5f6770; line-height:1.55; }
 .contact-item a { color:#1e73c9; text-decoration:none; font-weight:700; }
 .contact-item a:hover { text-decoration: underline; }
