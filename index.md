@@ -6,6 +6,18 @@ author_profile: true
 classes: wide
 ---
 
+<style>
+.important-text { color: #007bff; font-weight: 600; }
+.collaboration-text { color: #dc3545; font-weight: 600; }
+.highlight-box { 
+  background: #f8f9fa; 
+  border-left: 4px solid #007bff; 
+  padding: 1rem; 
+  margin: 1rem 0; 
+  border-radius: 4px; 
+}
+</style>
+
 > *"The real purpose of research is not just discovery — but translation. That's where science becomes service."*
 
 I'm **Hasan Shaikh**, a Clinical Data Scientist at the **Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)**, **Christian Medical College (CMC) Vellore**, India. I work at the intersection of **cancer imaging**, **radiomics**, and **machine learning**, with a focus on **head & neck cancer**. I build end-to-end pipelines—from **DICOM data curation** and **segmentation** to **risk modeling** and **clinician-facing dashboards**—aimed at delivering trustworthy, explainable tools for patient care.
