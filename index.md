@@ -18,14 +18,14 @@ classes: wide
 }
 /* Reduce overall text size */
 .page__content {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 .page__content h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .page__content h3 {
-  font-size: 1.0rem;
+  font-size: 1.1rem;
 }
 </style>
 
