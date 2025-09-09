@@ -11,70 +11,48 @@ classes: wide
 .collaboration-text { color: #dc3545; font-weight: 600; }
 .highlight-box { 
   background: #f8f9fa; 
-  border-left: 4px solid #007bff; 
+  border-left: 4px solid #dc3545; 
   padding: 1rem; 
   margin: 1rem 0; 
   border-radius: 4px; 
 }
+/* Reduce overall text size */
+.page__content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.page__content h2 {
+  font-size: 1.4rem;
+}
+.page__content h3 {
+  font-size: 1.2rem;
+}
 </style>
 
-> *"The real purpose of research is not just discovery — but translation. That's where science becomes service."*
-
-I'm **Hasan Shaikh**, a Clinical Data Scientist at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, India. I work at the intersection of <span class="important-text">cancer imaging, radiomics, and machine learning</span>, with a focus on <span class="important-text">head & neck cancer</span>. I build end-to-end pipelines—from DICOM data curation and segmentation to risk modeling and clinician-facing dashboards—aimed at delivering trustworthy, explainable tools for patient care.
+I'm **Hasan Shaikh**, a <span class="important-text">Project Assistant</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, India. I work on <span class="important-text">radiomics-based cancer recurrence prediction</span> and <span class="important-text">automated tumor segmentation</span> for head & neck cancer using machine learning and deep learning approaches.
 
 [Research Projects](/portfolio/){: .btn .btn--primary} [Publications](/publications/){: .btn .btn--info} [Download CV](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--success} [Contact Me](/contact/){: .btn .btn--warning}
 
 ---
 
-## Current Research Focus
-
-**<span class="important-text">Radiomics-Based Recurrence Prediction</span>**  
-Developing robust ML pipelines for predicting locoregional recurrence in head & neck cancer patients using CT-based radiomics features.
-
-**<span class="important-text">Automated Tumor Segmentation</span>**  
-Implementing 3D nnU-Net and MedSAM for automated segmentation with clinical workflow integration.
-
-**<span class="important-text">Clinical Decision Support Systems</span>**  
-Building lightweight web applications (FastAPI + React) that provide AI predictions and explanations at point-of-care.
-
----
-
 ## Education & Experience
 
-**M.Tech. Computer Engineering** | Aligarh Muslim University (2021-2023)  
-CGPA: 8.80/10.0 | Thesis Grade: A+ (9.5/10)
-
-**Clinical Data Scientist** | QIRAIL, CMC Vellore (2023-Present)  
-Lead researcher on <span class="important-text">radiomics-based cancer recurrence prediction</span> and <span class="important-text">deep learning for medical image segmentation</span>.
-
----
-
-## Technical Expertise
-
-**Programming:** Python, R, MATLAB, PyTorch, TensorFlow, scikit-learn  
-**Medical Imaging:** <span class="important-text">PyRadiomics, MONAI, 3D Slicer, DICOM processing</span>  
-**Infrastructure:** PostgreSQL, Docker, AWS, Orthanc, XNAT
-
----
-
-## Recent Achievements
-
-- **Best Poster Award** - 14th Research Day, CMC Vellore (2024)
-- **Book Chapter Published** - "Cancer Survival Prediction Using AI", Elsevier (2024)
-- **Conference Presentations** - ICCR 2024, CMC Research Day 2024
+**M.Tech. Computer Engineering** | Aligarh Muslim University (2021-2023) | CGPA: 8.80/10  
+**Project Assistant** | <span class="important-text">QIRAIL, CMC Vellore</span> (Aug 2024-Present)  
+Working on <span class="important-text">radiomics pipeline development</span>, <span class="important-text">3D nnU-Net segmentation</span>, and <span class="important-text">national cancer imaging biobank (CHAVI)</span>.
 
 ---
 
 <div class="highlight-box">
 <h3><span class="collaboration-text">Seeking PhD Opportunities</span></h3>
-<p>I am actively seeking <span class="collaboration-text">PhD positions in Medical AI, Computer Vision, or Biomedical Engineering</span> for Fall 2025/Spring 2026. My research interests align with programs focusing on clinical AI translation, medical imaging, and healthcare applications of machine learning.</p>
+<p>Actively seeking <span class="collaboration-text">PhD positions in Medical AI, Computer Vision, or Biomedical Engineering</span> for Fall 2025/Spring 2026. Research interests: clinical AI translation, medical imaging, radiomics, and automated segmentation.</p>
 </div>
 
 ## <span class="collaboration-text">Open for Collaborations</span>
 
-Looking for collaborations in:
-- <span class="collaboration-text">Multi-institutional clinical AI validation studies</span>
-- <span class="collaboration-text">Federated learning for medical applications</span>
-- <span class="collaboration-text">AI-driven precision oncology research</span>
+- <span class="collaboration-text">Multi-institutional medical AI studies</span>
+- <span class="collaboration-text">Radiomics and segmentation research</span>  
+- <span class="collaboration-text">Clinical AI deployment projects</span>
 
-<span class="collaboration-text">**Contact me for research collaborations, PhD program discussions, or speaking opportunities.**</span>
+<span class="collaboration-text">**Contact me for research collaborations, PhD opportunities, or speaking engagements.**</span>
+
