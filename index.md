@@ -18,14 +18,14 @@ classes: wide
 }
 /* Reduce overall text size */
 .page__content {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 .page__content h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .page__content h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 </style>
 
@@ -35,11 +35,35 @@ I'm **Hasan Shaikh**, a <span class="important-text">Project Assistant</span> at
 
 ---
 
-## Education & Experience
+## Education
 
-**M.Tech. Computer Engineering** | Aligarh Muslim University (2021-2023) | CGPA: 8.80/10  
-**Project Assistant** | <span class="important-text">QIRAIL, CMC Vellore</span> (Aug 2024-Present)  
-Working on <span class="important-text">radiomics pipeline development</span>, <span class="important-text">3D nnU-Net segmentation</span>, and <span class="important-text">national cancer imaging biobank (CHAVI)</span>.
+### M.Tech. Computer Engineering
+**Aligarh Muslim University (AMU)**, Aligarh, India | *Nov 2021 – Nov 2023*  
+**CGPA:** <span class="important-text">8.80/10.00</span>
+
+**Thesis:** "Multimodal Data Analytics for Predicting the Survival of Cancer Patients"  
+**Advisor:** Prof. Rashid Ali, Aligarh Muslim University
+
+### B.Tech. Computer Science and Engineering  
+**Dr. A.P.J. Abdul Kalam Technical University (AKTU)**, Lucknow, India | *Aug 2017 – Jul 2021*  
+**CGPA:** <span class="important-text">8.04/10.00</span>
+
+**Thesis:** "Detection of Breast Cancer"  
+**Supervisor:** Mr. Vijay Katta
+
+---
+
+## Experience
+
+### Project Assistant | QIRAIL, CMC Vellore
+*Aug 2024 – Present* | Tamil Nadu, India
+
+Working on <span class="important-text">radiomics-based risk stratification</span> for head & neck cancer, <span class="important-text">3D nnU-Net automated segmentation</span>, and contributing to <span class="important-text">CHAVI (India's first national oncology imaging biobank)</span>. Developing machine learning models for locoregional recurrence prediction and building end-to-end radiomics pipelines.
+
+### Research Analyst | STARlab Capital
+*Dec 2023 – June 2024* | Lucknow, India
+
+Designed and deployed <span class="important-text">volatility-based trading strategies</span> using OptionNet Explorer, Mesosim, and OptiTrade tools. Enhanced the ARUT strategy, increasing ROI by <span class="important-text">52.38%</span> through optimization and real-time feedback systems.
 
 ---
 
@@ -55,4 +79,3 @@ Working on <span class="important-text">radiomics pipeline development</span>, <
 - <span class="collaboration-text">Clinical AI deployment projects</span>
 
 <span class="collaboration-text">**Contact me for research collaborations, PhD opportunities, or speaking engagements.**</span>
-
