@@ -6,8 +6,6 @@ author_profile: true
 classes: wide
 ---
 
-## Current Research Projects
-
 ### Radiomics-Based Recurrence Prediction in Head & Neck Cancer
 **Duration:** 2023 - Present | **Role:** Lead Researcher  
 **Institution:** QIRAIL, Christian Medical College Vellore
