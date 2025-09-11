@@ -1,10 +1,11 @@
 ---
 title: "Research Projects"
-layout: single
+layout: archive
 permalink: /portfolio/
 author_profile: true
 classes: wide
 ---
+
 
 ### Radiomics-Based Recurrence Prediction in Head & Neck Cancer
 
