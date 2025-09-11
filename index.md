@@ -53,7 +53,7 @@ I'm **Hasan Shaikh**, a <span class="important-text">Project Assistant</span> at
 
 ---
 
-## Experience
+## Work Experience
 
 ### Project Assistant | QIRAIL, CMC Vellore
 *Aug 2024 – Present* | Tamil Nadu, India
@@ -64,6 +64,16 @@ Working on <span class="important-text">radiomics-based risk stratification</spa
 *Dec 2023 – June 2024* | Lucknow, India
 
 Designed and deployed <span class="important-text">volatility-based trading strategies</span> using OptionNet Explorer, Mesosim, and OptiTrade tools. Enhanced the ARUT strategy, increasing ROI by <span class="important-text">52.38%</span> through optimization and real-time feedback systems.
+
+---
+## Technical Skills
+
+**Programming Languages:** Python, R, MATLAB, SQL, JavaScript  
+**Machine Learning:** scikit-learn, XGBoost, PyTorch, TensorFlow, Keras  
+**Medical Imaging:** PyRadiomics, SimpleITK, MONAI, 3D Slicer  
+**Data Management:** PostgreSQL, MongoDB, DICOM, HL7 FHIR  
+**Web Development:** FastAPI, React, Node.js, Docker  
+**Research Tools:** Git, Jupyter, LaTeX, R Markdown
 
 ---
 
