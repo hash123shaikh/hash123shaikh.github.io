@@ -10,7 +10,7 @@ classes: wide
 .important-text { color: #007bff; font-weight: 600; }
 .collaboration-text { color: #dc3545; font-weight: 600; }
 .highlight-box { 
-  background: #f8f9fa; 
+  background: rgba(248, 249, 250, 0.95); 
   border-left: 4px solid #dc3545; 
   padding: 1rem; 
   margin: 1rem 0; 
@@ -19,6 +19,8 @@ classes: wide
 .page__content {
   font-size: 0.9rem;
   line-height: 1.5;
+  position: relative;
+  z-index: 1;
 }
 .page__content h2 {
   font-size: 1.4rem;
@@ -26,7 +28,20 @@ classes: wide
 .page__content h3 {
   font-size: 1.2rem;
 }
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.page {
+  background: transparent;
+}
 </style>
+
+<div id="vanta-bg"></div>
 
 I'm **Hasan Shaikh**, a <span class="important-text">Clinical Data Scientist</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, working at the intersection of medical imaging, machine learning, and radiation oncology.
 
@@ -120,3 +135,29 @@ Designed and deployed volatility-based trading strategies, improving ROI by 52% 
 I'm interested in collaborations addressing methodological rigor in medical AI, multi-institutional validation studies, and clinical deployment of radiomics models. If your work intersects with quantitative imaging, oncology outcomes research, or healthcare AI in resource-limited settings, I'd welcome a discussion.
 
 **Email:** hasanshaikh3198@gmail.com | **GitHub:** [hash123shaikh](https://github.com/hash123shaikh) | **Portfolio:** [hash123shaikh.github.io](https://hash123shaikh.github.io)
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+VANTA.BIRDS({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xa9a9cf,
+  color1: 0xff0000,
+  color2: 0xd1ff,
+  colorMode: "varianceGradient",
+  birdSize: 0.90,
+  wingSpan: 30.00,
+  speedLimit: 5.00,
+  separation: 32.00,
+  alignment: 46.00,
+  cohesion: 48.00,
+  quantity: 5.00
+})
+</script>
