@@ -172,15 +172,15 @@ VANTA.BIRDS({
   scale: 1.00,
   scaleMobile: 1.00,
   backgroundColor: 0xfaefe9,
-  color1: 0xff0000,
-  color2: 0xd1ff,
-  colorMode: "varianceGradient",
-  birdSize: 0.90,
-  wingSpan: 30.00,
-  speedLimit: 5.00,
-  separation: 32.00,
-  alignment: 46.00,
-  cohesion: 48.00,
-  quantity: 5.00
+  color1: 0x306e91,
+  color2: 0xafb4cf,
+  colorMode: "lerp",
+  birdSize: 0.80,
+  wingSpan: 20.00,
+  speedLimit: 3.00,
+  separation: 45.00,
+  alignment: 25.00,
+  cohesion: 82.00,
+  quantity: 2.00
 })
 </script>
