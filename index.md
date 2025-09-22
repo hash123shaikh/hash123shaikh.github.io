@@ -16,44 +16,46 @@ classes: wide
   margin: 1rem 0; 
   border-radius: 4px; 
 }
-.page__content {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
-}
-.page__content h2 {
-  font-size: 1.4rem;
-}
-.page__content h3 {
-  font-size: 1.2rem;
-}
-/* Vanta background - must be BEHIND everything */
+/* Vanta background - lowest layer */
 #vanta-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0 !important;
+  z-index: -1 !important;
 }
-/* Force sidebar and all navigation to be visible */
+/* Force ALL content to be visible above background */
+.masthead,
+.page,
+.page__content,
+.page__inner-wrap,
 .sidebar,
 .sidebar__right,
 .author__avatar,
 .author__content,
 .author__urls-wrapper,
-.masthead,
 .page__footer,
-.initial-content {
+.initial-content,
+h1, h2, h3, h4, p, ul, ol, div {
   position: relative;
   z-index: 10 !important;
 }
-/* Make sure text content is readable */
+/* Make main content readable with semi-transparent background */
 .page__inner-wrap {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 2rem !important;
+  border-radius: 8px !important;
+}
+.page__content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.page__content h2 {
+  font-size: 1.4rem;
+}
+.page__content h3 {
+  font-size: 1.2rem;
 }
 </style>
 
