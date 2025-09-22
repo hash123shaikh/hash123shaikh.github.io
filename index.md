@@ -171,7 +171,7 @@ VANTA.BIRDS({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  backgroundColor: 0xa9a9cf,
+  backgroundColor: 0xfaefe9,
   color1: 0xff0000,
   color2: 0xd1ff,
   colorMode: "varianceGradient",
