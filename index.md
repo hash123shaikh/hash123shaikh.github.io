@@ -16,7 +16,8 @@ classes: wide
   margin: 1rem 0; 
   border-radius: 4px; 
 }
-/* Vanta background - lowest layer */
+
+/* Vanta background - behind everything */
 #vanta-bg {
   position: fixed;
   top: 0;
@@ -25,28 +26,32 @@ classes: wide
   height: 100%;
   z-index: -1 !important;
 }
-/* Force ALL content to be visible above background */
-.masthead,
-.page,
-.page__content,
-.page__inner-wrap,
-.sidebar,
-.sidebar__right,
-.author__avatar,
-.author__content,
-.author__urls-wrapper,
-.page__footer,
-.initial-content,
-h1, h2, h3, h4, p, ul, ol, div {
+
+/* Sidebar - highest priority */
+.sidebar {
   position: relative;
-  z-index: 10 !important;
+  z-index: 100 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
 }
-/* Make main content readable with semi-transparent background */
+
+/* Main content area */
 .page__inner-wrap {
+  position: relative;
+  z-index: 50 !important;
   background: rgba(255, 255, 255, 0.92) !important;
   padding: 2rem !important;
   border-radius: 8px !important;
 }
+
+/* Navigation and footer */
+.masthead,
+.page__footer {
+  position: relative;
+  z-index: 75 !important;
+}
+
 .page__content {
   font-size: 0.9rem;
   line-height: 1.5;
