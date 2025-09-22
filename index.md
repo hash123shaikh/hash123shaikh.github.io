@@ -28,44 +28,45 @@ classes: wide
 }
 </style>
 
-I'm **Hasan Shaikh**, a <span class="important-text">Project Assistant</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>. I develop machine learning models for cancer outcome prediction and automated tumor segmentation in head & neck oncology.
+I'm **Hasan Shaikh**, a <span class="important-text">Clinical Data Scientist</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, working at the intersection of medical imaging, machine learning, and radiation oncology.
 
-My work addresses a persistent challenge in radiation oncology: building clinically deployable AI systems in resource-constrained environments. Where advanced imaging isn't routinely available, CT-based radiomics and deep learning approaches offer a methodologically sound pathway to precision oncology—one that doesn't depend on infrastructure most hospitals cannot afford.
-
----
-
-## Research Focus
-
-My current research centers on three interconnected problems:
-
-**Radiomics-Based Prognostication**  
-Developing predictive models for locoregional recurrence in head & neck cancer using CT-derived quantitative features. Working with 163 patients, I'm benchmarking eight metaheuristic feature selection algorithms (PSO, GA, GWO, etc.) across multiple classifiers to identify robust prognostic biomarkers. The goal: determine which combinations of imaging features and optimization methods yield clinically actionable risk stratification.
-
-**CT-Only Automated Segmentation**  
-Building 3D nnU-Net models for tumor delineation without MRI dependency. Our multi-institutional dataset (167 cases: 137 MAASTRO public, 30 CMC private) demonstrates that pure CT-based approaches can achieve Dice scores of 0.62-0.65—clinically acceptable performance in settings where MRI access is limited or cost-prohibitive.
-
-**Large-Scale Clinical Data Infrastructure**  
-Contributing to CHAVI (India's first national oncology imaging biobank) and a DBT/Wellcome Trust-funded prospective study encompassing ~1700 patients. This involves implementing FAIR-compliant data pipelines, ensuring quality control across institutions, and building infrastructure that enables reproducible multi-center research.
-
-The underlying question: How do we build AI systems that work reliably where they're needed most—not just where they're easiest to deploy?
+My research addresses a fundamental challenge: how do we build AI systems that deliver precision oncology in hospitals where advanced imaging infrastructure—PET scans, MRI, genomic sequencing—isn't readily available? In resource-constrained healthcare settings, CT-based radiomics and deep learning offer a methodologically sound alternative. The question driving my work is simple but critical: can we achieve world-class cancer care without world-class budgets?
 
 ---
 
-## Technical Approach
+## The Path Here
 
-I prioritize reproducibility and clinical translatability:
+My journey from Lucknow to Aligarh to Vellore has been shaped by a consistent focus on solving problems where the clinical need is greatest. During my master's at AMU (CGPA 8.80/10), I worked on multimodal survival prediction models, learning early that the most impactful research happens when you understand both the technical challenges and the clinical constraints.
 
-- **End-to-end radiomics workflows**: DICOM retrieval (Orthanc), semi-automated segmentation (Citric), PyRadiomics feature extraction, integrated with version-controlled ML pipelines
-- **Rigorous validation protocols**: Multi-institutional testing, sensitivity analysis for scanning protocol variations, independent cohort validation
-- **Scalable infrastructure**: AWS S3 automation, longitudinal database management, deployment-ready architectures
+Before joining QIRAIL, I spent time in quantitative finance at STARlab Capital, designing volatility-based trading strategies. That experience—backtesting models under real-world uncertainty, optimizing risk-reward ratios, improving ROI by 52%—taught me principles that translate directly to clinical ML: the importance of robust validation, the danger of overfitting to pristine datasets, and the discipline required to build systems that work when it matters.
 
-My prior work in quantitative finance—designing volatility-based trading strategies that improved ROI by 52%—reinforced critical principles that transfer directly to clinical ML: the importance of robust backtesting, ensemble methods, and managing uncertainty under real-world constraints.
+At CMC Vellore, I'm now part of a team proving that rigorous cancer research doesn't require unlimited resources. It requires methodological discipline, creative problem-solving, and a willingness to tackle hard problems with finite constraints.
 
 ---
 
-## Background
+## What I Do
 
-From Lucknow (B.Tech., AKTU) to Aligarh (M.Tech., AMU, CGPA 8.80/10) to Vellore, my trajectory reflects a consistent focus: building tools that function where the clinical need is greatest. At QIRAIL, I'm part of a team demonstrating that rigorous cancer research doesn't require unlimited budgets—it requires methodological discipline, creative problem-solving, and willingness to address hard problems with finite resources.
+I develop machine learning models for cancer outcome prediction and automated tumor segmentation, focusing on approaches that work in real clinical environments—not just research labs. My work spans radiomics-based prognostication, 3D deep learning for automated segmentation, and building large-scale imaging infrastructure that enables reproducible multi-institutional research.
+
+The technical approach emphasizes reproducibility and clinical translatability: FAIR-compliant data pipelines, rigorous multi-institutional validation, and deployment-ready architectures. I work with tools like PyRadiomics, PyTorch, nnU-Net, and cloud infrastructure (AWS S3) to build end-to-end systems that go from DICOM images to clinical predictions.
+
+But the real work isn't just building models—it's ensuring they function reliably where they're needed most, not just where they're easiest to deploy.
+
+---
+
+## What Drives This Work
+
+There's a gap between what's possible in well-funded academic centers and what's accessible in most hospitals. In India, over a million people are diagnosed with cancer each year. Most won't have access to the imaging protocols, treatment planning systems, or clinical trials available in Boston or London. 
+
+My goal is to prove that this gap isn't inevitable. That CT-based AI can achieve clinically actionable performance. That open-source tools and FAIR data practices can enable research across institutions. That precision oncology doesn't require unlimited budgets—it requires the right questions, rigorous methodology, and tools designed for the environments they'll actually be used in.
+
+---
+
+## Looking Forward
+
+I'm actively seeking PhD positions in Medical AI, Computer Vision, or Biomedical Engineering for Fall 2025/Spring 2026. I'm interested in programs that value translational research, methodological rigor, and real-world clinical impact.
+
+I'm also open to collaborations on multi-institutional validation studies, clinical deployment of radiomics models, and any work addressing healthcare AI in resource-limited settings. If your research intersects with quantitative imaging, oncology outcomes, or building AI systems that work where they're needed most—I'd welcome a conversation.
 
 [Research Projects](/portfolio/){: .btn .btn--primary} [Publications](/publications/){: .btn .btn--info} [Download CV](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--success} [Contact Me](/contact/){: .btn .btn--warning}
 
@@ -78,7 +79,7 @@ From Lucknow (B.Tech., AKTU) to Aligarh (M.Tech., AMU, CGPA 8.80/10) to Vellore,
 **CGPA:** <span class="important-text">8.80/10.00</span>
 
 **Thesis:** "Multimodal Data Analytics for Predicting the Survival of Cancer Patients"  
-**Advisor:** Prof. Rashid Ali, Aligarh Muslim University
+**Advisor:** Prof. Rashid Ali
 
 ### B.Tech. Computer Science and Engineering  
 **Dr. A.P.J. Abdul Kalam Technical University (AKTU)**, Lucknow, India | *Aug 2017 – Jul 2021*  
@@ -94,12 +95,12 @@ From Lucknow (B.Tech., AKTU) to Aligarh (M.Tech., AMU, CGPA 8.80/10) to Vellore,
 ### Project Assistant | QIRAIL, CMC Vellore
 *Aug 2024 – Present* | Tamil Nadu, India
 
-Working on <span class="important-text">radiomics-based risk stratification</span> for head & neck cancer, <span class="important-text">3D nnU-Net automated segmentation</span>, and contributing to <span class="important-text">CHAVI (India's first national oncology imaging biobank)</span>. Developing machine learning models for locoregional recurrence prediction and building end-to-end radiomics pipelines.
+Developing machine learning models for cancer recurrence prediction and automated tumor segmentation. Contributing to CHAVI (India's first national oncology imaging biobank) and building FAIR-compliant data infrastructure for multi-institutional research.
 
 ### Research Analyst | STARlab Capital
 *Dec 2023 – June 2024* | Lucknow, India
 
-Designed and deployed <span class="important-text">volatility-based trading strategies</span> using OptionNet Explorer, Mesosim, and OptiTrade tools. Enhanced the ARUT strategy, increasing ROI by <span class="important-text">52.38%</span> through optimization and real-time feedback systems.
+Designed and deployed volatility-based trading strategies, improving ROI by 52% through model optimization and real-time feedback systems.
 
 ---
 
@@ -114,13 +115,8 @@ Designed and deployed <span class="important-text">volatility-based trading stra
 
 ---
 
-<div class="highlight-box">
-<h3><span class="collaboration-text">Seeking PhD Opportunities</span></h3>
-<p>Actively seeking <span class="collaboration-text">PhD positions in Medical AI, Computer Vision, or Biomedical Engineering</span> for Fall 2025/Spring 2026. Research interests: clinical AI translation, medical imaging, radiomics, and automated segmentation.</p>
-</div>
-
-## <span class="collaboration-text">Open for Collaborations</span>
+## <span class="collaboration-text">Let's Connect</span>
 
 I'm interested in collaborations addressing methodological rigor in medical AI, multi-institutional validation studies, and clinical deployment of radiomics models. If your work intersects with quantitative imaging, oncology outcomes research, or healthcare AI in resource-limited settings, I'd welcome a discussion.
 
-**Contact:** hasanshaikh3198@gmail.com | **GitHub:** [hash123shaikh](https://github.com/hash123shaikh)
+**Email:** hasanshaikh3198@gmail.com | **GitHub:** [hash123shaikh](https://github.com/hash123shaikh) | **Portfolio:** [hash123shaikh.github.io](https://hash123shaikh.github.io)
