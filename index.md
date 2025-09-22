@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Hasan Shaikh — Clinical Data Scientist"
+title: ""
 permalink: /
 author_profile: true
 classes: wide
