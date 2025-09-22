@@ -17,6 +17,29 @@ classes: wide
   border-radius: 4px; 
 }
 
+/* Creative color highlighting */
+.vision-text { 
+  color: #28a745; 
+  font-weight: 600; 
+}
+.tech-highlight { 
+  color: #6f42c1; 
+  font-weight: 600; 
+}
+.metric-highlight { 
+  color: #fd7e14; 
+  font-weight: 700; 
+}
+.location-text { 
+  color: #20c997; 
+  font-weight: 600; 
+}
+.question-highlight {
+  color: #e83e8c;
+  font-weight: 600;
+  font-style: italic;
+}
+
 /* Vanta background - behind everything */
 #vanta-bg {
   position: fixed;
@@ -58,6 +81,7 @@ classes: wide
 }
 .page__content h2 {
   font-size: 1.4rem;
+  color: #2c3e50;
 }
 .page__content h3 {
   font-size: 1.2rem;
@@ -66,45 +90,45 @@ classes: wide
 
 <div id="vanta-bg"></div>
 
-I'm **Hasan Shaikh**, a <span class="important-text">Clinical Data Scientist</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, working at the intersection of medical imaging, machine learning, and radiation oncology.
+I'm **Hasan Shaikh**, a <span class="important-text">Clinical Data Scientist</span> at the <span class="important-text">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</span>, <span class="important-text">Christian Medical College (CMC) Vellore</span>, working at the intersection of <span class="tech-highlight">medical imaging</span>, <span class="tech-highlight">machine learning</span>, and <span class="vision-text">radiation oncology</span>.
 
-My research addresses a fundamental challenge: how do we build AI systems that deliver precision oncology in hospitals where advanced imaging infrastructure—PET scans, MRI, genomic sequencing—isn't readily available? In resource-constrained healthcare settings, CT-based radiomics and deep learning offer a methodologically sound alternative. The question driving my work is simple but critical: can we achieve world-class cancer care without world-class budgets?
-
----
-
-## The Path Here
-
-My journey from Lucknow to Aligarh to Vellore has been shaped by a consistent focus on solving problems where the clinical need is greatest. During my master's at AMU (CGPA 8.80/10), I worked on multimodal survival prediction models, learning early that the most impactful research happens when you understand both the technical challenges and the clinical constraints.
-
-Before joining QIRAIL, I spent time in quantitative finance at STARlab Capital, designing volatility-based trading strategies. That experience—backtesting models under real-world uncertainty, optimizing risk-reward ratios, improving ROI by 52%—taught me principles that translate directly to clinical ML: the importance of robust validation, the danger of overfitting to pristine datasets, and the discipline required to build systems that work when it matters.
-
-At CMC Vellore, I'm now part of a team proving that rigorous cancer research doesn't require unlimited resources. It requires methodological discipline, creative problem-solving, and a willingness to tackle hard problems with finite constraints.
+My research explores how <span class="vision-text">AI can transform cancer care</span> in diverse clinical settings. I focus on developing <span class="tech-highlight">CT-based radiomics</span> and <span class="tech-highlight">deep learning approaches</span> that deliver precision oncology across different healthcare environments — from tertiary care centers to community hospitals. The driving question: <span class="question-highlight">how do we build intelligent systems that scale effectively and serve patients wherever they are?</span>
 
 ---
 
-## What I Do
+## The Journey
 
-I develop machine learning models for cancer outcome prediction and automated tumor segmentation, focusing on approaches that work in real clinical environments—not just research labs. My work spans radiomics-based prognostication, 3D deep learning for automated segmentation, and building large-scale imaging infrastructure that enables reproducible multi-institutional research.
+From <span class="location-text">Agra</span> to <span class="location-text">Aligarh</span> to <span class="location-text">Vellore</span>, my path has been guided by a singular focus: building AI systems that address real clinical needs. During my master's at Aligarh Muslim University (AMU), India <span class="metric-highlight">(CGPA 8.80/10)</span>, I worked on <span class="tech-highlight">multimodal survival prediction models</span>, discovering that the most meaningful research emerges from understanding both technical possibilities and clinical realities.
 
-The technical approach emphasizes reproducibility and clinical translatability: FAIR-compliant data pipelines, rigorous multi-institutional validation, and deployment-ready architectures. I work with tools like PyRadiomics, PyTorch, nnU-Net, and cloud infrastructure (AWS S3) to build end-to-end systems that go from DICOM images to clinical predictions.
+Before joining QIRAIL, I spent time in quantitative finance at STARlab Capital, designing volatility-based trading strategies. That experience—backtesting models under real-world uncertainty, optimizing risk-reward ratios, and improving ROI by <span class="metric-highlight">52%</span>—taught me principles that translate directly to clinical ML: the importance of <span class="vision-text">robust validation</span>, the danger of overfitting to pristine datasets, and the discipline required to build systems that work when it matters.
 
-But the real work isn't just building models—it's ensuring they function reliably where they're needed most, not just where they're easiest to deploy.
+At CMC Vellore, I'm part of a team advancing cancer research through <span class="vision-text">methodological rigor</span>, <span class="vision-text">creative problem-solving</span>, and innovative approaches to resource optimization. We're demonstrating what's possible when technical excellence meets clinical insight.
 
 ---
 
-## What Drives This Work
+## What I Build
 
-There's a gap between what's possible in well-funded academic centers and what's accessible in most hospitals. In India, over a million people are diagnosed with cancer each year. Most won't have access to the imaging protocols, treatment planning systems, or clinical trials available in Boston or London. 
+I develop <span class="tech-highlight">machine learning models</span> for cancer outcome prediction and <span class="tech-highlight">automated tumor segmentation</span>, with emphasis on clinical deployability and real-world performance. My work spans <span class="important-text">radiomics-based prognostication</span>, <span class="important-text">3D deep learning for automated segmentation</span>, and large-scale imaging infrastructure that enables reproducible multi-institutional research.
 
-My goal is to prove that this gap isn't inevitable. That CT-based AI can achieve clinically actionable performance. That open-source tools and FAIR data practices can enable research across institutions. That precision oncology doesn't require unlimited budgets—it requires the right questions, rigorous methodology, and tools designed for the environments they'll actually be used in.
+The technical approach prioritizes <span class="vision-text">reproducibility</span> and <span class="vision-text">translational impact</span>: FAIR-compliant data pipelines, rigorous multi-institutional validation, and deployment-ready architectures. I work with <span class="tech-highlight">PyRadiomics</span>, <span class="tech-highlight">PyTorch</span>, <span class="tech-highlight">nnU-Net</span>, and cloud infrastructure (<span class="tech-highlight">AWS S3</span>) to build end-to-end systems that transform DICOM images into clinical insights.
+
+The goal extends beyond model development — it's about creating tools that <span class="vision-text">physicians trust</span> and <span class="vision-text">patients benefit from</span>, regardless of their healthcare setting.
+
+---
+
+## The Vision
+
+Healthcare AI holds <span class="vision-text">tremendous potential</span>. In India alone, over <span class="metric-highlight">a million people</span> receive cancer diagnoses annually. Many would benefit from advanced imaging analysis, personalized treatment planning, and evidence-based risk stratification—capabilities that AI can help deliver.
+
+My work aims to demonstrate that <span class="important-text">CT-based approaches can achieve clinically meaningful performance</span>, that <span class="vision-text">open-source tools and FAIR data practices</span> can democratize research capabilities, and that <span class="vision-text">precision oncology can scale</span> through intelligent system design and methodological innovation. The opportunity lies in <span class="question-highlight">building AI that works for everyone</span>, not just those in the most resource-rich settings.
 
 ---
 
 ## Looking Forward
 
-I'm actively seeking PhD positions in Medical AI, Computer Vision, or Biomedical Engineering for Fall 2025/Spring 2026. I'm interested in programs that value translational research, methodological rigor, and real-world clinical impact.
+I'm actively seeking <span class="collaboration-text">PhD positions in Medical AI, Computer Vision, or Biomedical Engineering</span> for <span class="metric-highlight">Fall 2025/Spring 2026</span>. I'm interested in programs that value <span class="vision-text">translational research</span>, <span class="vision-text">methodological rigor</span>, and <span class="vision-text">real-world clinical impact</span>.
 
-I'm also open to collaborations on multi-institutional validation studies, clinical deployment of radiomics models, and any work addressing healthcare AI in resource-limited settings. If your research intersects with quantitative imaging, oncology outcomes, or building AI systems that work where they're needed most—I'd welcome a conversation.
+I welcome collaborations on <span class="important-text">multi-institutional validation studies</span>, <span class="important-text">clinical deployment of radiomics models</span>, and any work advancing healthcare AI accessibility. If your research intersects with <span class="tech-highlight">quantitative imaging</span>, <span class="tech-highlight">oncology outcomes</span>, or <span class="tech-highlight">scalable clinical AI systems</span>—let's connect.
 
 [Research Projects](/portfolio/){: .btn .btn--primary} [Publications](/publications/){: .btn .btn--info} [Download CV](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--success} [Contact Me](/contact/){: .btn .btn--warning}
 
@@ -114,14 +138,14 @@ I'm also open to collaborations on multi-institutional validation studies, clini
 
 ### M.Tech. Computer Engineering
 **Aligarh Muslim University (AMU)**, Aligarh, India | *Nov 2021 – Nov 2023*  
-**CGPA:** <span class="important-text">8.80/10.00</span>
+**CGPA:** <span class="metric-highlight">8.80/10.00</span>
 
 **Thesis:** "Multimodal Data Analytics for Predicting the Survival of Cancer Patients"  
 **Advisor:** Prof. Rashid Ali
 
 ### B.Tech. Computer Science and Engineering  
 **Dr. A.P.J. Abdul Kalam Technical University (AKTU)**, Lucknow, India | *Aug 2017 – Jul 2021*  
-**CGPA:** <span class="important-text">8.04/10.00</span>
+**CGPA:** <span class="metric-highlight">8.04/10.00</span>
 
 **Thesis:** "Detection of Breast Cancer"  
 **Supervisor:** Mr. Vijay Katta
@@ -133,31 +157,25 @@ I'm also open to collaborations on multi-institutional validation studies, clini
 ### Project Assistant | QIRAIL, CMC Vellore
 *Aug 2024 – Present* | Tamil Nadu, India
 
-Developing machine learning models for cancer recurrence prediction and automated tumor segmentation. Contributing to CHAVI (India's first national oncology imaging biobank) and building FAIR-compliant data infrastructure for multi-institutional research.
+- Developing <span class="tech-highlight">machine learning models</span> for cancer recurrence prediction and <span class="tech-highlight">automated tumor segmentation</span>. Contributing to <span class="important-text">CHAVI (India's first national oncology imaging biobank)</span> and building <span class="vision-text">FAIR-compliant data infrastructure</span> for multi-institutional research.
 
 ### Research Analyst | STARlab Capital
 *Dec 2023 – June 2024* | Lucknow, India
 
-Designed and deployed volatility-based trading strategies, improving ROI by 52% through model optimization and real-time feedback systems.
+- Designed and deployed <span class="tech-highlight">volatility-based trading strategies</span>, improving ROI by <span class="metric-highlight">52%</span> through model optimization and real-time feedback systems.
 
 ---
 
 ## Technical Skills
 
-**Programming Languages:** Python, R, MATLAB, SQL, JavaScript  
-**Machine Learning:** scikit-learn, XGBoost, PyTorch, TensorFlow, Keras  
-**Medical Imaging:** PyRadiomics, SimpleITK, MONAI, 3D Slicer  
-**Data Management:** PostgreSQL, MongoDB, DICOM, HL7 FHIR  
-**Web Development:** FastAPI, React, Node.js, Docker  
-**Research Tools:** Git, Jupyter, LaTeX, R Markdown
+**Programming Languages:** <span class="tech-highlight">Python, R, MATLAB, SQL, JavaScript</span>  
+**Machine Learning:** <span class="tech-highlight">scikit-learn, XGBoost, PyTorch, TensorFlow, Keras</span>  
+**Medical Imaging:** <span class="tech-highlight">PyRadiomics, SimpleITK, MONAI, 3D Slicer</span>  
+**Data Management:** <span class="tech-highlight">PostgreSQL, MongoDB, DICOM, HL7 FHIR</span>  
+**Web Development:** <span class="tech-highlight">FastAPI, React, Node.js, Docker</span>  
+**Research Tools:** <span class="tech-highlight">Git, Jupyter, LaTeX, R Markdown</span>
 
 ---
-
-## <span class="collaboration-text">Let's Connect</span>
-
-I'm interested in collaborations addressing methodological rigor in medical AI, multi-institutional validation studies, and clinical deployment of radiomics models. If your work intersects with quantitative imaging, oncology outcomes research, or healthcare AI in resource-limited settings, I'd welcome a discussion.
-
-**Email:** hasanshaikh3198@gmail.com | **GitHub:** [hash123shaikh](https://github.com/hash123shaikh) | **Portfolio:** [hash123shaikh.github.io](https://hash123shaikh.github.io)
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
