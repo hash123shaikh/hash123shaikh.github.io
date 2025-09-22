@@ -28,16 +28,32 @@ classes: wide
 .page__content h3 {
   font-size: 1.2rem;
 }
+/* Vanta background - must be BEHIND everything */
 #vanta-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0 !important;
 }
-.page {
-  background: transparent;
+/* Force sidebar and all navigation to be visible */
+.sidebar,
+.sidebar__right,
+.author__avatar,
+.author__content,
+.author__urls-wrapper,
+.masthead,
+.page__footer,
+.initial-content {
+  position: relative;
+  z-index: 10 !important;
+}
+/* Make sure text content is readable */
+.page__inner-wrap {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
 }
 </style>
 
