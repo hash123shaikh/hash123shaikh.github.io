@@ -74,12 +74,6 @@ author:
   location: "Vellore, Tamil Nadu, India"
   email: "hasanshaikh3198@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:hasanshaikh3198@gmail.com"
-    - label: "Work Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:hasan.shaikh.inst@cmcvellore.ac.in"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/hasann-shaikh/"
@@ -89,6 +83,9 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=9jjwZ8cAAAAJ"
+    - label: "Work Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:hasan.shaikh.inst@cmcvellore.ac.in"
 
 # Collections
 collections:
