@@ -1,9 +1,6 @@
 ---
-layout: single
-title: "Curriculum Vitae"
+layout: none
 permalink: /cv/
-author_profile: true
-classes: wide
 ---
 [Download CV (PDF)](/files/CV_Hasan_Shaikh.pdf){: .btn .btn--primary}
 
