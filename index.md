@@ -7,35 +7,36 @@ classes: wide
 ---
 
 <style>
-.important-text { color: #007bff; font-weight: 600; }
-.collaboration-text { color: #dc3545; font-weight: 600; }
+/* Medical imaging inspired color palette - lighter professional tones */
+.important-text { color: #5DA3D5; font-weight: 600; }
+.collaboration-text { color: #E57373; font-weight: 600; }
 .highlight-box { 
-  background: rgba(248, 249, 250, 0.95); 
-  border-left: 4px solid #dc3545; 
-  padding: 1rem; 
-  margin: 1rem 0; 
+  background: rgba(240, 248, 255, 0.95); 
+  border-left: 4px solid #E57373; 
+  padding: 1.2rem; 
+  margin: 1.2rem 0; 
   border-radius: 4px; 
 }
 
-/* Creative color highlighting */
+/* Creative color highlighting - lighter medical tones */
 .vision-text { 
-  color: #28a745; 
+  color: #4DB6AC; 
   font-weight: 600; 
 }
 .tech-highlight { 
-  color: #6f42c1; 
+  color: #9575CD; 
   font-weight: 600; 
 }
 .metric-highlight { 
-  color: #fd7e14; 
+  color: #FF9F7F; 
   font-weight: 700; 
 }
 .location-text { 
-  color: #20c997; 
+  color: #64B5F6; 
   font-weight: 600; 
 }
 .question-highlight {
-  color: #e83e8c;
+  color: #F48FB1;
   font-weight: 600;
   font-style: italic;
 }
@@ -59,13 +60,15 @@ classes: wide
   border-radius: 8px !important;
 }
 
-/* Main content area */
+/* Main content area - MINIMAL SIDE SPACING */
 .page__inner-wrap {
   position: relative;
   z-index: 50 !important;
-  background: rgba(255, 255, 255, 0.92) !important;
-  padding: 2rem !important;
+  background: rgba(255, 255, 255, 0.93) !important;
+  padding: 1.5rem 0.3rem !important; /* Very minimal side padding */
   border-radius: 8px !important;
+  max-width: 98% !important; /* Use almost full width */
+  margin: 0 auto !important;
 }
 
 /* Navigation and footer */
@@ -75,16 +78,37 @@ classes: wide
   z-index: 75 !important;
 }
 
+/* INCREASED TEXT SIZES - More readable */
 .page__content {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 1.15rem; /* Larger body text */
+  line-height: 1.8; /* Comfortable reading */
+  color: #37474F; /* Professional dark gray */
 }
 .page__content h2 {
-  font-size: 1.4rem;
-  color: #2c3e50;
+  font-size: 1.85rem; /* Prominent headings */
+  color: #455A64; /* Softer heading color */
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
 .page__content h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Clear subheadings */
+  color: #546E7A;
+}
+
+/* Reduce container padding on all screen sizes */
+.page {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
+
+@media (min-width: 768px) {
+  .page__inner-wrap {
+    padding: 2rem 0.8rem !important; /* Minimal side padding on larger screens */
+  }
+  .page {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }
 </style>
 
@@ -146,9 +170,9 @@ VANTA.BIRDS({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  backgroundColor: 0xfaefe9,
-  color1: 0x306e91,
-  color2: 0xafb4cf,
+  backgroundColor: 0xF5F9FC, // Very light medical blue
+  color1: 0x64B5F6, // Light CT blue
+  color2: 0x81D4FA, // Soft cyan
   colorMode: "lerp",
   birdSize: 0.80,
   wingSpan: 20.00,
