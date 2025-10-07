@@ -134,49 +134,6 @@ I welcome collaborations on <span class="important-text">multi-institutional val
 
 ---
 
-## Education
-
-### M.Tech. Computer Engineering
-**Aligarh Muslim University (AMU)**, Aligarh, India | *Nov 2021 – Nov 2023*  
-**CGPA:** <span class="metric-highlight">8.80/10.00</span>
-
-**Thesis:** "Multimodal Data Analytics for Predicting the Survival of Cancer Patients"  
-**Advisor:** Prof. Rashid Ali
-
-### B.Tech. Computer Science and Engineering  
-**Dr. A.P.J. Abdul Kalam Technical University (AKTU)**, Lucknow, India | *Aug 2017 – Jul 2021*  
-**CGPA:** <span class="metric-highlight">8.04/10.00</span>
-
-**Thesis:** "Detection of Breast Cancer"  
-**Supervisor:** Mr. Vijay Katta
-
----
-
-## Work Experience
-
-### Project Assistant | QIRAIL, CMC Vellore
-*Aug 2024 – Present* | Tamil Nadu, India
-
-- Developing <span class="tech-highlight">machine learning models</span> for cancer recurrence prediction and <span class="tech-highlight">automated tumor segmentation</span>. Contributing to <span class="important-text">CHAVI (India's first national oncology imaging biobank)</span> and building <span class="vision-text">FAIR-compliant data infrastructure</span> for multi-institutional research.
-
-### Research Analyst | STARlab Capital
-*Dec 2023 – June 2024* | Lucknow, India
-
-- Designed and deployed <span class="tech-highlight">volatility-based trading strategies</span>, improving ROI by <span class="metric-highlight">52%</span> through model optimization and real-time feedback systems.
-
----
-
-## Technical Skills
-
-**Programming Languages:** <span class="tech-highlight">Python, R, MATLAB, SQL, JavaScript</span>  
-**Machine Learning:** <span class="tech-highlight">scikit-learn, XGBoost, PyTorch, TensorFlow, Keras</span>  
-**Medical Imaging:** <span class="tech-highlight">PyRadiomics, SimpleITK, MONAI, 3D Slicer</span>  
-**Data Management:** <span class="tech-highlight">PostgreSQL, MongoDB, DICOM, HL7 FHIR</span>  
-**Web Development:** <span class="tech-highlight">FastAPI, React, Node.js, Docker</span>  
-**Research Tools:** <span class="tech-highlight">Git, Jupyter, LaTeX, R Markdown</span>
-
----
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 <script>
