@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Hasan Shaikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e17;
+            color: #e4e6eb;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-tagline {
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-links a {
+            color: #e4e6eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover,
+        .navbar-links a.active {
+            color: #00d4ff;
+        }
+
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, #0a0e17 0%, #1a1f35 50%, #0a0e17 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Main content */
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 3rem 4rem 3rem;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #b794f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #b8bcc8;
+        }
+
+        .scholar-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 12px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .scholar-link:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+        }
+
+        /* Section */
+        .pub-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .section-count {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        /* Publication Card */
+        .pub-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .pub-card.featured {
+            border-left: 4px solid #f3a03d;
+            background: rgba(243, 160, 61, 0.05);
+        }
+
+        .pub-header {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .year-badge {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0a0e17;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .year-badge.submitted {
+            background: linear-gradient(135deg, #b794f6 0%, #9575CD 100%);
+        }
+
+        .year-badge.preparation {
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+        }
+
+        .pub-content {
+            flex: 1;
+        }
+
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, #f3a03d 0%, #ff9800 100%);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0a0e17;
+            margin-bottom: 0.8rem;
+        }
+
+        .pub-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #b8bcc8;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .author-highlight {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .pub-venue {
+            font-size: 0.95rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .pub-description {
+            font-size: 1rem;
+            color: #b8bcc8;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Tags */
+        .pub-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .tag {
+            padding: 0.4rem 0.9rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        .tag.radiomics {
+            background: rgba(183, 148, 246, 0.1);
+            border-color: rgba(183, 148, 246, 0.3);
+            color: #b794f6;
+        }
+
+        .tag.deep-learning {
+            background: rgba(243, 160, 61, 0.1);
+            border-color: rgba(243, 160, 61, 0.3);
+            color: #f3a03d;
+        }
+
+        /* Buttons */
+        .pub-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #0a0e17;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #00d4ff;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: #00d4ff;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(183, 148, 246, 0.2);
+            border: 1px solid rgba(183, 148, 246, 0.4);
+            border-radius: 20px;
+            color: #b794f6;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .status-badge.preparation {
+            background: rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.4);
+            color: #64b5f6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                padding: 7rem 1rem 3rem 1rem;
+            }
+
+            .navbar-content {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navbar-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .pub-header {
+                flex-direction: column;
+            }
+
+            .pub-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/" style="text-decoration: none;">
+                <div class="navbar-brand">
+                    <div class="navbar-name">Hasan Shaikh</div>
+                    <div class="navbar-tagline">Researcher in AI for Cancer Imaging</div>
+                </div>
+            </a>
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/portfolio/">Projects</a>
+                <a href="/publications/" class="active">Publications</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gradient"></div>
+
+    <div class="content">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 class="page-title">Research & Publications</h1>
+            <p class="page-subtitle">Advancing cancer care through CT-based radiomics and deep learning</p>
+            <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ" target="_blank" class="scholar-link">
+                📚 View Google Scholar Profile
+            </a>
+        </div>
+
+        <!-- Under Submission -->
+        <section class="pub-section">
+            <div class="section-header">
+                <span class="section-icon">📝</span>
+                <h2 class="section-title">Under Submission</h2>
+                <span class="section-count">(2)</span>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="year-badge submitted">2025</div>
+                    <div class="pub-content">
+                        <div class="status-badge">Under Review</div>
+                        <h3 class="pub-title">Automated Segmentation of Head and Neck Cancer from CT Images Using 3D Convolutional Neural Networks</h3>
+                        <p class="pub-authors">
+                            Piyus Prabhanjans, Asjad Nabeel P, Aparna V K, Rajendra Benny Kuchipudi, Hannah Mary Thomas T, Balu Krishna S, <span class="author-highlight">Hasan Shaikh</span>, Jeny Rajan et al.
+                        </p>
+                        <p class="pub-venue">International Conference on Artificial Intelligence for Healthcare (AIHC), 2025</p>
+                        <div class="pub-tags">
+                            <span class="tag deep-learning">Deep Learning</span>
+                            <span class="tag">Segmentation</span>
+                            <span class="tag">3D CNN</span>
+                            <span class="tag">Head & Neck Cancer</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://drive.google.com/file/d/1kEoBK_PccqJm8Lv16WT5ZEJ_Tsdx3Eoj/view?usp=drive_link" target="_blank" class="btn btn-primary">📄 View Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card featured">
+                <div class="pub-header">
+                    <div class="year-badge submitted">2025</div>
+                    <div class="pub-content">
+                        <div class="status-badge">Under Review</div>
+                        <h3 class="pub-title">Metaheuristic-Driven Machine Learning Pipelines for Radiomics-Based Prediction of Locoregional Recurrence in Head and Neck Cancer</h3>
+                        <p class="pub-authors">
+                            <span class="author-highlight">Hasan Shaikh</span>, Balu Krishna S, Amal Joseph Varghese, Hannah Mary Thomas T et al.
+                        </p>
+                        <p class="pub-venue">International Conference on Artificial Intelligence for Healthcare (AIHC), 2025</p>
+                        <p class="pub-description">
+                            Novel metaheuristic optimization approach for radiomics feature selection and machine learning pipeline optimization in predicting locoregional recurrence for head and neck cancer patients.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag radiomics">Radiomics</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Metaheuristics</span>
+                            <span class="tag">Head & Neck Cancer</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://drive.google.com/file/d/1_e6hidLL9GBIV958Yx9-cFdbtzbPxIZO/view?usp=drive_link" target="_blank" class="btn btn-primary">📄 View Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conference Presentations -->
+        <section class="pub-section">
+            <div class="section-header">
+                <span class="section-icon">🎤</span>
+                <h2 class="section-title">Conference Presentations</h2>
+                <span class="section-count">(2)</span>
+            </div>
+
+            <div class="pub-card featured">
+                <div class="pub-header">
+                    <div class="year-badge">2025</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Before We Treat, Can We Tell? A Locoregional Recurrence Signature in Head & Neck</h3>
+                        <p class="pub-authors">
+                            <span class="author-highlight">Hasan Shaikh</span>, Amal Joseph Varghese, Balu Krishna S, Hannah Mary Thomas T et al.
+                        </p>
+                        <p class="pub-venue">15th Research Day, Christian Medical College, Vellore, Tamil Nadu, India, 2025</p>
+                        <p class="pub-description">
+                            Prospective radiomics-based prediction model for identifying patients at high risk of locoregional recurrence before treatment initiation in head and neck cancer.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag radiomics">Radiomics</span>
+                            <span class="tag">Prognostic Model</span>
+                            <span class="tag">Clinical AI</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://drive.google.com/file/d/1OhymKtEJZSY3_5quAQPX-cfXJMNiUn6j/view?usp=drive_link" target="_blank" class="btn btn-primary">📄 View Abstract</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="year-badge">2024</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Can CT Radiomics Predict Recurrence in Head and Neck Cancer? Early Results from a Prospective Imaging Trial</h3>
+                        <p class="pub-authors">
+                            <span class="author-highlight">Hasan Shaikh</span>, Amal Joseph Varghese, Hannah Mary Thomas T et al.
+                        </p>
+                        <p class="pub-venue">14th Research Day, Christian Medical College, Vellore, Tamil Nadu, India, 2024</p>
+                        <p class="pub-description">
+                            Prospective CT radiomics study for one-year locoregional recurrence prediction in head and neck cancer; Naive Bayes showed the best train-test balance in early results.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag radiomics">Radiomics</span>
+                            <span class="tag">CT Imaging</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://drive.google.com/file/d/1BXd6kzwkHHyAlq8iUl4RFiRr4_XybGWr/view?usp=drive_link" target="_blank" class="btn btn-primary">📊 View Poster</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Chapters -->
+        <section class="pub-section">
+            <div class="section-header">
+                <span class="section-icon">📚</span>
+                <h2 class="section-title">Book Chapters</h2>
+                <span class="section-count">(1)</span>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="year-badge">2024</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Cancer Survival Prediction Using Artificial Intelligence: Current Status and Future Prospects</h3>
+                        <p class="pub-authors">
+                            <span class="author-highlight">Hasan Shaikh</span> and Rashid Ali
+                        </p>
+                        <p class="pub-venue">Data Science in the Medical Field, Academic Press (Elsevier), 2024. ISBN: 978-0-443-24029-4</p>
+                        <p class="pub-description">
+                            Comprehensive overview of AI and machine learning approaches for cancer survival prediction, spanning imaging and clinical data, with emphasis on explainability and clinical integration.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Artificial Intelligence</span>
+                            <span class="tag">Cancer Prognosis</span>
+                            <span class="tag">Survival Prediction</span>
+                            <span class="tag">Clinical Integration</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/B978-0-443-24028-7.00016-7" target="_blank" class="btn btn-primary">🔗 View on Elsevier</a>
+                            <a href="https://doi.org/10.1016/B978-0-443-24028-7.00016-7" target="_blank" class="btn btn-secondary">DOI: 10.1016/B978-0-443-24028-7.00016-7</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Under Preparation -->
+        <section class="pub-section">
+            <div class="section-header">
+                <span class="section-icon">✍️</span>
+                <h2 class="section-title">Under Preparation</h2>
+                <span class="section-count">(1)</span>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="year-badge preparation">TBD</div>
+                    <div class="pub-content">
+                        <div class="status-badge preparation">Manuscript in Progress</div>
+                        <h3 class="pub-title">A Prognosis Prediction of Breast Cancer using Multimodal Gated Attention Convolution Neural Network by Integrating Multi-dimensional Data (MGAttCNNMD)</h3>
+                        <p class="pub-authors">
+                            <span class="author-highlight">Hasan Shaikh</span> and Rashid Ali
+                        </p>
+                        <p class="pub-description">
+                            Novel multimodal deep learning architecture leveraging gated attention mechanisms for integrating multi-dimensional clinical and imaging data for breast cancer prognosis prediction.
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag deep-learning">Deep Learning</span>
+                            <span class="tag">Multimodal</span>
+                            <span class="tag">Attention Mechanism</span>
+                            <span class="tag">Breast Cancer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
