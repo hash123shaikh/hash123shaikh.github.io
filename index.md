@@ -12,11 +12,69 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #0a0e17;
             color: #e4e6eb;
             overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .navbar-tagline {
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-links a {
+            color: #e4e6eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #00d4ff;
         }
 
         /* Animated gradient background */
@@ -50,9 +108,9 @@
         .content {
             position: relative;
             z-index: 10;
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
         /* Hero Section */
@@ -60,9 +118,9 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 4rem;
-            padding: 2rem 0;
+            justify-content: center;
+            gap: 6rem;
+            padding: 8rem 0 4rem 0;
         }
 
         .hero-text {
@@ -119,7 +177,7 @@
 
         /* Profile Image */
         .hero-image {
-            flex: 0 0 450px;
+            flex: 0 0 500px;
             animation: fadeInRight 1s ease;
         }
 
@@ -130,8 +188,8 @@
 
         .profile-container {
             position: relative;
-            width: 450px;
-            height: 450px;
+            width: 500px;
+            height: 500px;
         }
 
         .profile-glow {
@@ -139,8 +197,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 480px;
-            height: 480px;
+            width: 530px;
+            height: 530px;
             background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 3s ease-in-out infinite;
@@ -344,19 +402,49 @@
         }
 
         /* Responsive */
+        @media (max-width: 1400px) {
+            .content {
+                padding: 0 2rem;
+            }
+            
+            .navbar-content {
+                padding: 0 2rem;
+            }
+            
+            .hero {
+                gap: 4rem;
+            }
+            
+            .profile-container {
+                width: 420px;
+                height: 420px;
+            }
+            
+            .profile-glow {
+                width: 450px;
+                height: 450px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero {
                 flex-direction: column;
                 text-align: center;
+                gap: 3rem;
             }
 
             .hero-text h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
 
             .profile-container {
-                width: 350px;
-                height: 350px;
+                width: 380px;
+                height: 380px;
+            }
+            
+            .profile-glow {
+                width: 410px;
+                height: 410px;
             }
         }
 
@@ -365,17 +453,42 @@
                 padding: 0 1rem;
             }
 
+            .navbar-content {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navbar-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar-links a {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 10rem 0 4rem 0;
+            }
+
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero-text .tagline {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .profile-container {
-                width: 280px;
-                height: 280px;
+                width: 320px;
+                height: 320px;
+            }
+            
+            .profile-glow {
+                width: 350px;
+                height: 350px;
             }
 
             .glass-card {
@@ -386,9 +499,42 @@
                 font-size: 2rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .profile-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .profile-glow {
+                width: 310px;
+                height: 310px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-brand">
+                <div class="navbar-name">Hasan Shaikh</div>
+                <div class="navbar-tagline">Researcher in AI for Cancer Imaging</div>
+            </div>
+            <div class="navbar-links">
+                <a href="#about">About</a>
+                <a href="#journey">Journey</a>
+                <a href="#build">What I Build</a>
+                <a href="#vision">Vision</a>
+                <a href="#forward">Looking Forward</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="bg-gradient"></div>
     <canvas id="particles"></canvas>
 
@@ -409,9 +555,9 @@
                     that scale from tertiary care centers to community hospitals.
                 </p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">View Projects</a>
-                    <a href="#" class="btn btn-secondary">Publications</a>
-                    <a href="#" class="btn btn-secondary">Download CV</a>
+                    <a href="/portfolio/" class="btn btn-primary">View Projects</a>
+                    <a href="/publications/" class="btn btn-secondary">Publications</a>
+                    <a href="/files/CV_Hasan_Shaikh.pdf" class="btn btn-secondary">Download CV</a>
                 </div>
             </div>
 
@@ -419,14 +565,14 @@
                 <div class="profile-container">
                     <div class="profile-glow"></div>
                     <div class="profile-img">
-                        <img src="https://via.placeholder.com/450" alt="Hasan Shaikh">
+                        <img src="https://hash123shaikh.github.io/assets/images/bio-photo.jpg" alt="Hasan Shaikh">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About -->
-        <section class="glass-card">
+        <section id="about" class="glass-card">
             <h2 class="section-title">The Vision</h2>
             <p>
                 <span class="highlight">How do we build intelligent systems that scale effectively and serve patients wherever they are?</span>
@@ -454,7 +600,7 @@
         </section>
 
         <!-- The Journey -->
-        <section class="glass-card">
+        <section id="journey" class="glass-card">
             <h2 class="section-title">The Journey</h2>
             
             <div class="timeline-item">
@@ -494,7 +640,7 @@
         </section>
 
         <!-- What I Build -->
-        <section class="glass-card">
+        <section id="build" class="glass-card">
             <h2 class="section-title">What I Build</h2>
             <p>
                 Developing <span class="highlight">machine learning models</span> for cancer outcome prediction 
@@ -523,7 +669,7 @@
         </section>
 
         <!-- Looking Forward -->
-        <section class="glass-card">
+        <section id="forward" class="glass-card">
             <h2 class="section-title">Looking Forward</h2>
             <p>
                 Actively seeking <span class="highlight-orange">PhD positions in Medical AI, Computer Vision, 
@@ -541,10 +687,10 @@
             </p>
 
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Let's Connect</a>
-                <a href="#" class="btn btn-secondary">LinkedIn</a>
-                <a href="#" class="btn btn-secondary">GitHub</a>
-                <a href="#" class="btn btn-secondary">Google Scholar</a>
+                <a href="/contact/" class="btn btn-primary">Let's Connect</a>
+                <a href="https://www.linkedin.com/in/hash123shaikh/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                <a href="https://github.com/hash123shaikh" target="_blank" class="btn btn-secondary">GitHub</a>
+                <a href="https://scholar.google.com" target="_blank" class="btn btn-secondary">Google Scholar</a>
             </div>
         </section>
     </div>
