@@ -1,0 +1,976 @@
+---
+layout: none
+permalink: /portfolio/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects - Hasan Shaikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e17;
+            color: #e4e6eb;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-tagline {
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-links a {
+            color: #e4e6eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover,
+        .navbar-links a.active {
+            color: #00d4ff;
+        }
+
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, #0a0e17 0%, #1a1f35 50%, #0a0e17 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Particle canvas */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Main content */
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 3rem 4rem 3rem;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #b794f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #b8bcc8;
+        }
+
+        /* Project Section */
+        .project-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card.featured {
+            border-left: 4px solid #00d4ff;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .project-org {
+            font-size: 0.95rem;
+            color: #b8bcc8;
+            font-weight: 500;
+        }
+
+        .project-period {
+            flex-shrink: 0;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .project-description {
+            font-size: 1.05rem;
+            color: #e4e6eb;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Key Contributions */
+        .contributions-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contributions-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .contributions-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+            color: #b8bcc8;
+            line-height: 1.7;
+        }
+
+        .contributions-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0.5rem;
+            color: #00d4ff;
+            font-weight: 700;
+        }
+
+        .contributions-list strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .metric {
+            color: #f3a03d;
+            font-weight: 700;
+        }
+
+        /* Technologies */
+        .tech-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tech-tag {
+            padding: 0.4rem 0.9rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        /* Links */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-box {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #00d4ff;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #b8bcc8;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            z-index: 10;
+            background: rgba(10, 14, 23, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 1.5rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .footer-bio {
+            font-size: 1rem;
+            color: #b8bcc8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-quote {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 3px solid #00d4ff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .quote-text {
+            font-size: 0.95rem;
+            color: #b8bcc8;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-author {
+            font-size: 0.85rem;
+            color: #00d4ff;
+            text-align: right;
+        }
+
+        .footer-right {
+            flex: 0 0 300px;
+        }
+
+        .connect-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #b8bcc8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            color: #00d4ff;
+            transform: translateX(5px);
+        }
+
+        .social-icon {
+            font-size: 1.3rem;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 3rem 0 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                padding: 7rem 1rem 3rem 1rem;
+            }
+
+            .navbar-content {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navbar-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+
+            .project-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-content-wrapper {
+                flex-direction: column;
+                gap: 3rem;
+                padding: 0 1rem;
+            }
+
+            .footer-left {
+                text-align: center;
+            }
+
+            .footer-bottom {
+                padding: 2rem 1rem 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/" style="text-decoration: none;">
+                <div class="navbar-brand">
+                    <div class="navbar-name">Hasan Shaikh</div>
+                    <div class="navbar-tagline">Researcher in AI for Cancer Imaging</div>
+                </div>
+            </a>
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/portfolio/" class="active">Projects</a>
+                <a href="/publications/">Publications</a>
+                <a href="/cv/">CV</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gradient"></div>
+    <canvas id="particles"></canvas>
+
+    <div class="content">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 class="page-title">Research Projects</h1>
+            <p class="page-subtitle">Building intelligent systems that transform cancer care through AI and medical imaging</p>
+        </div>
+
+        <!-- QIRAIL Projects -->
+        <section class="project-section">
+            <div class="section-header">
+                <span class="section-icon">🏥</span>
+                <h2 class="section-title">QIRAIL, CMC Vellore</h2>
+            </div>
+
+            <!-- Project 1: Radiomics Risk Stratification -->
+            <div class="project-card featured">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Radiomics-Based Risk Stratification in Head & Neck Cancer</h3>
+                        <p class="project-org">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</p>
+                    </div>
+                    <span class="project-period">Aug 2024 - Present</span>
+                </div>
+
+                <p class="project-description">
+                    Developing robust machine learning pipelines for predicting locoregional recurrence in head and neck cancer patients using CT-based radiomics features, with focus on clinical interpretability and deployment readiness.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value">367</div>
+                        <div class="stat-label">Patients</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">0.81</div>
+                        <div class="stat-label">AUC Score</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">10</div>
+                        <div class="stat-label">Feature Signature</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Algorithms Tested</div>
+                    </div>
+                </div>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li><strong>Addressed clinical need:</strong> Current risk stratification inadequately predicts locoregional recurrence in HNC patients, motivating development of improved prediction models using radiomics features</li>
+                    <li><strong>Conducted systematic comparison</strong> of 8 metaheuristic feature selectors (PSO, GA, GWO, etc.) across multiple classifiers on 367 patients to identify optimal approaches for high-dimensional radiomics data</li>
+                    <li><strong>Developed interpretable prediction model:</strong> 10-feature signature (4 clinical + 6 radiomics) achieved <span class="metric">AUC 0.81 (95% CI: 0.62-0.95)</span> on held-out test set while maintaining clinical interpretability</li>
+                    <li><strong>Provided mechanistic insights:</strong> Analyzed why larger feature sets underperformed due to overfitting and validated biological plausibility of selected features with oncology collaborators</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyRadiomics</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">PSO</span>
+                        <span class="tech-tag">Genetic Algorithms</span>
+                        <span class="tech-tag">SHAP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Reproducibility Study -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Reproducibility Study: CNN-Based Head and Neck Cancer Prognosis</h3>
+                        <p class="project-org">QIRAIL, CMC Vellore</p>
+                    </div>
+                    <span class="project-period">2024</span>
+                </div>
+
+                <p class="project-description">
+                    Critical examination of reproducibility claims in published CNN model for head and neck cancer outcomes, revealing significant dataset and documentation issues while successfully reproducing results.
+                </p>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li><strong>Challenged reproducibility claims</strong> of published CNN model by attempting complete replication across three HNC outcomes (distant metastasis, locoregional failure, overall survival)</li>
+                    <li><strong>Identified major dataset and documentation issues:</strong> Incorrectly provided datasets, multiple errors in data files, inadequate result reporting protocols, and poor documentation that contradicted reproducibility claims</li>
+                    <li><strong>Successfully reproduced results</strong> despite paper's flaws by correcting dataset errors, implementing missing preprocessing steps, and establishing proper validation protocols</li>
+                    <li><strong>Authors acknowledged reproducibility failures:</strong> Communicated findings that led to author recognition of dataset errors and documentation inadequacies in their published work</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">DICOM</span>
+                        <span class="tech-tag">Data Validation</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/hash123shaikh/Reproducibility-of-HNC_CNN.git" target="_blank" class="project-link">
+                        🔗 GitHub Repository
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: CHAVI Biobank -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">CHAVI: CompreHensive Digital ArchiVe of Cancer Imaging</h3>
+                        <p class="project-org">India's First National Oncology Imaging Biobank</p>
+                    </div>
+                    <span class="project-period">2024</span>
+                </div>
+
+                <p class="project-description">
+                    Contributing to CHAVI, a national biobank led by Tata Memorial Centre and IIT Kharagpur, establishing India's first comprehensive cancer imaging repository with FAIR principles.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value">304+</div>
+                        <div class="stat-label">HNC Cases</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">FAIR Compliant</div>
+                    </div>
+                </div>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li>Curated and uploaded <span class="metric">304+ anonymized HNC cases</span> with validated clinical/imaging metadata</li>
+                    <li>Built <strong>automated pipelines</strong> ensuring compliance with <strong>FAIR principles</strong> (Findable, Accessible, Interoperable, and Reusable) and interoperability for multi-institutional research</li>
+                    <li>Established quality control protocols for data validation and standardization</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DICOM</span>
+                        <span class="tech-tag">Orthanc</span>
+                        <span class="tech-tag">XNAT</span>
+                        <span class="tech-tag">FAIR Principles</span>
+                        <span class="tech-tag">Data Curation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Automated Segmentation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">CT-based Automated Segmentation Using 3D CNNs</h3>
+                        <p class="project-org">Collaboration with NIT Surathkal, India</p>
+                    </div>
+                    <span class="project-period">2024</span>
+                </div>
+
+                <p class="project-description">
+                    Implementing 3D nnU-Net for automated segmentation of head and neck tumors, demonstrating feasibility of CT-only approach for resource-limited settings without requiring MRI scans.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value">167</div>
+                        <div class="stat-label">Cases Curated</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">0.65</div>
+                        <div class="stat-label">Dice Score</div>
+                    </div>
+                </div>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li>Curated and de-anonymized multi-institutional datasets (<span class="metric">167 cases: 137 MAASTRO public + 30 CMC private</span>), ensuring data quality and harmonization for model training and validation</li>
+                    <li>3D nnU-Net segmentation model achieving <span class="metric">Global Dice scores: 0.62 (HN1), 0.63 (CMC), 0.65 (combined)</span> demonstrating feasibility of CT-only approach in resource-limited settings</li>
+                    <li>Developed quality assurance metrics for clinical validation</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">nnU-Net</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">MONAI</span>
+                        <span class="tech-tag">3D CNN</span>
+                        <span class="tech-tag">Medical Imaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Large-Scale Data Curation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Large-Scale Imaging and Clinical Data Curation for Prospective Trials</h3>
+                        <p class="project-org">DBT/Wellcome Trust India Alliance Funded Study</p>
+                    </div>
+                    <span class="project-period">2020 - 2025</span>
+                </div>
+
+                <p class="project-description">
+                    Contributing to DBT/Wellcome Trust India Alliance–funded prospective study supporting collection, curation, and quality assurance of imaging and clinical data for large-scale radiomics research.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value">~1700</div>
+                        <div class="stat-label">Patients</div>
+                    </div>
+                </div>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li>Contributed to DBT/Wellcome Trust India Alliance–funded prospective study (2020–2025), supporting collection, curation, and quality assurance of imaging and clinical data from <span class="metric">~1700 patients</span></li>
+                    <li>Designed <strong>end-to-end radiomics pipeline:</strong> DICOM retrieval (Orthanc), GTV-P segmentation (Citric), PyRadiomics-based extraction, enabling reproducible model training</li>
+                    <li>Helped coordinate data annotation workflows and implemented automated AWS S3 pipelines for secure cloud backups and data recovery</li>
+                    <li>Drafted the <strong>NVIDIA Academic Grant Proposal</strong>, justifying infrastructure needs for in-house deployment of large-scale deep learning models in clinical environments</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Orthanc</span>
+                        <span class="tech-tag">PyRadiomics</span>
+                        <span class="tech-tag">AWS S3</span>
+                        <span class="tech-tag">DICOM</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Data Pipeline</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STARlab Capital -->
+        <section class="project-section">
+            <div class="section-header">
+                <span class="section-icon">📊</span>
+                <h2 class="section-title">Quantitative Finance</h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Volatility-Based Trading Strategy Development</h3>
+                        <p class="project-org">STARlab Capital, Lucknow</p>
+                    </div>
+                    <span class="project-period">Dec 2023 - Jun 2024</span>
+                </div>
+
+                <p class="project-description">
+                    Designed, backtested, and deployed sophisticated volatility-based trading strategies using proprietary tools, demonstrating transferable skills in quantitative analysis and model optimization.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value">52.38%</div>
+                        <div class="stat-label">ROI Improvement</div>
+                    </div>
+                </div>
+
+                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <ul class="contributions-list">
+                    <li>Designed, backtested, and deployed volatility-based strategies (Nebula, ARUT, A2) using <strong>OptionNet Explorer, Mesosim, OptiTrade, OptiBot</strong> tools</li>
+                    <li>Enhanced the ARUT strategy, increasing ROI by <span class="metric">52.38%</span> through scenario-driven optimization and real-time feedback</li>
+                    <li>Refined internal platforms: improved trade logs, added dynamic filters, and led contributions to OptiTrade's open-source GitHub repository</li>
+                </ul>
+
+                <div class="tech-section">
+                    <div class="tech-label">Technologies & Tools</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OptionNet Explorer</span>
+                        <span class="tech-tag">Backtesting</span>
+                        <span class="tech-tag">Strategy Optimization</span>
+                        <span class="tech-tag">Risk Management</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/charmtraders-apps/issue_tracker" target="_blank" class="project-link">
+                        🔗 OptiTrade GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-left">
+                <h3 class="footer-name">Hasan Shaikh</h3>
+                <p class="footer-bio">
+                    Clinical Data Scientist at QIRAIL, CMC Vellore. Working at the intersection of medical imaging, 
+                    machine learning, and radiation oncology. Building intelligent systems that transform cancer care 
+                    through CT-based radiomics and deep learning.
+                </p>
+                <div class="footer-quote">
+                    <p class="quote-text">"The best way to predict the future is to invent it."</p>
+                    <p class="quote-author">— Alan Kay</p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3 class="connect-title">Connect</h3>
+                <div class="social-links">
+                    <a href="https://github.com/hash123shaikh" target="_blank" class="social-link">
+                        <span class="social-icon">🔗</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ" target="_blank" class="social-link">
+                        <span class="social-icon">🎓</span>
+                        <span>Google Scholar</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hasann-shaikh/" target="_blank" class="social-link">
+                        <span class="social-icon">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:hasanshaikh3198@gmail.com" class="social-link">
+                        <span class="social-icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Hasan Shaikh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Particle animation
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 80;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(0, 212, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            particles.forEach((p1, i) => {
+                particles.slice(i + 1).forEach(p2 => {
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * (1 - distance / 150)})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
