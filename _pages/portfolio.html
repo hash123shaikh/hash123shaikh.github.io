@@ -575,40 +575,57 @@ permalink: /portfolio/
                 <div class="project-header">
                     <div>
                         <h3 class="project-title">Radiomics-Based Risk Stratification in Head & Neck Cancer</h3>
-                        <p class="project-org">Quantitative Imaging Research and Artificial Intelligence Lab (QIRAIL)</p>
+                        <p class="project-org">DBT/Wellcome Trust India Alliance Funded Project | QIRAIL, CMC Vellore</p>
                     </div>
                     <span class="project-period">Aug 2024 - Present</span>
                 </div>
 
                 <p class="project-description">
-                    Developing robust machine learning pipelines for predicting locoregional recurrence in head and neck cancer patients using CT-based radiomics features, with focus on clinical interpretability and deployment readiness.
+                    <strong>Background:</strong> Accurately estimating individual cancer patient risk of early disease failure is crucial for understanding tumor biology, stratifying patients, and tailoring personalized treatment strategies. Current risk stratification methods inadequately predict locoregional recurrence in head and neck cancer patients, creating a critical need for improved prediction models.
+                </p>
+
+                <p class="project-description">
+                    <strong>The Challenge:</strong> Cancer radiomics converts routine radiological images—traditionally interpreted qualitatively—into quantifiable data describing tumor phenotypes. Unlike tissue biopsies, radiomics captures information from the entire tumor non-invasively, reducing sampling errors and requiring no additional radiation exposure for patients.
+                </p>
+
+                <p class="project-description">
+                    <strong>Our Approach:</strong> We systematically compared 8 metaheuristic feature selection algorithms (Particle Swarm Optimization, Genetic Algorithms, Grey Wolf Optimizer, Whale Optimization Algorithm, etc.) combined with 7 machine learning classifiers on pretreatment CT scans from 367 patients. The key research question: <em>Can pre-treatment radiomics signatures accurately identify advanced HNC patients at higher risk of recurrence?</em>
                 </p>
 
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-value">367</div>
-                        <div class="stat-label">Patients</div>
+                        <div class="stat-label">Patients Analyzed</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-value">0.81</div>
-                        <div class="stat-label">AUC Score</div>
+                        <div class="stat-label">AUC (95% CI: 0.62-0.95)</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-value">10</div>
                         <div class="stat-label">Feature Signature</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-value">8</div>
-                        <div class="stat-label">Algorithms Tested</div>
+                        <div class="stat-value">56</div>
+                        <div class="stat-label">Model Combinations</div>
                     </div>
                 </div>
 
-                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <h4 class="contributions-title">🎯 Key Achievements</h4>
                 <ul class="contributions-list">
-                    <li><strong>Addressed clinical need:</strong> Current risk stratification inadequately predicts locoregional recurrence in HNC patients, motivating development of improved prediction models using radiomics features</li>
-                    <li><strong>Conducted systematic comparison</strong> of 8 metaheuristic feature selectors (PSO, GA, GWO, etc.) across multiple classifiers on 367 patients to identify optimal approaches for high-dimensional radiomics data</li>
-                    <li><strong>Developed interpretable prediction model:</strong> 10-feature signature (4 clinical + 6 radiomics) achieved <span class="metric">AUC 0.81 (95% CI: 0.62-0.95)</span> on held-out test set while maintaining clinical interpretability</li>
-                    <li><strong>Provided mechanistic insights:</strong> Analyzed why larger feature sets underperformed due to overfitting and validated biological plausibility of selected features with oncology collaborators</li>
+                    <li><strong>Developed interpretable prediction model:</strong> Created a clinically meaningful 10-feature signature (4 clinical + 6 radiomics features) that achieved <span class="metric">AUC 0.81 (95% CI: 0.62-0.95)</span> on held-out test set while maintaining interpretability for clinical adoption</li>
+                    <li><strong>Systematic metaheuristic comparison:</strong> First comprehensive evaluation of 8 metaheuristic optimizers (PSO, GA, GWO, WOA, etc.) across multiple classifiers (Logistic Regression, Naive Bayes, SVM, Random Forest, etc.) specifically for radiomics feature selection in HNC</li>
+                    <li><strong>Mechanistic insights into model behavior:</strong> Discovered and documented why larger feature sets underperformed due to overfitting in high-dimensional radiomics data, providing valuable guidance for future model development</li>
+                    <li><strong>Clinical validation framework:</strong> Established collaboration with oncology team to validate biological plausibility of selected radiomic features, ensuring features reflect real tumor biology rather than imaging artifacts</li>
+                    <li><strong>Reproducible pipeline:</strong> Built end-to-end analysis pipeline from DICOM retrieval through feature extraction to model validation, enabling future multi-institutional validation studies</li>
+                </ul>
+
+                <h4 class="contributions-title">🔬 Methodology Details</h4>
+                <ul class="contributions-list">
+                    <li><strong>Feature extraction:</strong> Extracted comprehensive radiomic features from pretreatment CT scans using PyRadiomics, including first-order statistics, shape features, and texture features (GLCM, GLRLM, GLSZM)</li>
+                    <li><strong>Feature selection strategies:</strong> Implemented and compared LASSO regularization, SelectKBest univariate selection, and nature-inspired metaheuristics (PSO, WOA) for optimal feature subset identification</li>
+                    <li><strong>Model validation:</strong> Employed rigorous temporal splitting and nested cross-validation to prevent data leakage and ensure unbiased performance estimates</li>
+                    <li><strong>Performance metrics:</strong> Evaluated models using ROC AUC, calibration curves, decision curve analysis, and clinical net benefit to assess both discrimination and clinical utility</li>
                 </ul>
 
                 <div class="tech-section">
@@ -620,7 +637,9 @@ permalink: /portfolio/
                         <span class="tech-tag">XGBoost</span>
                         <span class="tech-tag">PSO</span>
                         <span class="tech-tag">Genetic Algorithms</span>
+                        <span class="tech-tag">Grey Wolf Optimizer</span>
                         <span class="tech-tag">SHAP</span>
+                        <span class="tech-tag">Orthanc DICOM</span>
                     </div>
                 </div>
             </div>
@@ -670,42 +689,79 @@ permalink: /portfolio/
                 <div class="project-header">
                     <div>
                         <h3 class="project-title">CHAVI: CompreHensive Digital ArchiVe of Cancer Imaging</h3>
-                        <p class="project-org">India's First National Oncology Imaging Biobank</p>
+                        <p class="project-org">India's First National Oncology Imaging Biobank | Led by Tata Memorial Centre & IIT Kharagpur</p>
                     </div>
                     <span class="project-period">2024</span>
                 </div>
 
                 <p class="project-description">
-                    Contributing to CHAVI, a national biobank led by Tata Memorial Centre and IIT Kharagpur, establishing India's first comprehensive cancer imaging repository with FAIR principles.
+                    <strong>The National Challenge:</strong> Development of AI and machine learning models in oncology requires access to large-scale, high-quality, and standardized imaging datasets. However, region-specific imaging biobanks remain scarce in South Asia, limiting AI research capabilities and model generalizability to diverse patient populations.
+                </p>
+
+                <p class="project-description">
+                    <strong>CHAVI's Mission:</strong> Creating India's first centralized repository of de-identified oncology imaging data to democratize medical data for research, foster reproducibility and collaboration, and enable AI-driven innovations in early cancer detection, prognosis prediction, and personalized treatment strategies.
+                </p>
+
+                <p class="project-description">
+                    <strong>Our Contribution:</strong> Designed and implemented comprehensive data preparation and integration pipeline for seamless upload of Head and Neck Cancer imaging and clinical data to CHAVI, ensuring ethical compliance with HIPAA and GDPR while maintaining data utility for AI research.
                 </p>
 
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-value">304+</div>
-                        <div class="stat-label">HNC Cases</div>
+                        <div class="stat-label">HNC Cases Curated</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-value">100%</div>
                         <div class="stat-label">FAIR Compliant</div>
                     </div>
+                    <div class="stat-box">
+                        <div class="stat-value">Zero</div>
+                        <div class="stat-label">Privacy Violations</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">Multi</div>
+                        <div class="stat-label">Institutional</div>
+                    </div>
                 </div>
 
-                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <h4 class="contributions-title">🎯 Key Achievements</h4>
                 <ul class="contributions-list">
-                    <li>Curated and uploaded <span class="metric">304+ anonymized HNC cases</span> with validated clinical/imaging metadata</li>
-                    <li>Built <strong>automated pipelines</strong> ensuring compliance with <strong>FAIR principles</strong> (Findable, Accessible, Interoperable, and Reusable) and interoperability for multi-institutional research</li>
-                    <li>Established quality control protocols for data validation and standardization</li>
+                    <li><strong>Curated 304+ anonymized HNC cases</strong> with comprehensive validated clinical and imaging metadata, establishing CMC Vellore as a major contributor to India's national cancer imaging repository</li>
+                    <li><strong>Automated FAIR-compliant pipeline:</strong> Built end-to-end data processing system ensuring datasets are Findable, Accessible, Interoperable, and Reusable for multi-institutional research collaboration</li>
+                    <li><strong>Rigorous de-identification protocols:</strong> Implemented comprehensive PHI/PII removal from both DICOM headers and clinical reports while maintaining data linkage integrity through anonymized identifiers</li>
+                    <li><strong>Quality control framework:</strong> Established systematic validation protocols detecting formatting errors, completing missing fields through logical inference, and standardizing data formats across institutional sources</li>
+                    <li><strong>Ethical compliance documentation:</strong> Maintained complete audit trails ensuring adherence to HIPAA and GDPR throughout data handling lifecycle</li>
+                </ul>
+
+                <h4 class="contributions-title">🔬 Technical Implementation</h4>
+                <ul class="contributions-list">
+                    <li><strong>Data preprocessing pipeline:</strong> Automated detection and correction of formatting errors, completion of missing fields, and standardization according to CHAVI's structured requirements</li>
+                    <li><strong>De-identification workflow:</strong> Multi-stage process removing patient names, hospital identifiers, and PII from imaging metadata (DICOM headers) and masking free-text fields in clinical reports</li>
+                    <li><strong>Data harmonization:</strong> Mapped clinical data into standardized formats ensuring interoperability across research platforms, with consistent imaging parameters and metadata fields</li>
+                    <li><strong>Anonymized linking:</strong> Assigned unique non-identifiable keys enabling multimodal research (combining clinical, imaging, and outcome data) without compromising patient privacy</li>
+                    <li><strong>AI-readiness optimization:</strong> Structured datasets specifically for machine learning applications, ensuring compatibility with common deep learning frameworks</li>
+                </ul>
+
+                <h4 class="contributions-title">🌐 Broader Impact</h4>
+                <ul class="contributions-list">
+                    <li><strong>Democratizing oncology research:</strong> Contributing to public repository enables researchers nationwide to access curated datasets without institutional barriers</li>
+                    <li><strong>Addressing regional disparities:</strong> CHAVI fills critical gap in South Asian imaging biobanks, enabling development of AI models trained on locally relevant patient populations</li>
+                    <li><strong>Fostering collaboration:</strong> Standardized data formats facilitate multi-institutional validation studies and reproducible research across cancer centers</li>
+                    <li><strong>Enabling precision oncology:</strong> Large-scale datasets support development of personalized treatment strategies based on imaging biomarkers</li>
                 </ul>
 
                 <div class="tech-section">
                     <div class="tech-label">Technologies & Tools</div>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">DICOM</span>
+                        <span class="tech-tag">DICOM Processing</span>
                         <span class="tech-tag">Orthanc</span>
                         <span class="tech-tag">XNAT</span>
                         <span class="tech-tag">FAIR Principles</span>
-                        <span class="tech-tag">Data Curation</span>
+                        <span class="tech-tag">HIPAA/GDPR</span>
+                        <span class="tech-tag">Data Anonymization</span>
+                        <span class="tech-tag">ETL Pipeline</span>
                     </div>
                 </div>
             </div>
@@ -714,44 +770,98 @@ permalink: /portfolio/
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">CT-based Automated Segmentation Using 3D CNNs</h3>
-                        <p class="project-org">Collaboration with NIT Surathkal, India</p>
+                        <h3 class="project-title">CT-only Automated Segmentation Using 3D nnU-Net</h3>
+                        <p class="project-org">Collaboration with NIT Surathkal | Submitted to Journal of Imaging Informatics in Medicine</p>
                     </div>
                     <span class="project-period">2024</span>
                 </div>
 
                 <p class="project-description">
-                    Implementing 3D nnU-Net for automated segmentation of head and neck tumors, demonstrating feasibility of CT-only approach for resource-limited settings without requiring MRI scans.
+                    <strong>Clinical Problem:</strong> Head and neck cancer requires precise tumor delineation for effective radiotherapy planning. Manual segmentation is time-consuming (30-60 minutes per case) and subject to significant inter-observer variability. Existing automated methods rely on multimodal PET/CT imaging, which is costly ($1000+ per scan), less accessible in resource-limited settings, and burdensome for patients.
+                </p>
+
+                <p class="project-description">
+                    <strong>Our Innovation:</strong> We developed a <em>CT-only</em> automated segmentation framework using 3D nnU-Net that eliminates the need for expensive PET scans while maintaining clinical-grade accuracy. This approach offers a robust, cost-effective, and scalable solution that can democratize access to precision radiotherapy planning.
+                </p>
+
+                <p class="project-description">
+                    <strong>Why CT-only Matters:</strong> CT scanners are 10x more common than PET/CT in India and globally. By achieving comparable performance with CT alone, we enable advanced radiotherapy planning in community hospitals and resource-limited settings where PET/CT is unavailable.
                 </p>
 
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-value">167</div>
-                        <div class="stat-label">Cases Curated</div>
+                        <div class="stat-label">Total Cases</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-value">0.65</div>
-                        <div class="stat-label">Dice Score</div>
+                        <div class="stat-label">Global Dice (Combined)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">0.71</div>
+                        <div class="stat-label">Median Dice</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">23.6mm</div>
+                        <div class="stat-label">HD95 Boundary</div>
                     </div>
                 </div>
 
-                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <h4 class="contributions-title">🎯 Key Achievements</h4>
                 <ul class="contributions-list">
-                    <li>Curated and de-anonymized multi-institutional datasets (<span class="metric">167 cases: 137 MAASTRO public + 30 CMC private</span>), ensuring data quality and harmonization for model training and validation</li>
-                    <li>3D nnU-Net segmentation model achieving <span class="metric">Global Dice scores: 0.62 (HN1), 0.63 (CMC), 0.65 (combined)</span> demonstrating feasibility of CT-only approach in resource-limited settings</li>
-                    <li>Developed quality assurance metrics for clinical validation</li>
+                    <li><strong>Multi-institutional dataset curation:</strong> Assembled and harmonized 167 cases from two institutions (137 MAASTRO public + 30 CMC private), implementing comprehensive de-identification and quality control protocols</li>
+                    <li><strong>Performance on public HN1 dataset:</strong> Achieved Global Dice of <span class="metric">0.63</span>, Median Dice of <span class="metric">0.60</span>, demonstrating robust baseline performance on publicly available data</li>
+                    <li><strong>Impact of private data integration:</strong> Adding 30 CMC cases (18% of training data) improved Global Dice to <span class="metric">0.65 (+3.99%)</span> and Median Dice to <span class="metric">0.71 (+18.56%)</span>, demonstrating value of institutional data diversity</li>
+                    <li><strong>Fold-wise analysis insights:</strong> Identified that Fold 1 benefited most from additional data (Global Dice: 0.68, IoU: 0.52), while performance varied by fold, revealing sensitivity to case distribution and data heterogeneity</li>
+                    <li><strong>Precision-sensitivity trade-offs:</strong> Achieved high precision (0.79-0.81) with moderate sensitivity (0.52-0.59), indicating conservative segmentation strategy that minimizes false positives—critical for clinical safety</li>
+                </ul>
+
+                <h4 class="contributions-title">🔬 Technical Methodology</h4>
+                <ul class="contributions-list">
+                    <li><strong>Architecture:</strong> Implemented 3D nnU-Net with self-configuring preprocessing pipeline, automatically optimizing patch size, batch size, and network topology for head and neck CT data</li>
+                    <li><strong>Training strategy:</strong> Three-fold cross-validation with careful patient-level splitting to prevent data leakage, trained on NVIDIA L40 GPU (48GB) using PyTorch and CUDA 12.6</li>
+                    <li><strong>Evaluation metrics:</strong> Comprehensive assessment using Global Dice, Median Dice, IoU, Precision, Sensitivity, Specificity, and HD95 for boundary accuracy</li>
+                    <li><strong>Data harmonization:</strong> Standardized imaging parameters, voxel spacing, and intensity normalization across public MAASTRO and private CMC datasets</li>
+                    <li><strong>Clinical validation:</strong> Qualitative evaluation by radiation oncologists confirmed strong spatial agreement with expert annotations, with minor under-segmentation in diffuse tumor boundaries</li>
+                </ul>
+
+                <h4 class="contributions-title">📊 Key Findings & Challenges</h4>
+                <ul class="contributions-list">
+                    <li><strong>Boundary accuracy challenge:</strong> HD95 increased from 16mm to 24mm with additional data, indicating reduced boundary precision—likely due to inter-institutional annotation style differences</li>
+                    <li><strong>Center-specific variability:</strong> Fold-dependent performance suggests sensitivity to institutional imaging protocols and annotation practices, highlighting need for domain adaptation techniques</li>
+                    <li><strong>Conservative segmentation strategy:</strong> High specificity (>0.9998) but lower sensitivity indicates model tends to under-segment rather than over-segment, which is clinically safer but may miss small tumor extensions</li>
+                </ul>
+
+                <h4 class="contributions-title">🚀 Future Directions</h4>
+                <ul class="contributions-list">
+                    <li>Integrate domain adaptation to reduce center-specific variability</li>
+                    <li>Leverage few-shot learning to address limited annotation challenges</li>
+                    <li>Expand private dataset to 100+ cases for more balanced fold representation</li>
+                    <li>Explore foundation models (MedSAM) and hybrid nnU-Net approaches</li>
+                    <li>Systematic benchmarking of CT-only vs. PET/CT fusion methods</li>
                 </ul>
 
                 <div class="tech-section">
                     <div class="tech-label">Technologies & Tools</div>
                     <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">nnU-Net</span>
+                        <span class="tech-tag">Python 3.9+</span>
+                        <span class="tech-tag">nnU-Net V2</span>
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">MONAI</span>
                         <span class="tech-tag">3D CNN</span>
-                        <span class="tech-tag">Medical Imaging</span>
+                        <span class="tech-tag">NVIDIA L40 GPU</span>
+                        <span class="tech-tag">CUDA 12.6</span>
+                        <span class="tech-tag">DICOM Processing</span>
                     </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        📄 Paper Under Review (JIIM)
+                    </a>
+                    <a href="#" class="project-link">
+                        🏆 3rd Prize - Winter Symposium 2025
+                    </a>
                 </div>
             </div>
 
@@ -759,41 +869,87 @@ permalink: /portfolio/
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Large-Scale Imaging and Clinical Data Curation for Prospective Trials</h3>
-                        <p class="project-org">DBT/Wellcome Trust India Alliance Funded Study</p>
+                        <h3 class="project-title">Large-Scale Imaging Data Curation for Prospective Radiomics Trials</h3>
+                        <p class="project-org">DBT/Wellcome Trust India Alliance Funded | ₹1.35 Crore Grant | PI: Dr. Hannah Mary Thomas T</p>
                     </div>
                     <span class="project-period">2020 - 2025</span>
                 </div>
 
                 <p class="project-description">
-                    Contributing to DBT/Wellcome Trust India Alliance–funded prospective study supporting collection, curation, and quality assurance of imaging and clinical data for large-scale radiomics research.
+                    <strong>Project Vision:</strong> This prospective study aims to answer a fundamental question in precision oncology: <em>Can pre-treatment radiomics signatures accurately identify advanced head and neck cancer patients at higher risk of recurrence and poor survival outcomes?</em> By developing robust image analysis pipelines and predictive models, we seek to enable personalized treatment strategies and optimize limited radiotherapy resources.
+                </p>
+
+                <p class="project-description">
+                    <strong>Scientific Foundation:</strong> Cancer radiomics converts routine radiological images into quantifiable tumor phenotypes. Unlike tissue biopsies that sample only small regions, radiomics captures information from the entire tumor non-invasively from standard clinical scans, providing comprehensive tumor characterization without additional radiation exposure or procedures for patients.
+                </p>
+
+                <p class="project-description">
+                    <strong>Clinical Significance:</strong> Accurately estimating individual patient risk is crucial for understanding tumor biology, stratifying patients based on risk profiles, tailoring personalized treatment strategies, and optimizing use of limited radiotherapy resources in resource-constrained healthcare settings.
                 </p>
 
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-value">~1700</div>
-                        <div class="stat-label">Patients</div>
+                        <div class="stat-label">Patients Enrolled</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">5 Years</div>
+                        <div class="stat-label">Prospective Study</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">₹1.35Cr</div>
+                        <div class="stat-label">Funding</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">PET+CT</div>
+                        <div class="stat-label">Multimodal</div>
                     </div>
                 </div>
 
-                <h4 class="contributions-title">🎯 Key Contributions</h4>
+                <h4 class="contributions-title">🎯 My Contributions (2024-2025)</h4>
                 <ul class="contributions-list">
-                    <li>Contributed to DBT/Wellcome Trust India Alliance–funded prospective study (2020–2025), supporting collection, curation, and quality assurance of imaging and clinical data from <span class="metric">~1700 patients</span></li>
-                    <li>Designed <strong>end-to-end radiomics pipeline:</strong> DICOM retrieval (Orthanc), GTV-P segmentation (Citric), PyRadiomics-based extraction, enabling reproducible model training</li>
-                    <li>Helped coordinate data annotation workflows and implemented automated AWS S3 pipelines for secure cloud backups and data recovery</li>
-                    <li>Drafted the <strong>NVIDIA Academic Grant Proposal</strong>, justifying infrastructure needs for in-house deployment of large-scale deep learning models in clinical environments</li>
+                    <li><strong>End-to-end radiomics pipeline development:</strong> Designed and implemented complete workflow from DICOM retrieval (Orthanc) → GTV-P segmentation (Citric) → PyRadiomics feature extraction, enabling reproducible model training across ~1700 patient cohort</li>
+                    <li><strong>Quality assurance at scale:</strong> Established systematic protocols for imaging and clinical data validation, ensuring data integrity across 5-year prospective collection period</li>
+                    <li><strong>AWS cloud infrastructure:</strong> Implemented automated S3 pipelines for secure backup and disaster recovery of imaging data, ensuring long-term data preservation and accessibility</li>
+                    <li><strong>Data annotation coordination:</strong> Helped coordinate workflows between radiation oncologists, medical physicists, and data scientists for consistent GTV-P delineation across large patient cohort</li>
+                    <li><strong>Infrastructure planning:</strong> Drafted NVIDIA Academic Grant Proposal justifying need for high-performance GPU infrastructure for in-house deployment of large-scale deep learning models in clinical environment</li>
+                </ul>
+
+                <h4 class="contributions-title">📊 Project Aims & Progress</h4>
+                <ul class="contributions-list">
+                    <li><strong>Aim 1 - Robust Segmentation Pipeline:</strong> Developed automated tumor segmentation workflow for PET and CT imaging, with collaborative validation through NIT Surathkal partnership</li>
+                    <li><strong>Aim 2 - Predictive Modeling:</strong> Built machine learning models using LASSO, SelectKBest, PSO, and WOA feature selection across multiple classifiers (Logistic Regression, SVM, Random Forest, etc.)</li>
+                    <li><strong>Aim 3 - Imaging Archive:</strong> Successfully collected data from 1550+ HNC patients prospectively, forming valuable resource for validation and future multi-institutional studies</li>
+                </ul>
+
+                <h4 class="contributions-title">🔬 Technical Infrastructure</h4>
+                <ul class="contributions-list">
+                    <li><strong>DICOM management:</strong> Orthanc-based PACS for centralized storage, retrieval, and anonymization of imaging data with RESTful API integration</li>
+                    <li><strong>Segmentation workflow:</strong> Citric platform for collaborative GTV-P delineation with version control and quality metrics tracking</li>
+                    <li><strong>Feature extraction:</strong> PyRadiomics-based automated extraction of first-order statistics, shape features, and texture features (GLCM, GLRLM, GLSZM)</li>
+                    <li><strong>Cloud infrastructure:</strong> AWS S3 with automated backup schedules, encryption at rest, and multi-region replication for disaster recovery</li>
+                    <li><strong>Data governance:</strong> Implemented FAIR principles, institutional IRB compliance, and patient consent tracking systems</li>
+                </ul>
+
+                <h4 class="contributions-title">🏆 Academic Contributions</h4>
+                <ul class="contributions-list">
+                    <li><strong>Oral Presentation:</strong> "Can CT Radiomics Predict Recurrence in Head and Neck Cancer? Early Results from a Prospective Imaging Trial" at 14th Annual Research Day, CMC Vellore (Oct 2024)</li>
+                    <li><strong>Conference Participation:</strong> 2nd Annual Winter Symposium on Health Data and AI - Organizing Team Member (March 2025)</li>
+                    <li><strong>CME Attendance:</strong> Revolution and Precision in Radiation Oncology, CMC Vellore (March 2025)</li>
                 </ul>
 
                 <div class="tech-section">
                     <div class="tech-label">Technologies & Tools</div>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Orthanc</span>
+                        <span class="tech-tag">Orthanc PACS</span>
                         <span class="tech-tag">PyRadiomics</span>
                         <span class="tech-tag">AWS S3</span>
                         <span class="tech-tag">DICOM</span>
                         <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Data Pipeline</span>
+                        <span class="tech-tag">Citric</span>
+                        <span class="tech-tag">RESTful API</span>
+                        <span class="tech-tag">ETL Pipeline</span>
                     </div>
                 </div>
             </div>
