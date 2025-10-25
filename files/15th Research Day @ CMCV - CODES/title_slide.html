@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Day Title Slide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .title-slide {
+            width: 100%;
+            max-width: 1400px;
+            aspect-ratio: 16/9;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Header with logos */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+            background: white;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .cmc-logo {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Main content area */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 80px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+            position: relative;
+        }
+        
+        /* Decorative elements */
+        .content::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .content::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .title-box {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(30, 58, 138, 0.4);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            transform: perspective(1000px) rotateX(2deg);
+        }
+        
+        .main-title {
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .info-section {
+            width: 100%;
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .info-row {
+            background: white;
+            padding: 20px 35px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .info-row:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+        }
+        
+        .info-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .info-content {
+            flex: 1;
+        }
+        
+        .info-label {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .info-text {
+            font-size: 17px;
+            color: #1e293b;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 20px 50px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .footer .date {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        /* Decorative corner elements */
+        .corner-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+        }
+        
+        .corner-decoration.top-left {
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #667eea 0%, transparent 100%);
+            border-radius: 0 0 100% 0;
+        }
+        
+        .corner-decoration.bottom-right {
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(135deg, transparent 0%, #3b82f6 100%);
+            border-radius: 100% 0 0 0;
+        }
+        
+        .button-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .download-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #5568d3;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="title-slide">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <!-- Header with logos -->
+        <div class="header">
+            <div class="logo-placeholder">
+                QIR-AI Lab Logo
+            </div>
+            <div class="logo-placeholder cmc-logo">
+                CMC Vellore Logo
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <div class="title-box">
+                <div class="main-title">
+                    Before We Treat, Can We Tell?
+                    <br>
+                    A Locoregional Recurrence Signature in Head & Neck Cancer
+                </div>
+                <div class="subtitle">
+                    Combining Radiomics and Clinical Features for Personalized Risk Prediction
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-row">
+                    <div class="info-icon">👥</div>
+                    <div class="info-content">
+                        <div class="info-label">Authors</div>
+                        <div class="info-text">Hasan Shaikh, Amal Joseph Varghese, Balu Krishna S, et al.</div>
+                    </div>
+                </div>
+                
+                <div class="info-row">
+                    <div class="info-icon">🏥</div>
+                    <div class="info-content">
+                        <div class="info-label">Affiliation</div>
+                        <div class="info-text">Quantitative Imaging Research and AI Lab, Department of Radiation Oncology, Christian Medical College, Vellore</div>
+                    </div>
+                </div>
+                
+                <div class="info-row">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <div class="info-label">Contact</div>
+                        <div class="info-text">hasan.shaikh.inst@cmcvellore.ac.in</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div>15th Research Day, CMC Vellore</div>
+            <div class="date">October 30-31, 2025</div>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button class="download-btn" onclick="downloadSlide()">📸 Save Slide</button>
+    </div>
+    
+    <script>
+        function downloadSlide() {
+            const instructions = `
+📸 HOW TO SAVE THIS TITLE SLIDE:
+
+Windows Users:
+1. Press: Windows Key + Shift + S
+2. Select the entire slide area
+3. Paste directly into PowerPoint (Ctrl + V)
+
+Mac Users:
+1. Press: Cmd + Shift + 4
+2. Click and drag around the slide
+3. Image saves to your desktop automatically
+
+Alternative Methods:
+• Right-click on slide → "Save as image"
+• Use Snipping Tool (Windows) or Screenshot app (Mac)
+
+Tip: You can replace the logo placeholders with your actual logos in PowerPoint!
+            `;
+            
+            alert(instructions);
+        }
+    </script>
+</body>
+</html>

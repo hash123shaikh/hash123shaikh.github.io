@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - CMC Vellore</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .slide {
+            background: white;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        .slide-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #1e40af;
+            padding-bottom: 10px;
+        }
+        
+        .slide-subtitle {
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .section-header {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 30px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #475569;
+        }
+        
+        .approach-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            border: 4px solid #3b82f6;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .winner-box {
+            background: #166534;
+            border: 4px solid #14532d;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .winner-box h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 0 15px 0;
+        }
+        
+        .winner-box .model-name {
+            font-size: 19px;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 15px 0;
+        }
+        
+        .winner-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .winner-stat {
+            background: white;
+            padding: 20px;
+            border: 3px solid #ffffff;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #64748b;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            font-size: 27px;
+            font-weight: bold;
+            color: #166534;
+        }
+        
+        .stat-ci {
+            font-size: 16px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Systematic Evaluation & Results -->
+    <div class="slide">
+        <div class="slide-title">Comprehensive Model Evaluation</div>
+        <div class="slide-subtitle">Systematic testing of 70 model combinations across two feature sets</div>
+        
+        <div class="approach-box">
+            
+            <!-- Visual Flow Diagram -->
+            <div style="margin-top: 7px;">
+                
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; margin-bottom: 25px;">
+                    <!-- 5 Classifiers with details -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="background: white; padding: 18px 25px; border: 3px solid #1e3a8a; font-size: 20px; font-weight: bold; color: #1e40af; border-radius: 5px; margin-bottom: 12px;">
+                            5 Classifiers
+                        </div>
+                        <div style="background: rgba(255,255,255,0.95); padding: 12px; border: 2px solid rgba(203,213,224,0.5); border-radius: 5px; text-align: left;">
+                            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #1e293b; line-height: 1.8;">
+                                <li>Logistic Regression</li>
+                                <li>Naïve Bayes</li>
+                                <li>Support Vector Machine</li>
+                                <li>Decision Tree</li>
+                                <li>Random Forest</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 36px; color: #1e293b; font-weight: bold; margin-top: 15px;">×</div>
+                    
+                    <!-- 7 Methods with details -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="background: white; padding: 18px 25px; border: 3px solid #1e3a8a; font-size: 20px; font-weight: bold; color: #1e40af; border-radius: 5px; margin-bottom: 12px;">
+                            7 Methods
+                        </div>
+                        <div style="background: rgba(255,255,255,0.95); padding: 12px; border: 2px solid rgba(203,213,224,0.5); border-radius: 5px; text-align: left;">
+                            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #1e293b; line-height: 1.8;">
+                                <li>LASSO</li>
+                                <li>SelectKBest</li>
+                                <li>Particle Swarm Optimization (PSO)</li>
+                                <li>Whale Optimization Algorithm (WOA)</li>
+                                <li>Grey Wolf Optimizer (GWO)</li>
+                                <li>Genetic Algorithm (GA)</li>
+                                <li>Simulated Annealing (SA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 36px; color: #1e293b; font-weight: bold; margin-top: 15px;">=</div>
+                    
+                    <div style="flex: 0.8; margin-top: 15px;">
+                        <div style="background: #fbbf24; padding: 18px 25px; border: 3px solid #f59e0b; font-size: 20px; font-weight: bold; color: #78350f; border-radius: 5px; text-align: center;">
+                            35 Per Phase
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin: 18px 0; font-size: 32px; color: #1e293b; font-weight: bold;">
+                    ↓
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+                    <div style="background: rgba(30,64,175,0.1); border: 3px solid rgba(30,64,175,0.3); padding: 18px; text-align: center; border-radius: 5px;">
+                        <div style="font-size: 18px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">PHASE 1</div>
+                        <div style="font-size: 16px; color: #475569;">Radiomics Only (103 features)</div>
+                        <div style="font-size: 32px; font-weight: bold; color: #1e40af; margin: 10px 0;">35</div>
+                        <div style="font-size: 15px; color: #475569;">combinations tested</div>
+                    </div>
+                    
+                    <div style="background: rgba(30,64,175,0.1); border: 3px solid rgba(30,64,175,0.3); padding: 18px; text-align: center; border-radius: 5px;">
+                        <div style="font-size: 18px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">PHASE 2</div>
+                        <div style="font-size: 16px; color: #475569;">Radiomics + Clinical (111 features)</div>
+                        <div style="font-size: 32px; font-weight: bold; color: #1e40af; margin: 10px 0;">35</div>
+                        <div style="font-size: 15px; color: #475569;">combinations tested</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin: 18px 0; font-size: 32px; color: #1e293b; font-weight: bold;">
+                    ↓
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #166534 0%, #14532d 100%); border: 4px solid #14532d; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+                    <div style="color: white; font-size: 18px; font-weight: bold; margin-bottom: 10px;">COMPREHENSIVE EVALUATION</div>
+                    <div style="color: white; font-size: 40px; font-weight: bold;">70</div>
+                    <div style="color: white; font-size: 16px; opacity: 0.95;">Model Combinations Systematically Tested</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Slide 2: Winner Model & Performance -->
+    <div class="slide">
+        <div class="slide-title">Optimal Model Selection</div>
+        <div class="slide-subtitle">Best performing combination from 70 systematic evaluations</div>
+        
+        <div class="winner-box">
+            <h3>WINNING MODEL</h3>
+            <div class="model-name">Logistic Regression + Grey Wolf Optimizer</div>
+            <p style="color: #ffffff; font-size: 20px; margin: 15px 0; opacity: 0.95;">
+                Using Radiomics + Clinical Features (111 features → 10 selected)
+            </p>
+            
+            <div class="winner-stats">
+                <div class="winner-stat">
+                    <div class="stat-label">Test AUC</div>
+                    <div class="stat-value">0.81</div>
+                    <div class="stat-ci">[0.62 - 0.95]</div>
+                </div>
+                
+                <div class="winner-stat">
+                    <div class="stat-label">Train AUC</div>
+                    <div class="stat-value">0.79</div>
+                    <div class="stat-ci">[0.71 - 0.86]</div>
+                </div>
+                
+                <div class="winner-stat">
+                    <div class="stat-label">Selected Features</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-ci">Sparse signature</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-header">The Sparse 10-Feature Signature</div>
+
+        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; padding: 25px; margin: 20px 0;">
+            <div style="display: flex; gap: 25px; align-items: center; justify-content: center;">
+                <!-- Clinical Features Circle -->
+                <div style="text-align: center;">
+                    <div style="width: 130px; height: 130px; border-radius: 50%; background: #1e40af; border: 5px solid #1e3a8a; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 12px;">
+                        <div style="color: white; font-size: 36px; font-weight: bold;">4</div>
+                        <div style="color: white; font-size: 15px; font-weight: 600; margin-top: 5px;">CLINICAL</div>
+                    </div>
+                    <div style="background: white; border: 2px solid #cbd5e0; padding: 12px; border-radius: 5px; text-align: left;">
+                        <div style="font-size: 15px; color: #1e293b; line-height: 1.7;">
+                            • Age<br>
+                            • AJCC Stage<br>
+                            • T Stage<br>
+                            • Location
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plus Symbol -->
+                <div style="font-size: 42px; color: #1e40af; font-weight: bold; margin-top: -50px;">+</div>
+                
+                <!-- Radiomic Features Circle -->
+                <div style="text-align: center;">
+                    <div style="width: 130px; height: 130px; border-radius: 50%; background: #166534; border: 5px solid #14532d; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 12px;">
+                        <div style="color: white; font-size: 36px; font-weight: bold;">6</div>
+                        <div style="color: white; font-size: 15px; font-weight: 600; margin-top: 5px;">RADIOMIC</div>
+                    </div>
+                    <div style="background: white; border: 2px solid #cbd5e0; padding: 12px; border-radius: 5px;">
+                        <div style="font-size: 14px; color: #64748b; font-weight: 600; margin-bottom: 6px;">SHAPE (2):</div>
+                        <div style="font-size: 13px; color: #1e293b; line-height: 1.5; margin-bottom: 8px;">
+                            • Maximum2DDiameterSlice<br>
+                            • MinorAxisLength
+                        </div>
+                        <div style="font-size: 14px; color: #64748b; font-weight: 600; margin-bottom: 6px;">TEXTURE (4):</div>
+                        <div style="font-size: 13px; color: #1e293b; line-height: 1.5;">
+                            • LargeDependenceEmphasis<br>
+                            • RunLengthNonUniformityNorm<br>
+                            • Idm<br>
+                            • Imc1
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Equals Symbol -->
+                <div style="font-size: 42px; color: #1e40af; font-weight: bold; margin-top: -50px;">=</div>
+                
+                <!-- Total Circle -->
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border: 5px solid #f59e0b; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto;">
+                        <div style="color: #78350f; font-size: 38px; font-weight: bold;">10</div>
+                        <div style="color: #78350f; font-size: 15px; font-weight: 600; margin-top: 5px;">FEATURES</div>
+                        <div style="color: #78350f; font-size: 13px; margin-top: 5px;">Sparse Signature</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
