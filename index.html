@@ -330,35 +330,6 @@
             color: #00d4ff;
         }
 
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(0, 212, 255, 0.05);
-            border-radius: 16px;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #00d4ff;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: #b8bcc8;
-            margin-top: 0.5rem;
-        }
-
         /* CTA Buttons */
         .cta-buttons {
             display: flex;
@@ -656,14 +627,13 @@
         <div class="navbar-content">
             <div class="navbar-brand">
                 <div class="navbar-name">Hasan Shaikh</div>
-                <div class="navbar-tagline">Researcher in AI for Cancer Imaging</div>
+                <div class="navbar-tagline">CT Radiomics • Medical Image Analysis</div>
             </div>
             <div class="navbar-links">
-                <a href="#about">About</a>
-                <a href="#journey">Journey</a>
-                <a href="#build">What I Build</a>
-                <a href="#vision">Vision</a>
-                <a href="#forward">Looking Forward</a>
+                <a href="#about">Research</a>
+                <a href="#journey">Background</a>
+                <a href="#build">Technical</a>
+                <a href="#forward">PhD Interests</a>
             </div>
         </div>
     </nav>
@@ -678,17 +648,18 @@
                 <h1>Hasan Shaikh</h1>
                 <div class="tagline">Clinical Data Scientist • Medical AI Researcher</div>
                 <p>
-                    Building <span class="highlight">intelligent systems</span> that transform 
-                    <span class="highlight-purple">cancer care</span> through 
-                    <span class="highlight-orange">CT-based radiomics</span> and 
-                    <span class="highlight">deep learning</span>.
+                    Developing <span class="highlight">CT radiomics models</span> for 
+                    <span class="highlight-purple">locoregional recurrence prediction</span> in 
+                    <span class="highlight-orange">head and neck cancers</span> and 
+                    <span class="highlight">3D deep learning architectures</span> for 
+                    automated tumor segmentation.
                 </p>
                 <p>
-                    At <span class="highlight">QIRAIL, CMC Vellore</span>, pioneering AI solutions 
-                    that scale from tertiary care centers to community hospitals.
+                    Currently at <span class="highlight">QIRAIL, CMC Vellore</span>, working on 
+                    multi-institutional validation studies and FAIR-compliant imaging infrastructure.
                 </p>
                 <div class="cta-buttons">
-                    <a href="/portfolio/" class="btn btn-primary">View Projects</a>
+                    <a href="/portfolio/" class="btn btn-primary">Research</a>
                     <a href="/publications/" class="btn btn-secondary">Publications</a>
                     <a href="/cv/" class="btn btn-secondary">CV</a>
                     <a href="/contact/" class="btn btn-secondary">Contact</a>
@@ -707,121 +678,115 @@
 
         <!-- About -->
         <section id="about" class="glass-card">
-            <h2 class="section-title">The Vision</h2>
+            <h2 class="section-title">Research Focus</h2>
             <p>
-                <span class="highlight">How do we build intelligent systems that scale effectively and serve patients wherever they are?</span>
+                My work addresses a fundamental challenge in medical AI: <span class="highlight">how can radiomics models 
+                maintain predictive performance across diverse anatomical subsites and heterogeneous clinical settings?</span>
             </p>
             <p>
-                In India, over <span class="highlight-orange">1 million people</span> receive cancer diagnoses annually. 
-                My mission: democratize precision oncology through AI-powered medical imaging analysis that works 
-                for everyone, regardless of healthcare setting.
+                I develop <span class="highlight-purple">CT radiomics models for locoregional recurrence prediction in head and neck cancers</span>, 
+                working across multiple anatomical subsites to investigate feature stability and model generalizability. 
+                Current projects include <span class="highlight-orange">prognostic model development from pretreatment CT imaging</span> 
+                and <span class="highlight">nnU-Net architectures for automated tumor segmentation</span>.
             </p>
-            
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">52%</div>
-                    <div class="stat-label">ROI Improvement</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8.8/10</div>
-                    <div class="stat-label">Master's CGPA</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1M+</div>
-                    <div class="stat-label">Cancer Cases (India)</div>
-                </div>
-            </div>
+            <p>
+                At QIRAIL, I'm building <span class="highlight">FAIR-compliant imaging infrastructure</span> supporting 
+                multi-institutional retrospective studies—standardizing DICOM processing pipelines, implementing quality 
+                control workflows, and ensuring reproducibility in feature extraction.
+            </p>
         </section>
 
         <!-- The Journey -->
         <section id="journey" class="glass-card">
-            <h2 class="section-title">The Journey</h2>
+            <h2 class="section-title">Background</h2>
             
             <div class="timeline-item">
-                <div class="timeline-location">Agra → Aligarh → Vellore</div>
+                <div class="timeline-location">QIRAIL, CMC Vellore (Current)</div>
                 <p>
-                    A path guided by building <span class="highlight">AI systems that address real clinical needs</span>. 
-                    From multimodal survival prediction models at AMU to advancing cancer research at CMC Vellore.
+                    Clinical Data Scientist developing <span class="highlight">CT radiomics models for locoregional recurrence prediction</span> 
+                    in head and neck cancers across multiple anatomical subsites. Building automated segmentation pipelines using 
+                    <span class="highlight-purple">nnU-Net</span>, extracting and analyzing radiomic features from pretreatment imaging, 
+                    and establishing FAIR data infrastructure for multi-center studies.
                 </p>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-location">Aligarh Muslim University</div>
                 <p>
-                    Master's in AI <span class="highlight-orange">(CGPA 8.80/10)</span> - Developed 
-                    <span class="highlight-purple">multimodal survival prediction models</span>, discovering that 
-                    meaningful research emerges from understanding both technical possibilities and clinical realities.
+                    <span class="highlight-orange">M.Tech in Artificial Intelligence (CGPA: 8.80/10)</span>. 
+                    Thesis: Multimodal survival prediction integrating clinical, imaging, and genomic data. 
+                    Investigated late fusion strategies and feature-level integration for Cox proportional 
+                    hazards models.
                 </p>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-location">STARlab Capital</div>
+                <div class="timeline-location">Research Interests</div>
                 <p>
-                    Quantitative finance experience designing <span class="highlight">volatility-based trading strategies</span>. 
-                    Improved ROI by <span class="highlight-orange">52%</span> through rigorous backtesting, risk optimization, 
-                    and robust validation—principles that translate directly to clinical ML.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-location">QIRAIL, CMC Vellore</div>
-                <p>
-                    Advancing cancer research through <span class="highlight">methodological rigor</span>, 
-                    <span class="highlight-purple">creative problem-solving</span>, and innovative approaches to 
-                    resource optimization. Demonstrating what's possible when technical excellence meets clinical insight.
+                    <span class="highlight">Medical image analysis</span>, particularly radiomics feature stability 
+                    and generalization. <span class="highlight-purple">Deep learning for segmentation</span> in 
+                    low-data regimes. <span class="highlight-orange">Uncertainty quantification</span> in clinical 
+                    prediction models. Multi-modal learning for oncology applications.
                 </p>
             </div>
         </section>
 
         <!-- What I Build -->
         <section id="build" class="glass-card">
-            <h2 class="section-title">What I Build</h2>
+            <h2 class="section-title">Technical Work</h2>
             <p>
-                Developing <span class="highlight">machine learning models</span> for cancer outcome prediction 
-                and <span class="highlight-purple">automated tumor segmentation</span>, with emphasis on clinical 
-                deployability and real-world performance.
+                <span class="highlight">Radiomics pipelines</span> using PyRadiomics for feature extraction from 
+                pretreatment CT imaging. Investigating <span class="highlight-purple">first-order, shape, and 
+                texture features</span> for locoregional recurrence prediction in head and neck cancers across multiple anatomical subsites.
             </p>
             <p>
-                From <span class="highlight-orange">radiomics-based prognostication</span> to 
-                <span class="highlight">3D deep learning for automated segmentation</span> and large-scale 
-                imaging infrastructure enabling reproducible multi-institutional research.
+                <span class="highlight-orange">Deep segmentation models</span> adapted from nnU-Net for lymph node 
+                delineation. Exploring <span class="highlight">data augmentation strategies</span> and 
+                <span class="highlight-purple">transfer learning approaches</span> for small medical imaging datasets.
+            </p>
+            <p>
+                <span class="highlight">DICOM processing infrastructure</span> with AWS S3 for decentralized data 
+                management. Implementing <span class="highlight-orange">automated quality control</span>, 
+                standardized preprocessing, and version-controlled feature extraction for reproducible research.
             </p>
 
             <div class="tech-grid">
                 <div class="tech-item"><span>PyRadiomics</span></div>
-                <div class="tech-item"><span>PyTorch</span></div>
-                <div class="tech-item"><span>nnU-Net</span></div>
-                <div class="tech-item"><span>AWS S3</span></div>
-                <div class="tech-item"><span>FAIR Data</span></div>
-                <div class="tech-item"><span>DICOM Processing</span></div>
+                <div class="tech-item"><span>PyTorch / nnU-Net</span></div>
+                <div class="tech-item"><span>SimpleITK / Scikit-image</span></div>
+                <div class="tech-item"><span>Cox Models / Survival</span></div>
+                <div class="tech-item"><span>DICOM / NIFTI</span></div>
+                <div class="tech-item"><span>AWS S3 / FAIR Data</span></div>
             </div>
 
             <p style="margin-top: 2rem;">
-                The goal: creating tools that <span class="highlight">physicians trust</span> and 
-                <span class="highlight-purple">patients benefit from</span>, regardless of healthcare setting.
+                Focus on <span class="highlight">methodological rigor</span>, 
+                <span class="highlight-purple">external validation</span>, and 
+                <span class="highlight-orange">reproducible workflows</span> that advance clinical translation.
             </p>
         </section>
 
         <!-- Looking Forward -->
         <section id="forward" class="glass-card">
-            <h2 class="section-title">Looking Forward</h2>
+            <h2 class="section-title">PhD Interests (Fall 2025 / Spring 2026)</h2>
             <p>
-                Actively seeking <span class="highlight-orange">PhD positions in Medical AI, Computer Vision, 
-                or Biomedical Engineering</span> for <span class="highlight">Fall 2025/Spring 2026</span>.
+                Seeking positions in <span class="highlight-orange">Medical Image Analysis, Computer Vision, 
+                or Biomedical Engineering</span> with focus on:
             </p>
             <p>
-                Interested in programs valuing <span class="highlight">translational research</span>, 
-                <span class="highlight-purple">methodological rigor</span>, and 
-                <span class="highlight">real-world clinical impact</span>.
+                → <span class="highlight">Generalization of radiomics models</span> across institutions and imaging protocols<br>
+                → <span class="highlight-purple">Uncertainty quantification</span> in clinical prediction systems<br>
+                → <span class="highlight-orange">Multi-modal learning</span> integrating imaging, clinical, and genomic data<br>
+                → <span class="highlight">Self-supervised learning</span> for medical imaging with limited annotations
             </p>
             <p>
-                Open to collaborations on <span class="highlight-orange">multi-institutional validation studies</span>, 
-                <span class="highlight">clinical deployment of radiomics models</span>, and advancing 
-                healthcare AI accessibility.
+                Interested in groups emphasizing <span class="highlight">rigorous validation</span>, 
+                <span class="highlight-purple">clinical collaboration</span>, and 
+                <span class="highlight-orange">reproducible research practices</span>.
             </p>
 
             <div class="cta-buttons">
-                <a href="/contact/" class="btn btn-primary">Let's Connect</a>
+                <a href="/contact/" class="btn btn-primary">Get in Touch</a>
                 <a href="https://linkedin.com/in/hasann-shaikh/" target="_blank" class="btn btn-secondary">LinkedIn</a>
                 <a href="https://github.com/hash123shaikh" target="_blank" class="btn btn-secondary">GitHub</a>
                 <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ" target="_blank" class="btn btn-secondary">Google Scholar</a>
@@ -835,9 +800,9 @@
             <div class="footer-left">
                 <h3 class="footer-name">Hasan Shaikh</h3>
                 <p class="footer-bio">
-                    Clinical Data Scientist at QIRAIL, CMC Vellore. Working at the intersection of medical imaging, 
-                    machine learning, and radiation oncology. Building intelligent systems that transform cancer care 
-                    through CT-based radiomics and deep learning.
+                    Clinical Data Scientist at QIRAIL, CMC Vellore. M.Tech in AI from Aligarh Muslim University. 
+                    Developing CT radiomics models for locoregional recurrence prediction in head and neck cancers, 
+                    automated segmentation pipelines using nnU-Net, and FAIR imaging infrastructure for multi-institutional research.
                 </p>
                 <div class="footer-quote">
                     <p class="quote-text">"The best way to predict the future is to invent it."</p>
