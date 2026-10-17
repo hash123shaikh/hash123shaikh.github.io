@@ -13,6 +13,7 @@
 <link rel="icon" href="assets/img/hasan-shaikh.jpg">
 </head>
 <body data-scene="home">
+<canvas id="fluid" aria-hidden="true"></canvas>
 <canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
@@ -47,8 +48,14 @@
   </ul>
   <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
+<div class="legend" role="note">
+  <p class="cap">Live: rotating beams build dose around a tumour (VMAT).</p>
+  <div class="dosebar" aria-hidden="true"><span>0 Gy</span><b><i></i></b><span>70 Gy</span></div>
+  <p class="hint">Move your cursor to deliver dose.</p>
+</div>
 <main id="main">
 <h1 class="page-title">I build AI that can tell, before treatment, how a head and neck cancer will behave.</h1>
+<ul class="chips" aria-label="Fields of work"><li>Radiation oncology</li><li>Head and neck cancer</li><li>Radiomics</li><li>Tumour auto-segmentation</li><li>Adaptive radiotherapy</li><li>Medical AI</li></ul>
 <p class="seek"><span class="dot" aria-hidden="true"></span>I am looking for a PhD in AI for oncology: medical imaging, radiomics, adaptive radiotherapy, uncertainty quantification, and toxicity or follow-up modelling.</p>
 <section class="block bio"><h2>Biography</h2>
 <p><strong>Hasan Shaikh</strong> is a data scientist and medical imaging researcher in the Quantitative Imaging Research and Artificial Intelligence Lab (<a href="https://qirail.cmcvellore.edu.in/">QIRAIL</a>), Department of Radiation Oncology, Christian Medical College (CMC) Vellore, one of India's leading cancer centres. He builds AI pipelines that help oncologists make smarter, faster and more personalised treatment decisions for patients with head and neck cancer.</p>
@@ -89,6 +96,7 @@
 </main>
 </div>
 <script src="assets/theme.js"></script>
+<script src="assets/fluid.js"></script>
 <script src="assets/scenes.js"></script>
 </body>
 </html>

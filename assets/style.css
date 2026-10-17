@@ -106,3 +106,15 @@ footer{margin-top:2rem;padding-top:1.25rem;color:var(--muted);font-size:.95rem;b
 @media (prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
 @media print{#scene,.top,.card{display:none}.wrap{display:block}}
 main h1,main h2,main h4,main p,main li,main dt,main dd,.meta{text-shadow:0 0 10px var(--paper),0 0 3px var(--paper)}
+
+#fluid{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.chips{list-style:none;margin:0 0 1.1rem;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
+.chips li{border:1px solid var(--red);color:var(--ink);background:var(--panel);border-radius:99px;padding:.15rem .8rem;font-size:.92rem;font-weight:600;text-shadow:none}
+.legend{position:fixed;left:1rem;bottom:1rem;z-index:6;max-width:15.5rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem;font-size:.82rem;line-height:1.4;box-shadow:0 4px 18px rgba(0,0,0,.12);pointer-events:none}
+.legend p{margin:0}
+.legend .cap{font-weight:600;margin-bottom:.4rem}
+.legend .hint{color:var(--muted);margin-top:.35rem}
+.dosebar{display:flex;align-items:center;gap:.4rem;color:var(--muted)}
+.dosebar b{position:relative;flex:1;height:.6rem;border-radius:3px;background:linear-gradient(90deg,#2B5CFF,#12B5E5,#1DBE62,#F2D21B,#FF8A1F,#E3202B)}
+.dosebar i{position:absolute;top:-3px;bottom:-3px;width:3px;background:var(--ink);left:var(--p,10%);border-radius:2px;transition:left .15s linear}
+@media (max-width:62rem){.legend{display:none}}

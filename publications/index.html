@@ -13,6 +13,7 @@
 <link rel="icon" href="../assets/img/hasan-shaikh.jpg">
 </head>
 <body data-scene="dna">
+<canvas id="fluid" aria-hidden="true"></canvas>
 <canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
@@ -47,6 +48,11 @@
   </ul>
   <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
+<div class="legend" role="note">
+  <p class="cap">Live: radiation breaks DNA, and the cell repairs it.</p>
+  <div class="dosebar" aria-hidden="true"><span>0 Gy</span><b><i></i></b><span>70 Gy</span></div>
+  <p class="hint">Move your cursor to deliver dose.</p>
+</div>
 <main id="main">
 <h1 class="page-title">Publications</h1>
   
@@ -62,6 +68,7 @@
 </main>
 </div>
 <script src="../assets/theme.js"></script>
+<script src="../assets/fluid.js"></script>
 <script src="../assets/scenes.js"></script>
 </body>
 </html>
