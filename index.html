@@ -7,6 +7,7 @@
 <meta name="description" content="Hasan Shaikh, data scientist at QIRAIL, Department of Radiation Oncology, CMC Vellore: radiomics and deep learning for head and neck cancer.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="assets/img/hasan-shaikh.jpg">
@@ -14,38 +15,65 @@
 <body data-scene="home">
 <canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell">
-<aside>
-  <img class="avatar" src="assets/img/hasan-shaikh.jpg" alt="Portrait of Hasan Shaikh" width="144" height="144">
-  <div>
-    <p class="name">Hasan Shaikh</p>
-    <p class="role">Data Scientist, QIRAIL<br>Dept. of Radiation Oncology<br>Christian Medical College, Vellore</p>
-  </div>
-  <nav class="nav" aria-label="Pages">
-    <a href="" aria-current="page">Home</a>
-    <a href="projects/">Projects</a>
-    <a href="publications/">Publications</a>
-    <a href="talks/">Talks and posters</a>
-    <a href="experience/">Experience and education</a>
-    <a href="contact/">Contact</a>
-  </nav>
-  <div class="links">
-    <a href="mailto:hasanshaikh3198@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/hasann-shaikh/">LinkedIn</a>
-    <a href="https://github.com/hash123shaikh">GitHub</a>
-    <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ">Scholar</a>
-    <a href="files/CV_Hasan_Shaikh.pdf">CV (PDF)</a>
-  </div>
-</aside>
-<main id="main">
-<header class="hero">
-  <div class="hero-text">
-    <h1 class="page-title">I build AI that can tell, before treatment, how a head and neck cancer will behave.</h1>
-    <p>I am a data scientist in the Quantitative Imaging Research and AI Lab (QIRAIL) at CMC Vellore. My work covers radiomics, tumour segmentation and the pipelines that move imaging data from hospital archives into models people can trust.</p>
-    <p>I also test whether published models hold up. One of my studies reproduced a CNN prognosis paper that reported 95% checklist compliance and found AUCs off by up to 0.22.</p>
-    <p class="seek">I am looking for a PhD in AI for oncology: prognosis, recurrence, toxicity or follow-up, with AI at the centre.</p>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="./">Hasan Shaikh</a>
+    <nav class="tabs" aria-label="Pages">
+      <a href="" aria-current="page">Home</a>
+      <a href="projects/">Projects</a>
+      <a href="publications/">Publications</a>
+      <a href="talks/">Talks and posters</a>
+      <a href="experience/">Experience and education</a>
+      <a href="contact/">Contact</a>
+      <a href="files/CV_Hasan_Shaikh.pdf">CV</a>
+    </nav>
+    <button class="mode" type="button" aria-label="Switch between light and dark colours"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></button>
   </div>
 </header>
+<div class="wrap">
+<aside class="card">
+  <img class="avatar" src="assets/img/hasan-shaikh.jpg" alt="Portrait of Hasan Shaikh" width="176" height="176">
+  <p class="name">Hasan Shaikh</p>
+  <p class="role">Data Scientist</p>
+  <p class="org"><a href="https://qirail.cmcvellore.edu.in/">QIRAIL, CMC Vellore</a></p>
+  <p class="where">Department of Radiation Oncology</p>
+  <ul class="icons">
+    <li><a href="mailto:hasanshaikh3198@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+    <li><a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a></li>
+    <li><a href="https://github.com/hash123shaikh" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+    <li><a href="https://orcid.org/0009-0009-3806-613X" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/hasann-shaikh/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+    <li><a href="files/CV_Hasan_Shaikh.pdf" aria-label="CV (PDF)"><i class="fa-solid fa-file-lines"></i></a></li>
+  </ul>
+  <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
+</aside>
+<main id="main">
+<h1 class="page-title">I build AI that can tell, before treatment, how a head and neck cancer will behave.</h1>
+<p class="seek"><span class="dot" aria-hidden="true"></span>I am looking for a PhD in AI for oncology: medical imaging, radiomics, adaptive radiotherapy, uncertainty quantification, and toxicity or follow-up modelling.</p>
+<section class="block bio"><h2>Biography</h2>
+<p><strong>Hasan Shaikh</strong> is a data scientist and medical imaging researcher in the Quantitative Imaging Research and Artificial Intelligence Lab (<a href="https://qirail.cmcvellore.edu.in/">QIRAIL</a>), Department of Radiation Oncology, Christian Medical College (CMC) Vellore, one of India's leading cancer centres. He builds AI pipelines that help oncologists make smarter, faster and more personalised treatment decisions for patients with head and neck cancer.</p>
+<p><strong>Prediction.</strong> A large part of his work asks a simple question: before we treat, can we tell who is likely to relapse? He engineered a 10-feature radiomics and clinical signature (2 clinical, 8 radiomic) for locoregional recurrence, choosing the features with five metaheuristic algorithms searched over more than 1,000 candidates. It reached an AUC of 0.82 in 327 patients treated with primary radiation, and SHAP explains each prediction so a clinician can see why. The work was a poster highlight at ESTRO 2026 in Stockholm, and a companion paper was accepted at AIHC 2025 (Springer LNEE).</p>
+<p><strong>Segmentation.</strong> With collaborators at NIT Karnataka, Surathkal, he curated 167 head and neck CT cases from MAASTRO and CMC Vellore and trained a 3D nnU-Net to outline gross tumour volume from CT alone. He is a co-author of AGSR-Net, a segmentation network that adds anatomy-guided skip connections, and of a medRxiv preprint on the nnU-Net results. An oral presentation of this work won third prize at the 2nd National Symposium on Health Data and AI.</p>
+<p><strong>Data engineering.</strong> Good models need clean data. He built the DICOM retrieval pipeline on Orthanc PACS for a prospective cohort of more than 2,000 head and neck cancer patients in a DBT/Wellcome Trust India Alliance study, automated segmentation and PyRadiomics extraction across it, and set up S3 backups for a five-year multisite radiotherapy study. He also contributed 304+ de-identified cases to CHAVI, India's first national oncology imaging biobank, working with Tata Memorial Centre and IIT Kharagpur.</p>
+<p><strong>Reproducibility.</strong> He also checks whether published models hold up. He reproduced a CNN-based prognosis study from the authors' own code, data and Docker container. The paper reported 95% CLAIM compliance, yet AUCs differed by up to 0.22, and external validation on a separate cohort gave an AUC close to chance. The lesson, now under submission to Scientific Reports, is that a high checklist score does not guarantee a trustworthy model.</p>
+<p><strong>Background.</strong> Hasan holds an M.Tech in Computer Science and Engineering from Aligarh Muslim University, where he worked with Prof. Rashid Ali on multimodal deep learning for cancer survival. His model, MGAttCNNMD, fuses clinical, copy-number and gene-expression data and reached 91.2% accuracy on METABRIC; it became a chapter in <em>Data Science in the Medical Field</em> (Elsevier). Before joining CMC Vellore he spent six months as a research analyst at STARlab Capital in Lucknow, backtesting options strategies and contributing to an open-source backtesting library.</p>
+<p><strong>Community.</strong> He organises the lab's hands-on Workshops on Radiomics and Auto Segmentation for clinicians, medical physicists and researchers (three so far), and helped run the Head and Neck Cancer Survivorship Program and the 2nd Annual Winter Symposium on Health Data and AI at CMC Vellore.</p>
+<p><strong>Outlook.</strong> He believes AI will eventually automate radiation oncology end to end: treatment delivery, planning, auto-segmentation, adaptive radiotherapy and a paperless, AI-driven medical record. He also believes the biggest impact of medical AI will come in under-resourced settings, where expert clinicians are scarce.</p>
+<p>He enjoys talking with researchers, clinicians, engineers and anyone curious about AI in healthcare, so please <a href="contact/">get in touch</a>.</p>
+</section>
+<section class="block"><div class="two">
+<div><h2>Research interests</h2><ul class="plain">
+<li>Radiomics-based cancer outcome prediction</li><li>Automated tumour segmentation (3D CNNs, nnU-Net)</li><li>Adaptive radiotherapy and treatment planning automation</li><li>Uncertainty quantification in clinical AI</li><li>Toxicity and follow-up modelling with AI</li><li>Multimodal deep learning for oncology</li><li>DICOM/PACS engineering and clinical data pipelines</li></ul></div>
+<div><h2>Education</h2><ul class="edu">
+<li><strong>M.Tech, Computer Science and Engineering</strong><br><span class="meta">Aligarh Muslim University, 2021–2023 · CGPA 8.80/10</span></li>
+<li><strong>B.Tech, Computer Science and Engineering</strong><br><span class="meta">Dr. A.P.J. Abdul Kalam Technical University, Lucknow, 2017–2021 · CGPA 8.04/10 · Honors degree, top 1% of 128 students</span></li></ul></div>
+</div></section>
+<section class="block"><h2>Tools I work with</h2>
+<dl class="two tools">
+<div><dt>Medical imaging</dt><dd>3D Slicer, ITK-SNAP, Orthanc PACS, XNAT, DICOM, NIfTI</dd></div>
+<div><dt>Machine learning</dt><dd>TensorFlow, Keras, scikit-learn, PyRadiomics, nnU-Net, MedSAM</dd></div>
+<div><dt>Languages</dt><dd>Python (NumPy, Pandas, SciPy), Bash</dd></div>
+<div><dt>Infrastructure</dt><dd>Docker, GitHub, PostgreSQL, AWS S3</dd></div></dl></section>
 <section class="block">
   <h2>News</h2>
   <ul class="news">
@@ -57,14 +85,10 @@
     <li><time>Mar 2025</time><span>Third prize for an oral presentation on nnU-Net segmentation, 2nd National Symposium on Health Data and AI.</span></li>
   </ul>
 </section>
-<section class="block"><h2>Where to go next</h2>
-<ul class="go"><li><a href="projects/">Projects</a>: recurrence prediction, segmentation, a reproducibility study</li>
-<li><a href="publications/">Publications</a>: papers, preprints and a book chapter</li>
-<li><a href="talks/">Talks and posters</a>: ESTRO 2026, AIHC 2025, Research Day</li>
-<li><a href="contact/">Contact</a>: email and where to find the lab</li></ul></section>
 <footer>Last updated October 2026. <a href="files/CV_Hasan_Shaikh.pdf">Download the CV</a>.</footer>
 </main>
 </div>
+<script src="assets/theme.js"></script>
 <script src="assets/scenes.js"></script>
 </body>
 </html>

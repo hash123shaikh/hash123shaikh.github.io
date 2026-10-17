@@ -7,6 +7,7 @@
 <meta name="description" content="Hasan Shaikh, data scientist at QIRAIL, Department of Radiation Oncology, CMC Vellore: radiomics and deep learning for head and neck cancer.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/img/hasan-shaikh.jpg">
@@ -14,28 +15,37 @@
 <body data-scene="linac">
 <canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell">
-<aside>
-  <img class="avatar" src="../assets/img/hasan-shaikh.jpg" alt="Portrait of Hasan Shaikh" width="144" height="144">
-  <div>
-    <p class="name">Hasan Shaikh</p>
-    <p class="role">Data Scientist, QIRAIL<br>Dept. of Radiation Oncology<br>Christian Medical College, Vellore</p>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="../">Hasan Shaikh</a>
+    <nav class="tabs" aria-label="Pages">
+      <a href="../">Home</a>
+      <a href="../projects/">Projects</a>
+      <a href="../publications/">Publications</a>
+      <a href="../talks/" aria-current="page">Talks and posters</a>
+      <a href="../experience/">Experience and education</a>
+      <a href="../contact/">Contact</a>
+      <a href="../files/CV_Hasan_Shaikh.pdf">CV</a>
+    </nav>
+    <button class="mode" type="button" aria-label="Switch between light and dark colours"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></button>
   </div>
-  <nav class="nav" aria-label="Pages">
-    <a href="../">Home</a>
-    <a href="../projects/">Projects</a>
-    <a href="../publications/">Publications</a>
-    <a href="../talks/" aria-current="page">Talks and posters</a>
-    <a href="../experience/">Experience and education</a>
-    <a href="../contact/">Contact</a>
-  </nav>
-  <div class="links">
-    <a href="mailto:hasanshaikh3198@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/hasann-shaikh/">LinkedIn</a>
-    <a href="https://github.com/hash123shaikh">GitHub</a>
-    <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ">Scholar</a>
-    <a href="../files/CV_Hasan_Shaikh.pdf">CV (PDF)</a>
-  </div>
+</header>
+<div class="wrap">
+<aside class="card">
+  <img class="avatar" src="../assets/img/hasan-shaikh.jpg" alt="Portrait of Hasan Shaikh" width="176" height="176">
+  <p class="name">Hasan Shaikh</p>
+  <p class="role">Data Scientist</p>
+  <p class="org"><a href="https://qirail.cmcvellore.edu.in/">QIRAIL, CMC Vellore</a></p>
+  <p class="where">Department of Radiation Oncology</p>
+  <ul class="icons">
+    <li><a href="mailto:hasanshaikh3198@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+    <li><a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a></li>
+    <li><a href="https://github.com/hash123shaikh" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+    <li><a href="https://orcid.org/0009-0009-3806-613X" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/hasann-shaikh/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+    <li><a href="../files/CV_Hasan_Shaikh.pdf" aria-label="CV (PDF)"><i class="fa-solid fa-file-lines"></i></a></li>
+  </ul>
+  <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
 <main id="main">
 <h1 class="page-title">Talks and posters</h1>
@@ -49,6 +59,7 @@
 <footer>Last updated October 2026. <a href="../files/CV_Hasan_Shaikh.pdf">Download the CV</a>.</footer>
 </main>
 </div>
+<script src="../assets/theme.js"></script>
 <script src="../assets/scenes.js"></script>
 </body>
 </html>
