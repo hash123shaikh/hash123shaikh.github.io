@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects – Hasan Shaikh</title>
+<meta name="description" content="Hasan Shaikh, data scientist at QIRAIL, Department of Radiation Oncology, CMC Vellore: radiomics and deep learning for head and neck cancer.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/hasan-shaikh.jpg">
+</head>
+<body data-scene="cells">
+<canvas id="scene" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<aside>
+  <img class="avatar" src="../assets/img/hasan-shaikh.jpg" alt="Portrait of Hasan Shaikh" width="144" height="144">
+  <div>
+    <p class="name">Hasan Shaikh</p>
+    <p class="role">Data Scientist, QIRAIL<br>Dept. of Radiation Oncology<br>Christian Medical College, Vellore</p>
+  </div>
+  <nav class="nav" aria-label="Pages">
+    <a href="../">Home</a>
+    <a href="../projects/" aria-current="page">Projects</a>
+    <a href="../publications/">Publications</a>
+    <a href="../talks/">Talks and posters</a>
+    <a href="../experience/">Experience and education</a>
+    <a href="../contact/">Contact</a>
+  </nav>
+  <div class="links">
+    <a href="mailto:hasanshaikh3198@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/hasann-shaikh/">LinkedIn</a>
+    <a href="https://github.com/hash123shaikh">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=9jjwZ8cAAAAJ">Scholar</a>
+    <a href="../files/CV_Hasan_Shaikh.pdf">CV (PDF)</a>
+  </div>
+</aside>
+<main id="main">
+<h1 class="page-title">Projects</h1>
+  
+  <article class="item">
+    <h4>Radiomics risk stratification in head and neck cancer</h4>
+    <p class="meta">ESTRO 2026 poster highlight</p>
+    <ul>
+      <li>Built a 10-feature signature (2 clinical, 8 radiomic) to predict locoregional recurrence.</li>
+      <li>Compared 5 metaheuristic algorithms, including a genetic algorithm, over 1,000+ candidate features.</li>
+      <li>AUC 0.82 (95% CI 0.62–0.95) in 327 patients treated with primary radiation, with SHAP explanations for each prediction.</li>
+    </ul>
+    <p class="tags">scikit-learn, NumPy, Pandas, SciPy</p>
+  </article>
+  <article class="item">
+    <h4>Reproducibility study of a CNN prognosis model</h4>
+    <p class="meta">Under submission, Scientific Reports</p>
+    <ul>
+      <li>Re-ran the authors’ released code, data and Docker container. AUCs differed from the published ones by −0.22 to +0.10, and fixing the code issues took almost seven weeks.</li>
+      <li>External validation on a separate cohort (n=102) gave an AUC of 0.49–0.59, close to chance.</li>
+      <li>Scored the paper against CLAIM and TRIPOD+AI: high checklist compliance did not mean it was reproducible.</li>
+    </ul>
+  </article>
+  <article class="item">
+    <h4>CT tumour segmentation with 3D CNNs</h4>
+    <p class="meta">With NIT Karnataka, Surathkal</p>
+    <ul>
+      <li>Curated 167 CT cases (137 MAASTRO, 30 CMC Vellore) and trained a 3D nnU-Net for gross tumour volume. Dice was 0.62 on MAASTRO, 0.63 on CMC and 0.65 combined.</li>
+      <li>Co-author of AGSR-Net, which lifts Dice from 0.70 to 0.73 and cuts HD95 from 33.92 to 21.22 mm across 896 patients.</li>
+    </ul>
+    <p class="tags">nnU-Net, 3D Slicer, ITK-SNAP</p>
+  </article>
+  <article class="item">
+    <h4>Prospective imaging study, 2,000+ patients</h4>
+    <p class="meta">DBT/Wellcome Trust India Alliance</p>
+    <ul>
+      <li>Built the DICOM retrieval pipeline on Orthanc PACS, then automated segmentation and PyRadiomics extraction for the whole cohort.</li>
+      <li>Set up AWS S3 backups with automatic error recovery for a five-year, multisite radiotherapy study.</li>
+    </ul>
+    <p class="tags">Python, Orthanc, DICOM/NIfTI, PyRadiomics, Bash</p>
+  </article>
+  <article class="item">
+    <h4>CHAVI, India’s first national oncology imaging biobank</h4>
+    <ul>
+      <li>Contributed 304+ de-identified cases with validated clinical and imaging metadata, anonymised with XNAT and Orthanc.</li>
+      <li>Worked with Tata Memorial Centre and IIT Kharagpur to harmonise data across institutions.</li>
+    </ul>
+  </article>
+  <article class="item">
+    <h4>MGAttCNNMD: multimodal survival prediction</h4>
+    <p class="meta">M.Tech thesis, Aligarh Muslim University, advised by Prof. Rashid Ali</p>
+    <ul>
+      <li>Three gated-attention CNNs (clinical, copy number, gene expression) fused by a stacked random forest.</li>
+      <li>91.2% accuracy for breast cancer survival on METABRIC, ahead of every single-modality baseline.</li>
+    </ul>
+  </article>
+
+<footer>Last updated October 2026. <a href="../files/CV_Hasan_Shaikh.pdf">Download the CV</a>.</footer>
+</main>
+</div>
+<script src="../assets/scenes.js"></script>
+</body>
+</html>
