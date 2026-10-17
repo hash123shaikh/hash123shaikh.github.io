@@ -12,9 +12,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="assets/img/hasan-shaikh.jpg">
 </head>
-<body data-scene="home">
-<canvas id="fluid" aria-hidden="true"></canvas>
-<canvas id="scene" aria-hidden="true"></canvas>
+<body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="bar">
@@ -48,15 +46,21 @@
   </ul>
   <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
-<div class="legend" role="note">
-  <p class="cap">Live: rotating beams build dose around a tumour (VMAT).</p>
-  <div class="dosebar" aria-hidden="true"><span>0 Gy</span><b><i></i></b><span>70 Gy</span></div>
-  <p class="hint">Move your cursor to deliver dose.</p>
-</div>
 <main id="main">
 <h1 class="page-title">I build AI that can tell, before treatment, how a head and neck cancer will behave.</h1>
 <ul class="chips" aria-label="Fields of work"><li>Radiation oncology</li><li>Head and neck cancer</li><li>Radiomics</li><li>Tumour auto-segmentation</li><li>Adaptive radiotherapy</li><li>Medical AI</li></ul>
+<figure class="fig">
+<ol class="flow" id="flow">
+<li><span class="n">1</span><svg viewBox="0 0 120 100" aria-hidden="true"><ellipse class="ct-skin" cx="60" cy="50" rx="38" ry="44"/><ellipse class="ct-bone" cx="60" cy="50" rx="29" ry="35"/><path class="tum" d="M52 38 q10 -8 18 2 q6 10 -4 16 q-12 6 -17 -4 q-3 -8 3 -14z"/><rect class="scan" x="22" y="6" width="76" height="3" rx="1.5"/></svg><div><h3>Scan</h3><p>A planning CT of a head and neck cancer patient.</p></div></li>
+<li><span class="n">2</span><svg viewBox="0 0 120 100" aria-hidden="true"><ellipse class="ct-skin" cx="60" cy="50" rx="38" ry="44"/><ellipse class="ct-bone" cx="60" cy="50" rx="29" ry="35"/><path class="tum" d="M52 38 q10 -8 18 2 q6 10 -4 16 q-12 6 -17 -4 q-3 -8 3 -14z"/><path class="seg" pathLength="100" d="M52 38 q10 -8 18 2 q6 10 -4 16 q-12 6 -17 -4 q-3 -8 3 -14z" transform="translate(60 48) scale(1.3) translate(-60 -48)"/></svg><div><h3>Segment</h3><p>A 3D nnU-Net outlines the tumour. Dice 0.65 on 167 CTs.</p></div></li>
+<li><span class="n">3</span><svg viewBox="0 0 120 100" aria-hidden="true"><line x1="6" y1="88" x2="114" y2="88" class="axis"/><rect class="fbar" style="--i:0" x="8.0" y="58" width="2.6" height="30" rx="1"/><rect class="fbar" style="--i:1" x="12.4" y="36" width="2.6" height="52" rx="1"/><rect class="fbar sel" style="--i:2" x="16.8" y="66" width="2.6" height="22" rx="1"/><rect class="fbar" style="--i:3" x="21.2" y="28" width="2.6" height="60" rx="1"/><rect class="fbar" style="--i:4" x="25.6" y="48" width="2.6" height="40" rx="1"/><rect class="fbar sel" style="--i:5" x="30.0" y="18" width="2.6" height="70" rx="1"/><rect class="fbar" style="--i:6" x="34.4" y="62" width="2.6" height="26" rx="1"/><rect class="fbar" style="--i:7" x="38.8" y="40" width="2.6" height="48" rx="1"/><rect class="fbar sel" style="--i:8" x="43.2" y="24" width="2.6" height="64" rx="1"/><rect class="fbar" style="--i:9" x="47.6" y="54" width="2.6" height="34" rx="1"/><rect class="fbar" style="--i:10" x="52.0" y="32" width="2.6" height="56" rx="1"/><rect class="fbar sel" style="--i:11" x="56.4" y="68" width="2.6" height="20" rx="1"/><rect class="fbar" style="--i:12" x="60.8" y="22" width="2.6" height="66" rx="1"/><rect class="fbar sel" style="--i:13" x="65.2" y="44" width="2.6" height="44" rx="1"/><rect class="fbar" style="--i:14" x="69.6" y="60" width="2.6" height="28" rx="1"/><rect class="fbar" style="--i:15" x="74.0" y="30" width="2.6" height="58" rx="1"/><rect class="fbar sel" style="--i:16" x="78.4" y="50" width="2.6" height="38" rx="1"/><rect class="fbar" style="--i:17" x="82.8" y="16" width="2.6" height="72" rx="1"/><rect class="fbar sel" style="--i:18" x="87.2" y="64" width="2.6" height="24" rx="1"/><rect class="fbar" style="--i:19" x="91.6" y="38" width="2.6" height="50" rx="1"/><rect class="fbar sel" style="--i:20" x="96.0" y="26" width="2.6" height="62" rx="1"/><rect class="fbar sel" style="--i:21" x="100.4" y="56" width="2.6" height="32" rx="1"/><rect class="fbar" style="--i:22" x="104.8" y="34" width="2.6" height="54" rx="1"/><rect class="fbar sel" style="--i:23" x="109.2" y="46" width="2.6" height="42" rx="1"/></svg><div><h3>Measure</h3><p>1,000+ radiomic features describe its shape and texture.</p></div></li>
+<li><span class="n">4</span><svg viewBox="0 0 120 100" aria-hidden="true"><line class="wire" x1="20" y1="14" x2="60" y2="23"/><line class="wire" x1="20" y1="14" x2="60" y2="41"/><line class="wire" x1="20" y1="14" x2="60" y2="59"/><line class="wire" x1="20" y1="14" x2="60" y2="77"/><line class="wire" x1="20" y1="32" x2="60" y2="23"/><line class="wire" x1="20" y1="32" x2="60" y2="41"/><line class="wire" x1="20" y1="32" x2="60" y2="59"/><line class="wire" x1="20" y1="32" x2="60" y2="77"/><line class="wire" x1="20" y1="50" x2="60" y2="23"/><line class="wire" x1="20" y1="50" x2="60" y2="41"/><line class="wire" x1="20" y1="50" x2="60" y2="59"/><line class="wire" x1="20" y1="50" x2="60" y2="77"/><line class="wire" x1="20" y1="68" x2="60" y2="23"/><line class="wire" x1="20" y1="68" x2="60" y2="41"/><line class="wire" x1="20" y1="68" x2="60" y2="59"/><line class="wire" x1="20" y1="68" x2="60" y2="77"/><line class="wire" x1="20" y1="86" x2="60" y2="23"/><line class="wire" x1="20" y1="86" x2="60" y2="41"/><line class="wire" x1="20" y1="86" x2="60" y2="59"/><line class="wire" x1="20" y1="86" x2="60" y2="77"/><line class="wire" x1="60" y1="23" x2="100" y2="32"/><line class="wire" x1="60" y1="23" x2="100" y2="68"/><line class="wire" x1="60" y1="41" x2="100" y2="32"/><line class="wire" x1="60" y1="41" x2="100" y2="68"/><line class="wire" x1="60" y1="59" x2="100" y2="32"/><line class="wire" x1="60" y1="59" x2="100" y2="68"/><line class="wire" x1="60" y1="77" x2="100" y2="32"/><line class="wire" x1="60" y1="77" x2="100" y2="68"/><circle class="node" cx="20" cy="14" r="5"/><circle class="node" cx="20" cy="32" r="5"/><circle class="node" cx="20" cy="50" r="5"/><circle class="node" cx="20" cy="68" r="5"/><circle class="node" cx="20" cy="86" r="5"/><circle class="node" cx="60" cy="23" r="5"/><circle class="node" cx="60" cy="41" r="5"/><circle class="node" cx="60" cy="59" r="5"/><circle class="node" cx="60" cy="77" r="5"/><circle class="node out" cx="100" cy="32" r="6"/><circle class="node out" cx="100" cy="68" r="6"/></svg><div><h3>Select and learn</h3><p>Metaheuristics keep 10 features (2 clinical, 8 radiomic).</p></div></li>
+<li><span class="n">5</span><svg viewBox="0 0 120 100" aria-hidden="true"><path class="axis" d="M12 8 V88 H112" fill="none"/><line class="chance" x1="12" y1="88" x2="112" y2="8"/><path class="roc-fill" d="M12 88 C 16 38, 40 18, 112 10 V88z"/><path class="roc" pathLength="100" d="M12 88 C 16 38, 40 18, 112 10"/><circle class="rocdot" cx="112" cy="10" r="4.5"/></svg><div><h3>Predict</h3><p>Recurrence risk before treatment. AUC 0.82 in 327 patients.</p></div></li>
+</ol>
+<figcaption>How my work runs, from a scan to a prediction made before treatment starts.</figcaption>
+</figure>
 <p class="seek"><span class="dot" aria-hidden="true"></span>I am looking for a PhD in AI for oncology: medical imaging, radiomics, adaptive radiotherapy, uncertainty quantification, and toxicity or follow-up modelling.</p>
+
 <section class="block bio"><h2>Biography</h2>
 <p><strong>Hasan Shaikh</strong> is a data scientist and medical imaging researcher in the Quantitative Imaging Research and Artificial Intelligence Lab (<a href="https://qirail.cmcvellore.edu.in/">QIRAIL</a>), Department of Radiation Oncology, Christian Medical College (CMC) Vellore, one of India's leading cancer centres. He builds AI pipelines that help oncologists make smarter, faster and more personalised treatment decisions for patients with head and neck cancer.</p>
 <p><strong>Prediction.</strong> A large part of his work asks a simple question: before we treat, can we tell who is likely to relapse? He engineered a 10-feature radiomics and clinical signature (2 clinical, 8 radiomic) for locoregional recurrence, choosing the features with five metaheuristic algorithms searched over more than 1,000 candidates. It reached an AUC of 0.82 in 327 patients treated with primary radiation, and SHAP explains each prediction so a clinician can see why. The work was a poster highlight at ESTRO 2026 in Stockholm, and a companion paper was accepted at AIHC 2025 (Springer LNEE).</p>
@@ -85,7 +89,8 @@
   <h2>News</h2>
   <ul class="news">
     <li><time>Sep 2026</time><span>Co-organised the 3rd Workshop on Radiomics and Auto Segmentation at CMC Vellore (18–19 Sep).</span></li>
-    <li><time>Mar 2026</time><span>Poster highlight at ESTRO 2026, Stockholm, on a prospective radiomics-clinical signature for locoregional recurrence. Segmentation preprint posted on <a href="https://doi.org/10.64898/2026.03.12.26347996">medRxiv</a>.</span></li>
+    <li><time>2026</time><span>Poster highlight at ESTRO 2026, Stockholm, on a prospective radiomics-clinical signature for locoregional recurrence.</span></li>
+    <li><time>Mar 2026</time><span>Segmentation preprint posted on <a href="https://doi.org/10.64898/2026.03.12.26347996">medRxiv</a>.</span></li>
     <li><time>Dec 2025</time><span>Presented metaheuristic radiomics work at AIHC 2025, NIT Calicut.</span></li>
     <li><time>Nov 2025</time><span>Organised the 1st Workshop on Radiomics and Auto Segmentation (14–15 Nov); the 2nd followed on 27–28 Mar 2026.</span></li>
     <li><time>Sep 2025</time><span>Organised the Head and Neck Cancer Survivorship Program at CMC Vellore.</span></li>
@@ -96,7 +101,6 @@
 </main>
 </div>
 <script src="assets/theme.js"></script>
-<script src="assets/fluid.js"></script>
-<script src="assets/scenes.js"></script>
+<script src="assets/figures.js"></script>
 </body>
 </html>
