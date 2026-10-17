@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/img/hasan-shaikh.jpg">
 </head>
-<body>
+<body data-scene="linac">
+<canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="bar">
@@ -46,17 +47,11 @@
   </ul>
   <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
+<div class="legend" role="note">
+  <p class="cap">Live: a linac gantry shapes the beam with MLC leaves.</p>
+  </div>
 <main id="main">
-<h1 class="page-title">Talks and posters</h1><figure class="fig route">
-<ol>
-<li class="" style="--i:0"><span class="stop">1</span><b>Vellore</b><span>Oct 2024</span></li>
-<li class="" style="--i:1"><span class="stop">2</span><b>Vellore</b><span>Mar 2025</span></li>
-<li class="" style="--i:2"><span class="stop">3</span><b>Vellore</b><span>Oct 2025</span></li>
-<li class="nat" style="--i:3"><span class="stop">4</span><b>Calicut</b><span>Dec 2025</span></li>
-<li class="intl" style="--i:4"><span class="stop">5</span><b>Stockholm</b><span>2026</span></li>
-</ol>
-<figcaption>From my own institution to a national conference to ESTRO in Sweden. The numbers match the list below, oldest first.</figcaption>
-</figure><h2>Presentations, oldest first</h2>
+<h1 class="page-title">Talks and posters</h1><h2>Presentations, oldest first</h2>
 <ol class="refs">
 <li><span class="no">[1]</span><div><p class="t">Can CT radiomics predict recurrence in head and neck cancer? Early results from a prospective imaging trial.</p><p class="v"><span class="kind ">Poster</span> 14th Research Day, CMC Vellore, October 2024.</p><p class="b"><a class="badge" href="../files/Hasan_Poster%20-%20CMC%20Vellore.pdf">PDF</a></p></div></li>
 <li><span class="no">[2]</span><div><p class="t">Automated segmentation of head and neck cancer from CT images using 3D nnU-Net.</p><p class="v"><span class="kind ">Oral</span> 2nd National Symposium on Health Data and AI, CMC Vellore, March 2025.</p><p class="b"><span class="badge hl">Third prize</span> <a class="badge" href="../files/Poster_Hasan%20--%202nd_Winter_Symposium_BMIU_CMCV.pdf">PDF</a></p></div></li>
@@ -71,6 +66,6 @@
 </main>
 </div>
 <script src="../assets/theme.js"></script>
-<script src="../assets/figures.js"></script>
+<script src="../assets/scenes.js"></script>
 </body>
 </html>

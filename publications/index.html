@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/img/hasan-shaikh.jpg">
 </head>
-<body>
+<body data-scene="dna">
+<canvas id="scene" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="bar">
@@ -46,16 +47,11 @@
   </ul>
   <p class="open"><span class="dot" aria-hidden="true"></span>Open to PhD positions</p>
 </aside>
+<div class="legend" role="note">
+  <p class="cap">Live: radiation breaks DNA, and the cell repairs it.</p>
+  </div>
 <main id="main">
-<h1 class="page-title">Publications</h1><figure class="fig rmap">
-<ol class="cols">
-<li style="--i:0"><h3>Segmentation</h3><p>Outline the tumour on a CT.</p><ul class="chips2"><li><a href="#p1" aria-label="Publication 1">1</a></li><li><a href="#p5" aria-label="Publication 5">5</a></li></ul></li>
-<li style="--i:1"><h3>Prediction</h3><p>Tell who is likely to relapse.</p><ul class="chips2"><li><a href="#p3" aria-label="Publication 3">3</a></li><li><a href="#p4" aria-label="Publication 4">4</a></li></ul></li>
-<li style="--i:2"><h3>Trust</h3><p>Check that published models hold up.</p><ul class="chips2"><li><a href="#p2" aria-label="Publication 2">2</a></li></ul></li>
-<li style="--i:3"><h3>Survival</h3><p>Predict survival from multi-omics data.</p><ul class="chips2"><li><a href="#p6" aria-label="Publication 6">6</a></li></ul></li>
-</ol>
-<figcaption>Where each publication sits in my work. The numbers match the list below.</figcaption>
-</figure><h2>Journal papers</h2>
+<h1 class="page-title">Publications</h1><h2>Journal papers</h2>
 <ol class="refs">
 <li id="p1"><span class="no">[1]</span><div><p class="t">Anatomy-guided skip-connection recalibration for CT-based head and neck tumor auto-segmentation.</p><p>Asjad Nabeel P, Hannah Mary Thomas T, <span class="me">Hasan Shaikh</span>, Sathya A, Rajendra Benny Kuchipudi, Jino Wilson Victor, Simon P Pavamani, Balu Krishna Sasidharan, Jeny Rajan.</p><p class="v"><em>International Journal of Biomedical Imaging.</em></p><p class="b"><span class="badge status">Under submission</span></p></div></li>
 <li id="p2"><span class="no">[2]</span><div><p class="t">Can reproducibility be achieved? External validation of “reproducible” image-based prognostic models for head and neck cancer.</p><p><span class="me">Hasan Shaikh</span>, Sathya A, Praveenraj C, Balu Krishna S, Aparna Irodi, Rajendra Benny Kuchipudi, Jino Wilson Victor, Manu Mathew, Rajesh Isiah, Simon Pavamani, Joy Mammen, Hannah Mary Thomas T.</p><p class="v"><em>Scientific Reports</em>, Nature Portfolio.</p><p class="b"><span class="badge status">Under submission</span></p></div></li>
@@ -78,6 +74,6 @@
 </main>
 </div>
 <script src="../assets/theme.js"></script>
-<script src="../assets/figures.js"></script>
+<script src="../assets/scenes.js"></script>
 </body>
 </html>
